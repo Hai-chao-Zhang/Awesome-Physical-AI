@@ -77,7 +77,7 @@ Local unique citation keys: `18`
 | 13 | [`section/1_intro.tex:19`](section/1_intro.tex#L19) | `driess2023palm` | [PaLM-E: an embodied multimodal language model](https://proceedings.mlr.press/v202/driess23a.html) |
 | 14 | [`section/1_intro.tex:19`](section/1_intro.tex#L19) | `zitkovich2023rt` | [Rt-2: Vision-language-action models transfer web knowledge to robotic control](https://robotics-transformer2.github.io/) |
 | 15 | [`section/1_intro.tex:19`](section/1_intro.tex#L19) | `kim2024openvla` | [OpenVLA: An Open-Source Vision-Language-Action Model](https://arxiv.org/abs/2406.09246) |
-| 16 | [`section/1_intro.tex:19`](section/1_intro.tex#L19) | `black2024pi0` | [_0pi0: A Vision--Language--Action Flow Model for General Robot Control](https://scholar.google.com/scholar?q=_0pi0%3A%20A%20Vision--Language--Action%20Flow%20Model%20for%20General%20Robot%20Control) |
+| 16 | [`section/1_intro.tex:19`](section/1_intro.tex#L19) | `black2024pi0` | [pi0: A Vision-Language-Action Flow Model for General Robot Control](https://www.physicalintelligence.company/download/pi0.pdf) |
 | 17 | [`section/1_intro.tex:25`](section/1_intro.tex#L25) | `ha2018world` | [World models](https://arxiv.org/abs/1803.10122) |
 | 18 | [`section/1_intro.tex:25`](section/1_intro.tex#L25) | `lecun2022path` | [A Path Towards Autonomous Machine Intelligence Version 0.9. 2, 2022-06-27](https://openreview.net/forum?id=BZ5a1r-kVsf) |
 
@@ -134,9 +134,9 @@ Local unique citation keys: `35`
 | 4 | [`section/3_vlm.tex:4`](section/3_vlm.tex#L4) | `liu2023llava` | [Visual instruction tuning](https://proceedings.neurips.cc/paper_files/paper/2023/hash/6dcf277ea32ce3288914faf369fe6de0-Abstract-Conference.html) |
 | 5 | [`section/3_vlm.tex:7`](section/3_vlm.tex#L7) | `lu2019vilbert` | [Vilbert: Pretraining task-agnostic visiolinguistic representations for vision-and-language tasks](https://scholar.google.com/scholar?q=Vilbert%3A%20Pretraining%20task-agnostic%20visiolinguistic%20representations%20for%20vision-and-language%20tasks) |
 | 6 | [`section/3_vlm.tex:7`](section/3_vlm.tex#L7) | `tan2019lxmert` | [Lxmert: Learning cross-modality encoder representations from transformers](https://scholar.google.com/scholar?q=Lxmert%3A%20Learning%20cross-modality%20encoder%20representations%20from%20transformers) |
-| 7 | [`section/3_vlm.tex:7`](section/3_vlm.tex#L7) | `team2026qwen3` | [Qwen3. 5-omni technical report](https://arxiv.org/abs/2604.15804) |
+| 7 | [`section/3_vlm.tex:7`](section/3_vlm.tex#L7) | `team2026qwen3` | [Qwen3.5-Omni Technical Report](https://arxiv.org/abs/2604.15804) |
 | 8 | [`section/3_vlm.tex:7`](section/3_vlm.tex#L7) | `li2023blip` | [Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models](https://scholar.google.com/scholar?q=Blip-2%3A%20Bootstrapping%20language-image%20pre-training%20with%20frozen%20image%20encoders%20and%20large%20language%20models) |
-| 9 | [`section/3_vlm.tex:7`](section/3_vlm.tex#L7) | `shen2026fine` | [Fine-grained preference optimization improves spatial reasoning in vlms](https://scholar.google.com/scholar?q=Fine-grained%20preference%20optimization%20improves%20spatial%20reasoning%20in%20vlms) |
+| 9 | [`section/3_vlm.tex:7`](section/3_vlm.tex#L7) | `shen2026fine` | [Fine-Grained Preference Optimization Improves Spatial Reasoning in VLMs](https://arxiv.org/abs/2506.21656) |
 | 10 | [`section/3_vlm.tex:7`](section/3_vlm.tex#L7) | `agarwal2025cosmos` | [Cosmos world foundation model platform for physical ai](https://arxiv.org/abs/2501.03575) |
 | 11 | [`section/3_vlm.tex:7`](section/3_vlm.tex#L7) | `liu2025generative` | [Generative physical ai in vision: A survey](https://arxiv.org/abs/2501.10928) |
 | 12 | [`section/3_vlm.tex:7`](section/3_vlm.tex#L7) | `shridhar2022cliport` | [Cliport: What and where pathways for robotic manipulation](https://scholar.google.com/scholar?q=Cliport%3A%20What%20and%20where%20pathways%20for%20robotic%20manipulation) |
@@ -174,21 +174,21 @@ Local unique citation keys: `20`
 | 2 | [`section/4_action.tex:11`](section/4_action.tex#L11) | `kim2024openvla` | [OpenVLA: An Open-Source Vision-Language-Action Model](https://arxiv.org/abs/2406.09246) |
 | 3 | [`section/4_action.tex:11`](section/4_action.tex#L11) | `pertsch2025fast` | [FAST: Efficient action tokenization for vision-language-action models](https://arxiv.org/abs/2501.09747) |
 | 4 | [`section/4_action.tex:12`](section/4_action.tex#L12) | `act` | [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](https://arxiv.org/abs/2304.13705) |
-| 5 | [`section/4_action.tex:12`](section/4_action.tex#L12) | `black2024pi0` | [_0pi0: A Vision--Language--Action Flow Model for General Robot Control](https://scholar.google.com/scholar?q=_0pi0%3A%20A%20Vision--Language--Action%20Flow%20Model%20for%20General%20Robot%20Control) |
-| 6 | [`section/4_action.tex:12`](section/4_action.tex#L12) | `physicalintelligence2025pi05` | [_0.5pi0.5: A Vision--Language--Action Model with Open-World Generalization](https://arxiv.org/abs/2504.16054) |
+| 5 | [`section/4_action.tex:12`](section/4_action.tex#L12) | `black2024pi0` | [pi0: A Vision-Language-Action Flow Model for General Robot Control](https://www.physicalintelligence.company/download/pi0.pdf) |
+| 6 | [`section/4_action.tex:12`](section/4_action.tex#L12) | `physicalintelligence2025pi05` | [pi0.5: A Vision-Language-Action Model with Open-World Generalization](https://proceedings.mlr.press/v305/black25a.html) |
 | 7 | [`section/4_action.tex:12`](section/4_action.tex#L12) | `wen2025dexvla` | [DexVLA: Vision-language model with plug-in diffusion expert for general robot control](https://arxiv.org/abs/2502.05855) |
 | 8 | [`section/4_action.tex:12`](section/4_action.tex#L12) | `rdt1b2025` | [RDT-1B: a Diffusion Foundation Model for Bimanual Manipulation](https://scholar.google.com/scholar?q=RDT-1B%3A%20a%20Diffusion%20Foundation%20Model%20for%20Bimanual%20Manipulation) |
 | 9 | [`section/4_action.tex:14`](section/4_action.tex#L14) | `qu2025spatialvla` | [SpatialVLA: Exploring Spatial Representations for Visual-Language-Action Model](https://scholar.google.com/scholar?q=SpatialVLA%3A%20Exploring%20Spatial%20Representations%20for%20Visual-Language-Action%20Model) |
 | 10 | [`section/4_action.tex:15`](section/4_action.tex#L15) | `zhen2024threedvla` | [3D-VLA: a 3D vision-language-action generative world model](https://scholar.google.com/scholar?q=3D-VLA%3A%20a%203D%20vision-language-action%20generative%20world%20model) |
 | 11 | [`section/4_action.tex:21`](section/4_action.tex#L21) | `driess2023palm` | [PaLM-E: an embodied multimodal language model](https://proceedings.mlr.press/v202/driess23a.html) |
-| 12 | [`section/4_action.tex:26`](section/4_action.tex#L26) | `o2024open` | [Open x-embodiment: Robotic learning datasets and rt-x models: Open x-embodiment collaboration 0](https://scholar.google.com/scholar?q=Open%20x-embodiment%3A%20Robotic%20learning%20datasets%20and%20rt-x%20models%3A%20Open%20x-embodiment%20collaboration%200) |
+| 12 | [`section/4_action.tex:26`](section/4_action.tex#L26) | `o2024open` | [Open X-Embodiment: Robotic Learning Datasets and RT-X Models](https://arxiv.org/abs/2310.08864) |
 | 13 | [`section/4_action.tex:27`](section/4_action.tex#L27) | `octo_2023` | [Octo: An Open-Source Generalist Robot Policy](https://scholar.google.com/scholar?q=Octo%3A%20An%20Open-Source%20Generalist%20Robot%20Policy) |
 | 14 | [`section/4_action.tex:37`](section/4_action.tex#L37) | `bjorck2025gr00tn1` | [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](https://arxiv.org/abs/2503.14734) |
 | 15 | [`section/4_action.tex:38`](section/4_action.tex#L38) | `wen2024tinyvla` | [TinyVLA: Towards fast, data-efficient vision-language-action models for robotic manipulation](https://scholar.google.com/scholar?q=TinyVLA%3A%20Towards%20fast%2C%20data-efficient%20vision-language-action%20models%20for%20robotic%20manipulation) |
 | 16 | [`section/4_action.tex:38`](section/4_action.tex#L38) | `shukor2025smolvla` | [SmolVLA: A vision-language-action model for affordable and efficient robotics](https://arxiv.org/abs/2506.01844) |
 | 17 | [`section/4_action.tex:38`](section/4_action.tex#L38) | `cai2026xiaomi` | [Xiaomi-Robotics-0: An Open-Sourced Vision-Language-Action Model with Real-Time Execution](https://arxiv.org/abs/2602.12684) |
-| 18 | [`section/4_action.tex:38`](section/4_action.tex#L38) | `ye2026starvla` | [StarVLA-$$: Reducing Complexity in Vision Language Action Systems](https://arxiv.org/abs/2604.11757) |
-| 19 | [`section/4_action.tex:40`](section/4_action.tex#L40) | `intelligence2025pi06vlalearnsexperience` | [$^*_0.6$: a VLA That Learns From Experience](https://arxiv.org/abs/2511.14759) |
+| 18 | [`section/4_action.tex:38`](section/4_action.tex#L38) | `ye2026starvla` | [StarVLA-alpha: Reducing Complexity in Vision Language Action Systems](https://arxiv.org/abs/2604.11757) |
+| 19 | [`section/4_action.tex:40`](section/4_action.tex#L40) | `intelligence2025pi06vlalearnsexperience` | [pi0.6*: a VLA That Learns From Experience](https://arxiv.org/abs/2511.14759) |
 | 20 | [`section/4_action.tex:40`](section/4_action.tex#L40) | `torne2026mem` | [MEM: Multi-Scale Embodied Memory for Vision Language Action Models](https://arxiv.org/abs/2603.03596) |
 
 ### `section/5_world_models.tex`
@@ -221,7 +221,7 @@ Local unique citation keys: `30`
 | 2 | [`section/6_physic_ai.tex:8`](section/6_physic_ai.tex#L8) | `team2025gemini1` | [Gemini robotics: Bringing ai into the physical world](https://arxiv.org/abs/2503.20020) |
 | 3 | [`section/6_physic_ai.tex:8`](section/6_physic_ai.tex#L8) | `team2025gemini15` | [Gemini robotics 1.5: Pushing the frontier of generalist robots with advanced embodied reasoning, thinking, and motion transfer](https://arxiv.org/abs/2510.03342) |
 | 4 | [`section/6_physic_ai.tex:8`](section/6_physic_ai.tex#L8) | `brohan2023rt` | [RT-1: Robotics Transformer for Real-World Control at Scale](https://scholar.google.com/scholar?q=RT-1%3A%20Robotics%20Transformer%20for%20Real-World%20Control%20at%20Scale) |
-| 5 | [`section/6_physic_ai.tex:8`](section/6_physic_ai.tex#L8) | `o2024open` | [Open x-embodiment: Robotic learning datasets and rt-x models: Open x-embodiment collaboration 0](https://scholar.google.com/scholar?q=Open%20x-embodiment%3A%20Robotic%20learning%20datasets%20and%20rt-x%20models%3A%20Open%20x-embodiment%20collaboration%200) |
+| 5 | [`section/6_physic_ai.tex:8`](section/6_physic_ai.tex#L8) | `o2024open` | [Open X-Embodiment: Robotic Learning Datasets and RT-X Models](https://arxiv.org/abs/2310.08864) |
 | 6 | [`section/6_physic_ai.tex:12`](section/6_physic_ai.tex#L12) | `ahn2022saycan` | [Do As I Can, Not As I Say: Grounding Language in Robotic Affordances](https://proceedings.mlr.press/v205/ichter23a.html) |
 | 7 | [`section/6_physic_ai.tex:12`](section/6_physic_ai.tex#L12) | `liu2024ok` | [OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics](https://arxiv.org/abs/2401.12202) |
 | 8 | [`section/6_physic_ai.tex:17`](section/6_physic_ai.tex#L17) | `huang2025rekep` | [ReKep: Spatio-Temporal Reasoning of Relational Keypoint Constraints for Robotic Manipulation](https://scholar.google.com/scholar?q=ReKep%3A%20Spatio-Temporal%20Reasoning%20of%20Relational%20Keypoint%20Constraints%20for%20Robotic%20Manipulation) |
