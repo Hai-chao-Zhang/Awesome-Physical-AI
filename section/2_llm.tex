@@ -1,0 +1,39 @@
+\section{LLM-Based World Knowledge for Physical AI}
+\label{sec:world-knowledge}
+
+\emph{LLM-based world knowledge} refers to language-mediated world priors stored as parametric regularities in large language models~\citep{petroni2019language,roberts2020knowledge}.
+Prompting and context expose parts of these priors as task-level hypotheses about objects, goals, actions, procedures, and constraints for Physical AI~\citep{brown2020language,wei2022chain}.
+
+\subsection{World Knowledge as Coupled Priors}
+
+World knowledge is better treated as a set of coupled priors than as a monolithic store: semantic knowledge grounds object categories and references; commonsense knowledge supplies default assumptions and safety constraints; procedural knowledge decomposes tasks; causal knowledge suggests outcomes and risks; spatial knowledge supports layout and manipulation preconditions; and affordance knowledge links objects or parts to possible interactions~\citep{arkin1990integrating,hagoort2004integration,schwenk2022okvqa}. 
+In grounded Physical AI systems, spatial and affordance priors are often operationalized by models that connect linguistic relations to perceptual structure: recent spatial VLMs map relations such as ``inside'' or ``aligned with'' to metric or 3D structure~\citep{chen2024spatialvlm,yuan2024robopoint,song2025robospatial}. 
+Affordance-oriented work similarly identifies which objects, parts, or regions support a requested action~\citep{qian2024affordancellm,huang2024manipvqa,chu2025threedaffordancellm}.
+
+\subsection{Parametric World Knowledge in LLMs}
+
+LLMs encode factual associations, procedural patterns, commonsense defaults, and task constraints through large-scale pretraining on corpora that repeatedly describe object functions, task procedures, safety constraints, and likely outcomes~\citep{petroni2019language,roberts2020knowledge,brown2020language,bommasani2021foundation}.
+Because these descriptions recur across documents, they become parametric regularities whose strength tracks pretraining exposure~\citep{kandpal2023longtail,chang2024factualpretraining}.
+Recent recall and materialization studies further probe which factual priors can be surfaced from LLMs~\citep{yuan2024factbench,hu2024gptkb}.
+Embodied planning work provides a task-level diagnostic: LLMs can often retrieve plausible steps, object uses, and constraints for situated tasks~\citep{song2023llmplanner,rana2023sayplan,hua2024gensim2}.
+
+\subsection{LLMs as Priors and Controllers in Physical AI}
+
+LLMs contribute to Physical AI in four main ways.
+For \textbf{task planning}, SayCan~\citep{ahn2022saycan} grounds LLM-generated step sequences with learned affordance values to filter physically infeasible actions, and Inner Monologue~\citep{huang2022innermonologue} enables closed-loop replanning by feeding back environmental observations as language~\citep{huang2022zeroshotplanners}.
+Moving from prose to code, \textbf{skill generation} approaches such as Code as Policies~\citep{liang2023codeaspolicies} and ProgPrompt~\citep{singh2023progprompt} prompt LLMs to produce executable robot programs, while Voyager~\citep{wang2023voyager} uses LLMs to iteratively build open-ended skill libraries.
+At the level of \textbf{goal and reward specification}, VoxPoser~\citep{huang2023voxposer} composes spatial value maps from language instructions, reducing manual reward engineering.
+Finally, as \textbf{agentic orchestrators}, LLMs coordinate tools and sub-modules across multi-step tasks~\citep{rana2023sayplan,hua2024gensim2}, acting as closed-loop decision engines rather than one-shot planners.
+Together, these uses establish LLMs as the semantic and procedural scaffolding of Physical AI pipelines---a foundation whose limits are examined next.
+
+\subsection{Limits of Language-Only Physical Reasoning}
+
+The systems reviewed above reveal a common pattern: LLMs are effective at proposing goals, plans, and constraints, but their outputs become more reliable when paired with grounding, verification, or action interfaces~\citep{ahn2022saycan,huang2022innermonologue,rana2023sayplan}. 
+The core limitation is the abstraction gap between language and physics. 
+Language compresses continuous physical states into sparse descriptions and often omits pose, velocity, contact, deformation, uncertainty, and embodiment constraints. 
+In this sense, LLM-based priors remain linguistic: they may suggest that glass is fragile or that a handle can be grasped, but they do not estimate geometry, contact, force, friction, or future trajectories~\citep{qiu2025phybench,xu2025physense}. 
+LLMs can therefore hallucinate objects, propose infeasible plans, or assume that actions succeed.
+Recent planning analyses, including LLM-modulo studies and PlanBench updates, sharpen this point by showing that language-only models remain unreliable without external models or verifiers~\citep{kambhampati2024llmscantplan,valmeekam2024planbench}. 
+Physical reasoning benchmarks further expose weaknesses in dynamics, vision-grounded physics, and tool use~\citep{xiang2025seephys,zhang2025phystoolbench}. 
+These limitations motivate the remainder of this survey, which progressively addresses perceptual grounding, action grounding, and predictive world modeling.
+LLMs are therefore useful interfaces and coordinators, but they form an important yet insufficient layer of Physical AI.

@@ -1,0 +1,22 @@
+\section{Grounding World Knowledge into Action}
+\label{sec:vla-action}
+
+Grounding world knowledge into perception is not sufficient for Physical AI. 
+An agent must also transform perception and language instructions into executable actions. 
+Vision-Language-Action models provide a natural interface for this transition.
+
+\subsection{Vision-Language-Action Models}
+VLA models map visual observations and language instructions to action outputs. 
+They can be trained from demonstrations, robot trajectories, teleoperation data, or large-scale embodied datasets. 
+By integrating perception, language, and action, VLA models allow agents to follow instructions and perform physical tasks in embodied environments.
+
+\subsection{Action Spaces and Policy Learning}
+Action spaces in Physical AI can take many forms, including discrete actions, continuous controls, end-effector poses, joint commands, waypoints, trajectories, or action tokens. 
+VLA models make physical learning more direct than language-only reasoning because they operate over action-relevant representations. 
+However, policy learning remains difficult due to limited embodied data, diverse robot morphologies, and the need for closed-loop interaction.
+
+\subsection{Why VLAs Still Need World Knowledge and World Models}
+Current VLA models are not yet generalist Physical AI systems. 
+They often struggle to generalize across tasks, environments, and embodiments. 
+LLM-based world knowledge can provide high-level task priors and reasoning, while world models can provide predictive and simulative knowledge about physical dynamics. 
+Thus, VLA models are best understood as one layer in a larger roadmap from world knowledge to embodied action.

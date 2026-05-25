@@ -1,0 +1,29 @@
+\section{World Models for Physical AI}
+\label{sec:world-models}
+
+World models provide predictive and simulative substrates for Physical AI. 
+While LLMs encode high-level world knowledge, world models aim to predict how states evolve over time, especially under actions. 
+They are therefore essential for planning, counterfactual reasoning, simulation, and policy learning.
+
+\subsection{Video World Models}
+Video world models generate or predict future visual observations. 
+They can support visual imagination, future prediction, synthetic data generation, and interactive simulation. 
+For Physical AI, video world models are useful because they provide a visual interface for modeling temporal evolution and possible future outcomes. 
+However, photorealistic generation does not necessarily imply physical correctness. 
+A useful world model for Physical AI must support temporal consistency, controllability, action conditioning, and physically plausible dynamics.
+
+\subsection{Latent World Models}
+Latent world models predict future states in a learned representation space rather than directly generating pixels. 
+This makes them more efficient for planning and control, since they can focus on task-relevant dynamics instead of reconstructing every visual detail. 
+Latent predictive models are especially promising for embodied agents that require fast simulation, long-horizon planning, and policy optimization.
+
+\subsection{Interactive and Action-Conditioned World Models}
+Action-conditioned world models predict how the environment changes in response to possible actions. 
+This capability is central to Physical AI because agents must evaluate counterfactual futures before acting. 
+Interactive world models can be used for planning, policy learning, simulation-based training, and safety evaluation.
+
+\subsection{World Knowledge vs. World Models}
+LLM-based world knowledge and world models are complementary. 
+LLMs encode semantic, commonsense, procedural, and causal priors about what usually happens and what actions may be meaningful. 
+World models estimate what will happen next under physical dynamics. 
+In short, LLMs provide knowledge about the world, while world models provide predictive mechanisms for the world.

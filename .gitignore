@@ -1,0 +1,20 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Generated PDFs from local compilation
+acl_latex.pdf
+latex/acl_latex.pdf
+
+# OS/editor metadata
+.DS_Store
+.vscode/

@@ -1,0 +1,127 @@
+\begin{abstract}
+Physical AI aims to move artificial intelligence from digital reasoning toward perception, prediction, simulation, planning, and action in the physical world.
+While recent progress has advanced through vision-language models, vision-language-action models, world models, policy learning, and embodied agents, existing discussions are often organized from robotics-centric, vision-centric, or cyber-physical perspectives.
+In this survey, we instead study Physical AI through the lens of \emph{LLM-based world knowledge}.
+We argue that LLMs encode semantic, commonsense, procedural, and causal knowledge through large-scale pretraining and scaling, making them useful high-level priors for physical reasoning, multimodal grounding, action grounding, and embodied decision making.
+However, language-based knowledge is sparse and lossy for dense physical states, and is ill-suited to directly represent metric and continuous quantities such as geometry, motion, contact, force, high-frequency dynamics, and long-horizon temporal evolution.
+Vision-language and multimodal models ground LLM-derived world knowledge into perception, but often express physical understanding through language outputs.
+Vision-Language-Action (VLA) models further connect perception and language to executable actions, yet lack an internal predictive model of how the physical world evolves under actions.
+This motivates a roadmap from LLM-based world knowledge to multimodal grounding, action grounding, and world models that directly learn predictive and simulative knowledge from videos, trajectories, and embodied interactions.
+We review how multimodal models, action-grounded models, and world models provide perceptual, actionable, predictive, and simulative substrates for Physical AI.
+Finally, we discuss open challenges along the roadmap from LLM-based world knowledge to deployable Physical AI, including grounding, world modeling, closed-loop evaluation, safety, and generalization.
+\end{abstract}
+% Finally, we discuss the gap between current Physical AI models and robust embodied agents, highlighting challenges in dense physical representation, language-to-action grounding, physical consistency, sim-to-real transfer, closed-loop evaluation, safety, reproducibility, and the path toward deployable and generalizable Physical AI systems.
+%%%%%%%%%%%%
+
+% \begin{abstract}
+% Physical AI aims to move artificial intelligence from digital reasoning toward perception, prediction, simulation, planning, and action in the physical world.
+% While recent progress has advanced through vision-language models, vision-language-action models, world models, policy learning, and embodied agents, existing discussions are often organized from robotics-centric, vision-centric, or cyber-physical perspectives.
+% In this survey, we instead study Physical AI through the lens of \emph{LLM-based world knowledge}.
+% We argue that LLMs encode semantic, commonsense, procedural, and causal knowledge through large-scale pretraining and scaling, making them useful high-level priors for physical reasoning, multimodal grounding, action grounding, and embodied decision making.
+% However, language-based knowledge is sparse and lossy for dense physical states, and is ill-suited to directly represent metric and continuous quantities such as geometry, motion, contact, force, high-frequency dynamics, and long-horizon temporal evolution.
+% Vision-language and multimodal models ground LLM-derived world knowledge into perception, but often express physical understanding through language outputs.
+% Vision-Language-Action (VLA) models further connect perception and language to executable actions, yet lack an internal predictive model of how the physical world evolves under actions.
+% This motivates a roadmap from LLM-based world knowledge to multimodal grounding, action grounding, and world models that directly learn predictive and simulative knowledge from videos, trajectories, and embodied interactions.
+% We review how multimodal models, action-grounded models, and world models provide perceptual, action-oriented, predictive, and simulative substrates for Physical AI.
+% Finally, we discuss open challenges along the roadmap from LLM-based world knowledge to deployable Physical AI, including grounding, world modeling, closed-loop evaluation, safety, and generalization.
+% \end{abstract}
+
+
+% \begin{abstract}
+% Physical AI aims to move artificial intelligence from digital reasoning toward perception, prediction, simulation, planning, and action in the physical world.
+% While recent progress has advanced through vision-language models, vision-language-action models, world models, policy learning, and embodied agents, existing discussions are often organized from robotics-centric, vision-centric, or cyber-physical perspectives.
+% In this survey, we instead study Physical AI through the lens of \emph{LLM-based world knowledge}.
+% We argue that LLMs encode semantic, commonsense, procedural, and causal knowledge through large-scale pretraining and scaling, making them useful high-level priors for physical reasoning, multimodal grounding, action grounding, and embodied decision making.
+% However, language-based knowledge is sparse and lossy for dense physical states, and is ill-suited to directly represent metric and continuous quantities such as geometry, motion, contact, force, high-frequency dynamics, and long-horizon temporal evolution.
+% Vision-language and multimodal models ground LLM-derived world knowledge into perception, but often express physical understanding through language outputs.
+% Vision-Language-Action (VLA) models further connect perception and language to executable actions, yet lack an internal predictive model of how the physical world evolves under actions.
+% This motivates a roadmap from LLM-based world knowledge to multimodal grounding, action grounding, and world models that directly learn predictive and simulative knowledge from videos, trajectories, and embodied interactions.
+% We review how multimodal models, action-grounded models, and world models provide perceptual, action-oriented, predictive, and simulative substrates for Physical AI.
+% Finally, we discuss open challenges along the roadmap from LLM-based world knowledge to deployable Physical AI, including grounding, world modeling, closed-loop evaluation, safety, and generalization.
+% \end{abstract}
+
+% \begin{abstract}
+% Physical AI aims to move artificial intelligence from digital reasoning toward perception, prediction, simulation, planning, and action in the physical world.
+% While recent progress has involved vision-language models, vision-language-action models, world models, policy learning, and embodied agents, existing discussions are often organized from robotics-centric, vision-centric, or cyber-physical perspectives.
+% In this survey, we instead study Physical AI through the lens of \emph{LLM-based world knowledge}.
+% We argue that large language models encode broad semantic, commonsense, procedural, and causal knowledge about the world, making them useful high-level priors for physical reasoning, multimodal grounding, action grounding, and embodied decision making.
+% However, language-based knowledge is sparse and lossy for dense physical states, and cannot directly represent metric and continuous quantities such as geometry, motion, contact, force, high-frequency dynamics, and long-horizon temporal evolution.
+% Vision-language and multimodal models ground LLM-derived world knowledge into perception, but often express physical understanding through language outputs.
+% Vision-language-action models further connect perception and language to executable actions, yet they lack an internal predictive model of how the physical world evolves under actions.
+% This motivates a roadmap from LLM-based world knowledge to multimodal grounding, action grounding, and world models that directly learn predictive and simulative knowledge from videos, trajectories, and embodied interactions.
+% We review how multimodal models, action-grounded models, and video, latent, and interactive world models provide the perceptual, actionable, predictive, and simulative substrates for Physical AI.
+% Finally, we discuss the gap between current Physical AI models and robust embodied agents, highlighting challenges in dense physical representation, language-to-action grounding, physical consistency, sim-to-real transfer, closed-loop evaluation, safety, and the reproducibility of closed-source frontier systems.
+% \end{abstract}
+
+
+% \begin{abstract}
+% Physical AI aims to move artificial intelligence from digital reasoning toward perception, prediction, simulation, planning, and action in the physical world.
+% Recent progress has been driven by vision-language models, vision-language-action models, world models, policy learning, and embodied agents.
+% However, existing discussions are often organized from robotics-centric, vision-centric, or cyber-physical perspectives.
+% In this survey, we instead study Physical AI through the lens of \emph{LLM-based world knowledge}.
+% We argue that large language models encode broad semantic, commonsense, procedural, and causal knowledge about the world, making them useful high-level priors for physical reasoning, multimodal grounding, and embodied decision making.
+% LLMs have also been widely used as zero-shot generalizable backbones for multimodal alignment, action grounding, and agentic control.
+% Nevertheless, language-based knowledge is sparse and lossy for dense physical states.
+% It is difficult to directly represent metric and continuous physical quantities such as geometry, motion, contact, force, high-frequency dynamics, and long-horizon temporal evolution through language alone.
+% Vision-language and multimodal models ground LLM-derived world knowledge into perception, but they often express physical understanding through language outputs.
+% Vision-language-action models further connect perception and language to executable actions, yet they do not by themselves provide an internal predictive model of how the physical world evolves under actions.
+% This motivates a roadmap from LLM-based world knowledge to multimodal grounding and action grounding, and further to world models that directly learn predictive and simulative knowledge from videos, trajectories, and embodied interactions.
+% In this roadmap, world models mark a crucial transition beyond LLM-centric backbones by learning physical dynamics in video, latent, and interactive spaces.
+% We review how multimodal models, action-grounded models, and video, latent, and interactive world models jointly provide the perceptual, actionable, predictive, and simulative substrates for Physical AI.
+% We further discuss how current Physical AI models can support robotics, and how far they remain from robust, general-purpose embodied agents in real-world environments.
+% Finally, we identify key challenges in moving from current Physical AI models to deployed systems, including dense physical representation, language-to-action grounding, physical consistency, sim-to-real transfer, closed-loop evaluation, safety, and the reproducibility of closed-source frontier systems.
+% \end{abstract}
+
+
+
+
+
+
+% \begin{abstract}
+% Physical AI aims to move artificial intelligence from digital reasoning toward perception, prediction, simulation, planning, and action in the physical world.
+% Recent progress has been driven by vision-language models, vision-language-action models, world models, policy learning, and embodied agents.
+% However, existing discussions are often organized from robotics-centric, vision-centric, or cyber-physical perspectives.
+% In this survey, we instead study Physical AI through the lens of \emph{LLM-based world knowledge}.
+% We argue that large language models encode broad semantic, commonsense, procedural, and causal knowledge about the world, making them useful high-level priors for physical reasoning, multimodal grounding, and embodied decision making.
+% LLMs have also been widely used as zero-shot generalizable backbones for multimodal alignment, action grounding, and agentic control.
+% Nevertheless, language-based knowledge is sparse and lossy for dense physical states.
+% It is difficult to directly represent metric and continuous physical quantities such as geometry, motion, contact, force, high-frequency dynamics, and long-horizon temporal evolution through language alone.
+% Vision-language and multimodal models ground LLM-derived world knowledge into perception, but they often express physical understanding through language outputs.
+% Vision-language-action models further connect perception and language to executable actions, yet they do not by themselves provide an internal predictive model of how the physical world evolves under actions.
+% This motivates a roadmap from LLM-based world knowledge to multimodal grounding and action grounding, and further to world models that directly learn predictive and simulative knowledge from videos, trajectories, and embodied interactions.
+% In this roadmap, world models mark a crucial transition beyond LLM-centric backbones by learning physical dynamics in video, latent, and interactive spaces.
+% We review how multimodal models, action-grounded models, and video, latent, and interactive world models jointly provide the perceptual, actionable, predictive, and simulative substrates for Physical AI.
+% We further discuss how current Physical AI models can support robotics, and how far they remain from robust, general-purpose embodied agents in real-world environments.
+% Finally, we identify key challenges in moving from current Physical AI models to deployed systems, including dense physical representation, language-to-action grounding, physical consistency, sim-to-real transfer, closed-loop evaluation, safety, and the reproducibility of closed-source frontier systems.
+% \end{abstract}
+
+
+% \begin{abstract}
+% Physical AI aims to move artificial intelligence from digital reasoning toward perception, prediction, simulation, planning, and action in the physical world.
+% Recent progress has been driven by vision-language models, vision-language-action models, world models, policy learning, and embodied agents.
+% However, existing discussions are often organized from robotics-centric, vision-centric, or cyber-physical perspectives.
+% In this survey, we instead study Physical AI through the lens of \emph{LLM-based world knowledge}.
+% We argue that large language models encode broad semantic, commonsense, procedural, and causal knowledge about the world, making them useful high-level priors for physical reasoning, multimodal grounding, and embodied decision making.
+% LLMs have also been widely used as zero-shot generalizable backbones for multimodal alignment, action grounding, and agentic control.
+
+% Nevertheless, language-based knowledge is sparse and lossy for dense physical states.
+% It is difficult to directly represent metric and continuous physical quantities such as geometry, motion, contact, force, high-frequency dynamics, and long-horizon temporal evolution through language alone.
+% This motivates a roadmap from LLM-based world knowledge to multimodal grounding, action grounding, world modeling, policy learning, and embodied agents.
+% We review how vision-language and multimodal models ground LLM-derived world knowledge into perception, how vision-language-action models connect perception and language to executable actions, and how video, latent, and interactive world models provide predictive and simulative substrates for Physical AI.
+% We further discuss how current Physical AI models can support robotics, and how far they remain from robust, general-purpose embodied agents in real-world environments.
+% Finally, we identify key challenges in moving from current physical models to deployed Physical AI systems, including dense physical representation, language-to-action grounding, physical consistency, sim-to-real transfer, closed-loop evaluation, safety, and the reproducibility of closed-source frontier systems.
+
+% This survey studies how world knowledge encoded in large language models can be grounded into perception, prediction, simulation, planning, and action for Physical AI.
+% \end{abstract}
+
+%\begin{abstract}
+% Physical AI aims to move artificial intelligence from digital reasoning toward perception, prediction, simulation, planning, and action in the physical world. 
+% While recent progress has been driven by vision-language models, vision-language-action models, world models, and embodied agents, existing discussions are often organized from robotics-centric, vision-centric, or cyber-physical perspectives. 
+% In this survey, we instead study Physical AI through the lens of \emph{LLM-based world knowledge}. 
+% We argue that large language models encode broad semantic, commonsense, procedural, and causal knowledge about the world, making them useful high-level priors for physical reasoning and embodied decision making. 
+% However, although the LLM has been widely used for the zero-shot generlizibility and world knowledge as a start pretrained model for multimodality or action alignment
+% language-based knowledge is sparse and lossy for dense physical states and hard to direct utilizing Scalar value in physics, such as geometry, motion, contact, force, high-fps and long-horizon dynamics. 
+% This motivates a roadmap from LLM-based world knowledge to multimodal grounding, action grounding, world modeling, policy learning, and embodied agents. 
+% We review how vision-language and multimodal models ground world knowledge from LLM into perception, how vision-language-action models aims for the generlizibility understanding ability and connect perception and language to action, and how video, latent, and interactive world models provide predictive and simulative substrates for Physical AI.  How current physcial AI help the robotics and how far we from the human-level physical AI robotics system with world-knowledge
+% Finally, we discuss key challenges in moving from current physical models to real-world Physical AI systems, including dense physical representation, language-to-action grounding, physical consistency, sim-to-real transfer, closed-loop evaluation, safety, and the reproducibility of closed-source frontier systems.
+% \end{abstract}

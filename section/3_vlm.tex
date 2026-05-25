@@ -1,0 +1,20 @@
+\section{Grounding World Knowledge into Perception}
+\label{sec:vlm-grounding}
+
+To act in the physical world, an AI system must connect language-based world knowledge to perceptual observations. 
+Vision-language models and multimodal large language models provide a first step toward such grounding by aligning language with images, videos, and visual scenes.
+
+\subsection{Vision-Language and Multimodal Models}
+VLMs and MLLMs extend LLMs with visual inputs, allowing them to perform visual question answering, image and video understanding, spatial reasoning, object localization, and instruction grounding. 
+For Physical AI, these capabilities are important because agents must recognize objects, infer scene layouts, understand human instructions, and reason about affordances.
+
+\subsection{Spatial, Temporal, and Affordance Grounding}
+Physical AI requires more than object recognition. 
+It requires understanding where objects are, how they relate spatially, what actions they afford, and how they may change over time. 
+Multimodal grounding enables models to connect language concepts such as ``grasp,'' ``push,'' ``open,'' or ``avoid'' to visual evidence in the environment.
+
+\subsection{The Language Bottleneck for Dense Physical States}
+A major limitation of VLMs is that their outputs are often expressed in language. 
+While language is effective for abstraction and communication, it is a lossy interface for dense physical states. 
+Physical interaction requires representing trajectories, velocities, contact dynamics, occlusion, deformation, uncertainty, and long-horizon temporal evolution. 
+This language bottleneck motivates models that can move beyond description toward action and prediction.

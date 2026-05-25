@@ -1,0 +1,26 @@
+\section{From Models to Physical AI Systems}
+\label{sec:systems}
+
+The roadmap from LLM-based world knowledge to Physical AI ultimately requires deployed systems that can act in real or interactive environments. 
+This section discusses how current models connect to policy learning, embodied agents, robotics, frontier systems, and evaluation.
+
+\subsection{Policy Learning and Embodied Agents}
+Policy learning connects perception, prediction, and action. 
+In Physical AI, policies may be learned from demonstrations, reinforcement learning, offline datasets, synthetic trajectories, or world-model-based simulation. 
+Embodied agents integrate high-level reasoning, multimodal perception, action execution, and feedback to operate in physical or simulated environments.
+
+\subsection{Robotics and the Embodiment Gap}
+Robotics provides a critical testbed for Physical AI, but it also exposes major gaps. 
+Different robots have different bodies, sensors, action spaces, dynamics, and safety constraints. 
+A policy that works for one embodiment may not transfer to another. 
+This embodiment gap limits the generalization of current VLA and world-model-based approaches.
+
+\subsection{Frontier Systems and Closed Models}
+Recent frontier systems demonstrate rapid progress toward agentic and physical capabilities, including LLM agents, computer-use agents, robotics foundation models, and world-model platforms. 
+However, many of these systems are closed-source or partially disclosed, making them difficult to evaluate reproducibly. 
+A survey of Physical AI must therefore consider not only academic models, but also product-level systems that shape the field while lacking standard academic references.
+
+\subsection{Benchmarks and Evaluation}
+Evaluation remains a central challenge. 
+Open-loop language or vision benchmarks are insufficient for Physical AI, which requires closed-loop interaction, physical consistency, task completion, robustness, safety, and generalization across environments and embodiments. 
+Future benchmarks should evaluate not only what a model knows, but how reliably it can ground that knowledge into perception, prediction, planning, and action.
