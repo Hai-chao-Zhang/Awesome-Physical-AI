@@ -1,22 +1,47 @@
 \section{Grounding World Knowledge into Action}
-\label{sec:vla-action}
+\label{sec:vla_action}
 
-Grounding world knowledge into perception is not sufficient for Physical AI. 
-An agent must also transform perception and language instructions into executable actions. 
-Vision-Language-Action models provide a natural interface for this transition.
+Grounding world knowledge into perception allows an agent to understand what is happening in a scene, but Physical AI additionally requires deciding what to do next. Vision-Language-Action (VLA) models address this step by mapping visual observations, embodiment states, and language goals into action outputs. By connecting semantic understanding with actionable control, VLAs provide a key bridge between foundation-model reasoning and physical-world interaction. This section first reviews action space design and policy learning, followed by language-grounded VLA policies, hybrid reasoning-to-action frameworks, and emerging directions toward reliable Physical AI systems.
 
-\subsection{Vision-Language-Action Models}
-VLA models map visual observations and language instructions to action outputs. 
-They can be trained from demonstrations, robot trajectories, teleoperation data, or large-scale embodied datasets. 
-By integrating perception, language, and action, VLA models allow agents to follow instructions and perform physical tasks in embodied environments.
+\noindent\textbf{Action Spaces and Policy Learning.}
+The action space defines how a Physical AI system acts. Depending on the embodiment and task, actions can be represented as poses, joint states, gripper commands, contact targets, waypoints, trajectories, action chunks, or high-level skills. 
+This action representation determines how pretrained world knowledge becomes executable behavior: high-level skills align better with language and planning, while low-level commands provide precise but embodiment-specific control.
 
-\subsection{Action Spaces and Policy Learning}
-Action spaces in Physical AI can take many forms, including discrete actions, continuous controls, end-effector poses, joint commands, waypoints, trajectories, or action tokens. 
-VLA models make physical learning more direct than language-only reasoning because they operate over action-relevant representations. 
-However, policy learning remains difficult due to limited embodied data, diverse robot morphologies, and the need for closed-loop interaction.
+Recent VLA systems instantiate this spectrum through several action interfaces.
+One line discretizes robot actions into tokens, enabling autoregressive prediction with transformer-based VLM backbones, as in RT-2~\cite{zitkovich2023rt} and OpenVLA~\cite{kim2024openvla}; FAST further improves this direction by tokenizing high-frequency action sequences in frequency space, and can be combined with models such as $\pi_0$ to form efficient autoregressive VLA policies~\cite{pertsch2025fast}.
+A second line predicts continuous action chunks or trajectories, following action-chunking and diffusion or flow-based visuomotor policies such as ACT~\cite{act}, $\pi_0$~\cite{black2024pi0}, $\pi_{0.5}$~\cite{physicalintelligence2025pi05}, DexVLA~\cite{wen2025dexvla}, and RDT-1B~\cite{rdt1b2025}.
+A third line spatially structures the action interface beyond raw motor commands.
+SpatialVLA~\cite{qu2025spatialvla} represents actions with adaptive 3D action grids, grounding candidate motions in egocentric coordinates.
+3D-VLA~\cite{zhen2024threedvla} uses 3D interaction tokens to predict task-relevant targets or motion primitives in scene space.
+Such spatial action representations expose geometry to the policy and can improve transfer across objects, scenes, and embodiments.
 
-\subsection{Why VLAs Still Need World Knowledge and World Models}
-Current VLA models are not yet generalist Physical AI systems. 
-They often struggle to generalize across tasks, environments, and embodiments. 
-LLM-based world knowledge can provide high-level task priors and reasoning, while world models can provide predictive and simulative knowledge about physical dynamics. 
-Thus, VLA models are best understood as one layer in a larger roadmap from world knowledge to embodied action.
+
+\noindent\textbf{Grounding Language in Action.}
+Early VLAs asked whether a VLM could act by treating actions like language.
+PaLM-E showed that embodied multimodal representations can support robot reasoning and planning~\cite{driess2023palm}.
+RT-2 made the link to control explicit by co-fine-tuning a pretrained VLM on web-scale vision-language tasks and robot trajectories, representing robot actions as text-like tokens, and de-tokenizing outputs back into commands~\cite{zitkovich2023rt}.
+This matters because semantic and commonsense priors learned from Internet-scale data can be aligned with physical action data.
+
+Scaling this recipe requires broader data and transferable policy interfaces.
+Open X-Embodiment and RT-X standardize data across many robot embodiments~\cite{o2024open}.
+Octo learns an open generalist policy from heterogeneous data~\cite{octo_2023}, and OpenVLA trains on large-scale real robot demonstrations~\cite{kim2024openvla}.
+These models take image observations, proprioception, and language instructions as input, and output action tokens.
+They align well with language-model training, but remain data-dependent and limited in physical resolution, especially for high-frequency motion, contact timing, force control, and recovery.
+
+\noindent\textbf{Reasoning to Action.}
+Recent systems increasingly use hybrid VLA architectures that separate world knowledge and reasoning from motion generation.
+A VLM grounds instructions, object semantics, spatial relations, task history, and commonsense priors, while a specialized policy converts this reasoning into high-frequency actions under embodiment constraints.
+This shifts VLA from action-as-language toward a reasoning-to-control interface for Physical AI.
+
+$\pi_0$ combines a pretrained VLM with a flow-matching action expert~\cite{black2024pi0}, and $\pi_{0.5}$ adds heterogeneous co-training over robot data, web data, and semantic prediction tasks~\cite{physicalintelligence2025pi05}.
+DexVLA uses a VLM with a diffusion expert~\cite{wen2025dexvla}, RDT-1B scales diffusion for bimanual manipulation~\cite{rdt1b2025}, and GR00T N1 combines vision-language reasoning with a diffusion transformer action generator for humanoids~\cite{bjorck2025gr00tn1}.
+TinyVLA~\cite{wen2024tinyvla}, SmolVLA~\cite{shukor2025smolvla}, Xiaomi-Robotics-0~\cite{cai2026xiaomi}, and StarVLA-$\alpha$~\cite{ye2026starvla} show that efficiency and real-time execution are also part of the roadmap.
+The trend is also moving beyond offline imitation.
+$\pi^{*}_{0.6}$ uses reinforcement learning from real deployments with experience and corrective interventions~\cite{intelligence2025pi06vlalearnsexperience}, while MEM adds video and text memory for longer-horizon behavior and adaptation from history~\cite{torne2026mem}.
+
+
+
+\noindent\textbf{Physical AI Roadmap.}
+VLA models provide an action-facing layer for Physical AI, but action prediction alone is not sufficient.
+Even when VLAs use visual-language reasoning to interpret goals, objects, spatial relations, and task history, this reasoning is still coarse and semantic rather than grounded in physical dynamics.
+One potential direction is to connect multimodal LLM world knowledge with physical prediction and control through world models. These models can capture factors that are difficult to describe in language, such as friction, compliance, contact geometry, force, uncertainty, and timing, enabling physically grounded planning, control, and recovery beyond direct data-driven imitation.

@@ -1,38 +1,31 @@
 \section{Introduction}
 
-Large language models (LLMs) such as ChatGPT~\cite{openai2023gpt4}, Gemini~\cite{team2023gemini}, or Claude~\cite{anthropic2024claude35sonnettool}, have rapidly evolved from text generators into general-purpose reasoning engines capable of instruction following, task decomposition, tool use, planning, and agentic interaction with external environments~\citep{brown2020language,wei2022chain}. 
-A key reason behind this transition is that large-scale pretraining and scaling allow LLMs to encode broad forms of \emph{world knowledge}~\cite{hagoort2004integration, arkin1990integrating, schwenk2022okvqa} from textual and multimodal corpora. 
-Such knowledge includes semantic knowledge about objects and events, commonsense knowledge about everyday situations, procedural knowledge about how tasks are performed, and causal knowledge about likely consequences of actions. 
-These forms of knowledge make LLMs promising high-level priors for systems that must reason about, interact with, and eventually act in the physical world, which brings possibility for a generlist physical AI and related topics such as vision and robotics to percept, understand, and execute in the physical world with a frozen LLM.
+Large language models (LLMs), including frontier systems such as GPT-4~\cite{openai2023gpt4}, Gemini~\cite{team2023gemini}, and Claude~\cite{anthropic2024claude35sonnettool}, have evolved from text generators into general-purpose reasoning engines capable of instruction following, task decomposition, tool use, planning, and agentic interaction with external environments~\citep{brown2020language,wei2022chain}. 
+A central reason for this transition is that large-scale pretraining allows LLMs to encode broad forms of \emph{world knowledge}: semantic knowledge about objects and events, commonsense knowledge about everyday situations, procedural knowledge about how tasks are performed, and causal knowledge about likely consequences of actions~\citep{petroni2019language,roberts2020knowledge,kandpal2023longtail,chang2024factualpretraining}. 
+Such knowledge makes LLMs useful high-level priors for systems that must reason about, interact with, and eventually act in the physical world.
 
-However, LLM-based world knowledge that learnt from internet-scale text alone is insufficient for \emph{Physical AI} due to the foundermental limited obersevation from text. 
+However, LLM-based world knowledge alone is insufficient for \emph{Physical AI}. 
 The physical world is dense, continuous, temporal, and governed by geometry, dynamics, contact, force, uncertainty, and embodiment-specific constraints. 
-Language provides a powerful abstraction interface, but it is often too sparse and lossy to represent physical states such as trajectories, velocities, contact dynamics, deformation, occlusion, high-frequency dynamics, and long-horizon temporal evolution. 
-Therefore, the central question is not merely whether LLMs contain world knowledge, but how such knowledge can be grounded into perception, prediction, simulation, planning, policy learning, and real-world action.
+Language provides an effective abstraction interface, but it is too sparse and lossy to represent physical states such as trajectories, velocities, contacts, deformations, occlusions, high-frequency dynamics, and long-horizon temporal evolution. 
+Thus, the key question is not only whether LLMs contain world knowledge, but how such knowledge can be grounded into perception, prediction, simulation, planning, policy learning, and real-world action.
 
-Recent progress in multimodal foundation models has begun to bridge this gap. 
-Vision-language models (VLMs) and multimodal large language models (MLLMs) starting from 
-extend LLMs with visual perception, allowing language-based world knowledge to be grounded into images, videos, scenes, objects, spatial relations, and affordances~\citep{alayrac2022flamingo,liu2023llava,openai2023gpt4v}. 
-This grounding is crucial for Physical AI: an agent must not only know what an object is, but also where it is, how it can be interacted with, and how it may change over time. 
-However, many VLMs still express physical understanding primarily through language outputs. 
-Such outputs are effective for high-level description and reasoning, but remain limited for dense physical prediction, continuous control, and action-conditioned future modeling.
+Vision-language models (VLMs) and multimodal large language models (MLLMs) provide the first step in this grounding process. 
+By connecting language with images, videos, regions, objects, spatial relations, and affordances, they allow LLM-derived world knowledge to become situated in perceptual observations~\citep{alayrac2022flamingo,li2023blip,liu2023llava,team2023gemini}. 
+For Physical AI, this is crucial: an agent must not only know that a glass is fragile or that a handle affords pulling, but must also determine whether the relevant object is present, where it is, and whether the current configuration makes the action feasible. 
+Yet many VLMs still express physical understanding primarily through language outputs. 
+This makes them effective for high-level description and reasoning, but limited for dense physical prediction, continuous control, and action-conditioned future modeling.
 
-
-
-Vision-Language-Action (VLA) models further move from perception and description toward action. 
-By mapping visual observations and language instructions into executable actions, VLAs provide a natural interface between multimodal reasoning and embodied control~\citep{brohan2023rt2,driess2023palm,kim2024openvla}. 
-Compared with pure language or vision-language models, VLA models introduce action spaces that are more suitable for physical learning, imitation, and robot policy optimization. 
-Nevertheless, VLA models alone are not sufficient for general Physical AI. 
-Their action representations are often embodiment-specific, their training data are limited compared with web-scale language and vision corpora, and their generalization across tasks, environments, and robot bodies remains fragile. 
-More importantly, although VLAs connect perception and language to executable actions, they typically lack an internal predictive model of how the physical world evolves under actions. 
-As a result, VLAs still require high-level priors from LLMs and stronger predictive models of physical dynamics.
+Vision-Language-Action (VLA) models move one step further, from perception and description toward executable behavior. 
+By mapping visual observations and language instructions to actions, VLAs provide an action-facing interface between multimodal reasoning and embodied control~\citep{driess2023palm,zitkovich2023rt,kim2024openvla,black2024pi0}. 
+Nevertheless, VLAs alone are not sufficient for general Physical AI. 
+Their action representations are often embodiment-specific, their robot data are limited compared with web-scale language and vision data, and their generalization across tasks, environments, and robot bodies remains fragile. 
+More importantly, although VLAs connect perception and language to action, they typically do not provide an internal predictive model of how the physical world evolves under actions.
 
 This motivates the role of \emph{world models}. 
-In contrast to LLM-based world knowledge, which captures what is semantically, procedurally, or causally plausible, world models aim to predict or simulate how the world evolves over time, especially under actions~\citep{ha2018world,lecun2022path}. 
-They mark a crucial transition beyond purely LLM-centric backbones: instead of only relying on language-encoded priors, world models directly learn predictive and simulative knowledge from videos, trajectories, and embodied interactions. 
-Video world models provide visual imagination and future prediction, while latent world models learn compact predictive representations for planning and control. 
-Interactive and action-conditioned world models further allow agents to reason about counterfactual futures: what would happen if a particular action were taken? 
-In this sense, LLMs and world models play complementary roles: LLMs encode high-level knowledge about what typically happens and what actions may be meaningful, whereas world models estimate what will happen next under physical dynamics.
+In contrast to LLM-based world knowledge, which captures what is semantically, procedurally, or causally plausible, world models aim to predict or simulate what will happen next under physical dynamics~\citep{ha2018world,lecun2022path}. 
+They mark a transition beyond purely LLM-centric backbones: instead of only relying on language-encoded priors, world models directly learn predictive and simulative knowledge from videos, trajectories, and embodied interactions. 
+Video world models provide visual imagination and future prediction; latent world models learn compact predictive representations for planning and control; and interactive or action-conditioned world models allow agents to reason about counterfactual futures before acting. 
+In this sense, LLMs and world models are complementary: LLMs encode high-level knowledge about what typically happens and what actions may be meaningful, whereas world models estimate what is likely to happen next.
 
 In this survey, we study Physical AI through the lens of \emph{LLM-based world knowledge}. 
 We define Physical AI, from a language-centered perspective, as AI systems that ground language-based semantic, commonsense, procedural, and causal knowledge into multimodal perception, physical prediction, simulation, planning, policy learning, and embodied action. 
@@ -42,12 +35,12 @@ Rather than attempting to exhaustively survey all robotics, control, or physical
     \text{LLMs} \rightarrow \text{VLMs/MLLMs} \rightarrow \text{VLAs} \rightarrow \text{World Models} \rightarrow \text{Policy Learning} \rightarrow \text{Embodied Agents}.
 \end{equation}
 
-This roadmap provides a structured way to categorize recent progress in the perspective of world knowledge from LLM to world models, while keeping the survey centered on language and multimodal reasoning. 
+This roadmap keeps the survey centered on language and multimodal reasoning while clarifying how recent Physical AI systems connect to broader embodied intelligence. 
 First, we examine where world knowledge comes from and why LLMs can serve as high-level priors for physical reasoning. 
 Second, we review how VLMs and MLLMs ground such knowledge into perception, and why language remains a bottleneck for dense physical states. 
-Third, we discuss VLA models as a transition from multimodal grounding to executable action, highlighting both their promise and their limitations as generalist physical learners. 
-Fourth, we survey world models, including video world models, latent world models, and interactive or action-conditioned world models, as predictive and simulative substrates for Physical AI. 
-Finally, we discuss the gap between current models and deployable Physical AI systems, covering policy learning, sim-to-real transfer, closed-loop evaluation, safety, reproducibility, and closed-source frontier systems.
+Third, we discuss VLA models as a transition from multimodal grounding to executable action, emphasizing both their promise and their limitations as generalist physical learners. 
+Fourth, we survey world models as predictive and simulative substrates for Physical AI. 
+Finally, we discuss the gap between current models and deployable Physical AI systems, including policy learning, sim-to-real transfer, closed-loop evaluation, safety, reproducibility, and closed-source frontier systems.
 
 To the best of our knowledge, this is the first survey to study Physical AI through the joint lens of LLM-based world knowledge and world models. 
 Our goal is not to provide another general robotics or vision survey, but to clarify how language-derived world knowledge, multimodal grounding, action learning, and predictive simulation can be connected into a coherent roadmap toward Physical AI.
@@ -56,7 +49,7 @@ Our goal is not to provide another general robotics or vision survey, but to cla
 This survey makes the following contributions:
 \begin{itemize}
     \item \textbf{A world-knowledge-centered formulation of Physical AI.}
-    We formulate Physical AI as systems that ground LLM-based world knowledge and/or world-model-based predictive knowledge into perception, prediction, simulation, planning, policy learning, and real-world action.
+    We formulate Physical AI as systems that ground LLM-based world knowledge and world-model-based predictive knowledge into perception, prediction, simulation, planning, policy learning, and real-world action.
 
     \item \textbf{An LLM-centered organization of recent advances.}
     We organize Physical AI from the perspective of LLMs as world-knowledge priors, reasoning engines, and agentic controllers, rather than from a purely vision-centric, robotics-centric, or cyber-physical perspective.
@@ -67,6 +60,76 @@ This survey makes the following contributions:
     \item \textbf{A deployment-oriented discussion of challenges and future directions.}
     We identify key gaps along the roadmap from LLM-based world knowledge to deployable Physical AI, including dense physical representation, language-to-action grounding, long-horizon world modeling, sim-to-real transfer, closed-loop evaluation, safety, reproducibility, and closed-source frontier systems.
 \end{itemize}
+
+% \section{Introduction}
+
+% Large language models (LLMs) such as ChatGPT~\cite{openai2023gpt4}, Gemini~\cite{team2023gemini}, or Claude~\cite{anthropic2024claude35sonnettool}, have rapidly evolved from text generators into general-purpose reasoning engines capable of instruction following, task decomposition, tool use, planning, and agentic interaction with external environments~\citep{brown2020language,wei2022chain}. 
+% A key reason behind this transition is that large-scale pretraining and scaling allow LLMs to encode broad forms of \emph{world knowledge}~\cite{hagoort2004integration, arkin1990integrating, schwenk2022okvqa} from textual and multimodal corpora. 
+% Such knowledge includes semantic knowledge about objects and events, commonsense knowledge about everyday situations, procedural knowledge about how tasks are performed, and causal knowledge about likely consequences of actions. 
+% These forms of knowledge make LLMs promising high-level priors for systems that must reason about, interact with, and eventually act in the physical world, which brings possibility for a generlist physical AI and related topics such as vision and robotics to percept, understand, and execute in the physical world with a frozen LLM.
+
+% However, LLM-based world knowledge that learnt from internet-scale text alone is insufficient for \emph{Physical AI} due to the foundermental limited obersevation from text. 
+% The physical world is dense, continuous, temporal, and governed by geometry, dynamics, contact, force, uncertainty, and embodiment-specific constraints. 
+% Language provides a powerful abstraction interface, but it is often too sparse and lossy to represent physical states such as trajectories, velocities, contact dynamics, deformation, occlusion, high-frequency dynamics, and long-horizon temporal evolution. 
+% Therefore, the central question is not merely whether LLMs contain world knowledge, but how such knowledge can be grounded into perception, prediction, simulation, planning, policy learning, and real-world action.
+
+% Recent progress in multimodal foundation models has begun to bridge this gap. 
+% Vision-language models (VLMs) and multimodal large language models (MLLMs) starting from 
+% extend LLMs with visual perception, allowing language-based world knowledge to be grounded into images, videos, scenes, objects, spatial relations, and affordances~\citep{alayrac2022flamingo,liu2023llava,openai2023gpt4}. 
+% This grounding is crucial for Physical AI: an agent must not only know what an object is, but also where it is, how it can be interacted with, and how it may change over time. 
+% However, many VLMs still express physical understanding primarily through language outputs. 
+% Such outputs are effective for high-level description and reasoning, but remain limited for dense physical prediction, continuous control, and action-conditioned future modeling.
+
+
+
+% Vision-Language-Action (VLA) models further move from perception and description toward action. 
+% By mapping visual observations and language instructions into executable actions, VLAs provide a natural interface between multimodal reasoning and embodied control~\citep{zitkovich2023rt,driess2023palm,kim2024openvla}. 
+% Compared with pure language or vision-language models, VLA models introduce action spaces that are more suitable for physical learning, imitation, and robot policy optimization. 
+% Nevertheless, VLA models alone are not sufficient for general Physical AI. 
+% Their action representations are often embodiment-specific, their training data are limited compared with web-scale language and vision corpora, and their generalization across tasks, environments, and robot bodies remains fragile. 
+% More importantly, although VLAs connect perception and language to executable actions, they typically lack an internal predictive model of how the physical world evolves under actions. 
+% As a result, VLAs still require high-level priors from LLMs and stronger predictive models of physical dynamics.
+
+% This motivates the role of \emph{world models}. 
+% In contrast to LLM-based world knowledge, which captures what is semantically, procedurally, or causally plausible, world models aim to predict or simulate how the world evolves over time, especially under actions~\citep{ha2018world,lecun2022path}. 
+% They mark a crucial transition beyond purely LLM-centric backbones: instead of only relying on language-encoded priors, world models directly learn predictive and simulative knowledge from videos, trajectories, and embodied interactions. 
+% Video world models provide visual imagination and future prediction, while latent world models learn compact predictive representations for planning and control. 
+% Interactive and action-conditioned world models further allow agents to reason about counterfactual futures: what would happen if a particular action were taken? 
+% In this sense, LLMs and world models play complementary roles: LLMs encode high-level knowledge about what typically happens and what actions may be meaningful, whereas world models estimate what will happen next under physical dynamics.
+
+% In this survey, we study Physical AI through the lens of \emph{LLM-based world knowledge}. 
+% We define Physical AI, from a language-centered perspective, as AI systems that ground language-based semantic, commonsense, procedural, and causal knowledge into multimodal perception, physical prediction, simulation, planning, policy learning, and embodied action. 
+% This perspective differs from robotics-centric, vision-centric, or broad cyber-physical views of Physical AI. 
+% Rather than attempting to exhaustively survey all robotics, control, or physical intelligence systems, we organize recent progress as a roadmap from world knowledge to physical agency:
+% \begin{equation}
+%     \text{LLMs} \rightarrow \text{VLMs/MLLMs} \rightarrow \text{VLAs} \rightarrow \text{World Models} \rightarrow \text{Policy Learning} \rightarrow \text{Embodied Agents}.
+% \end{equation}
+
+% This roadmap provides a structured way to categorize recent progress in the perspective of world knowledge from LLM to world models, while keeping the survey centered on language and multimodal reasoning. 
+% First, we examine where world knowledge comes from and why LLMs can serve as high-level priors for physical reasoning. 
+% Second, we review how VLMs and MLLMs ground such knowledge into perception, and why language remains a bottleneck for dense physical states. 
+% Third, we discuss VLA models as a transition from multimodal grounding to executable action, highlighting both their promise and their limitations as generalist physical learners. 
+% Fourth, we survey world models, including video world models, latent world models, and interactive or action-conditioned world models, as predictive and simulative substrates for Physical AI. 
+% Finally, we discuss the gap between current models and deployable Physical AI systems, covering policy learning, sim-to-real transfer, closed-loop evaluation, safety, reproducibility, and closed-source frontier systems.
+
+% To the best of our knowledge, this is the first survey to study Physical AI through the joint lens of LLM-based world knowledge and world models. 
+% Our goal is not to provide another general robotics or vision survey, but to clarify how language-derived world knowledge, multimodal grounding, action learning, and predictive simulation can be connected into a coherent roadmap toward Physical AI.
+
+% \paragraph{Contributions.}
+% This survey makes the following contributions:
+% \begin{itemize}
+%     \item \textbf{A world-knowledge-centered formulation of Physical AI.}
+%     We formulate Physical AI as systems that ground LLM-based world knowledge and/or world-model-based predictive knowledge into perception, prediction, simulation, planning, policy learning, and real-world action.
+
+%     \item \textbf{An LLM-centered organization of recent advances.}
+%     We organize Physical AI from the perspective of LLMs as world-knowledge priors, reasoning engines, and agentic controllers, rather than from a purely vision-centric, robotics-centric, or cyber-physical perspective.
+
+%     \item \textbf{A roadmap from world knowledge to embodied agents.}
+%     We provide a layered roadmap that traces the transition from language-based world knowledge to multimodal grounding, action grounding, world modeling, policy learning, and embodied deployment.
+
+%     \item \textbf{A deployment-oriented discussion of challenges and future directions.}
+%     We identify key gaps along the roadmap from LLM-based world knowledge to deployable Physical AI, including dense physical representation, language-to-action grounding, long-horizon world modeling, sim-to-real transfer, closed-loop evaluation, safety, reproducibility, and closed-source frontier systems.
+% \end{itemize}
 
 
 

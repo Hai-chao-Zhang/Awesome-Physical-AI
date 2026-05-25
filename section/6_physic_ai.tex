@@ -1,26 +1,68 @@
 \section{From Models to Physical AI Systems}
 \label{sec:systems}
 
-The roadmap from LLM-based world knowledge to Physical AI ultimately requires deployed systems that can act in real or interactive environments. 
-This section discusses how current models connect to policy learning, embodied agents, robotics, frontier systems, and evaluation.
+The roadmap from LLM based world knowledge to Physical AI ultimately requires systems that can act in real or interactive environments. 
+While earlier sections focus on representation, reasoning, world modeling, and vision language action models, this section shifts the focus from model capability to system deployment. 
+A deployed Physical AI system must close the loop between perception, planning, and execution. 
+This system level view is important because physical performance is rarely determined by model accuracy alone. 
+Latency, embodiment, sensing, calibration, controller design, recovery behavior, and evaluation protocol all shape whether a model can be used reliably in the physical world \citep{guo2026agenticlab,team2025gemini1,team2025gemini15,brohan2023rt,o2024open}.
 
-\subsection{Policy Learning and Embodied Agents}
-Policy learning connects perception, prediction, and action. 
-In Physical AI, policies may be learned from demonstrations, reinforcement learning, offline datasets, synthetic trajectories, or world-model-based simulation. 
-Embodied agents integrate high-level reasoning, multimodal perception, action execution, and feedback to operate in physical or simulated environments.
+\noindent\textbf{Embodied Agents.}
+Embodied agents connect high level task understanding with physical execution. 
+A typical system may parse an instruction, infer task structure, ground objects and states, choose actions, execute them through policies or controllers, and verify whether the expected outcome has been achieved \citep{guo2026agenticlab,ahn2022saycan,liu2024ok}. 
+This differs from a pure VLA formulation because the action model is only one component of the full system. 
+System performance also depends on state estimation, execution interfaces, controller behavior, online verification, and failure recovery.
 
-\subsection{Robotics and the Embodiment Gap}
-Robotics provides a critical testbed for Physical AI, but it also exposes major gaps. 
-Different robots have different bodies, sensors, action spaces, dynamics, and safety constraints. 
-A policy that works for one embodiment may not transfer to another. 
-This embodiment gap limits the generalization of current VLA and world-model-based approaches.
+Many embodied agents therefore use modular interfaces between reasoning and control. 
+High level modules may operate over language, symbolic states, object relations, keypoint constraints, value maps, or robot programs, while low level modules execute motion primitives, grasp planners, visuomotor policies, or controllers \citep{huang2025rekep,huang2023voxposer,liang2023codeaspolicies,shen2026tiptop}. 
+This modularity can make long horizon behavior easier to specify and diagnose, but it also raises interface design questions. 
+The system must decide what information should be passed between modules, how uncertainty should be handled, and when the agent should replan instead of continuing execution.
 
-\subsection{Frontier Systems and Closed Models}
-Recent frontier systems demonstrate rapid progress toward agentic and physical capabilities, including LLM agents, computer-use agents, robotics foundation models, and world-model platforms. 
-However, many of these systems are closed-source or partially disclosed, making them difficult to evaluate reproducibly. 
-A survey of Physical AI must therefore consider not only academic models, but also product-level systems that shape the field while lacking standard academic references.
+\noindent\textbf{Robotics and the Embodiment Gap.}
+Robotics exposes Physical AI models to real sensing, contact, dynamics, actuation limits, and safety constraints. 
+It also reveals the embodiment gap. 
+Robots differ in morphology, degrees of freedom, sensor placement, camera viewpoints, control frequency, gripper design, compliance, and workspace constraints. 
+A policy that works for one embodiment may fail on another even when the language instruction and visual scene appear similar.
 
-\subsection{Benchmarks and Evaluation}
-Evaluation remains a central challenge. 
-Open-loop language or vision benchmarks are insufficient for Physical AI, which requires closed-loop interaction, physical consistency, task completion, robustness, safety, and generalization across environments and embodiments. 
-Future benchmarks should evaluate not only what a model knows, but how reliably it can ground that knowledge into perception, prediction, planning, and action.
+This gap makes generalization in Physical AI different from generalization in language or vision. 
+A language model can process text through a shared token interface, and a vision model can process images after standard preprocessing. 
+In contrast, a robot's action space is tied to its body. 
+The same task may require different grasps, trajectories, contact strategies, and recovery behaviors across embodiments. 
+Large scale robot learning efforts and cross embodiment datasets directly target this issue, but they also show how difficult it is to scale physical data across platforms \citep{brohan2023rt,zitkovich2023rt,o2024open,team2025gemini1,team2025gemini15,liu2023llm}.
+
+Deployment further depends on the non model parts of the robotic stack. 
+Calibration errors, controller delay, camera synchronization, tactile drift, object pose uncertainty, and hardware wear can dominate observed failures. 
+For this reason, a system that performs well in offline prediction may still fail in real execution. 
+Physical AI papers should therefore report not only model metrics, but also system conditions such as sensors, action interface, control frequency, reset protocol, recovery policy, and human intervention rules.
+
+\noindent\textbf{Deployment and System Integration.}
+A central challenge is the transition from offline evaluation to interactive deployment. 
+Offline evaluation measures whether a model predicts the right label, plan, action, or future observation under a fixed dataset. 
+Interactive deployment measures whether the system can use these predictions to make progress in the world. 
+The two are related but not equivalent. 
+Open loop accuracy may hide compounding errors, poor recovery, latency, or sensitivity to small state deviations.
+
+Robust deployment requires closed loop monitoring. 
+The system must observe the environment, execute an action, check the outcome, and update its plan when reality deviates from expectation. 
+This makes verification and recovery central components of Physical AI systems rather than optional add-ons. 
+Recent systems explore this direction through real world agent platforms, open vocabulary planning, grounded decoding, and deployment oriented action reasoning models \citep{guo2026agenticlab,huang2023grounded,shen2026tiptop,fang2026molmoact2}.
+
+Another key design choice is the interface between learned models and controllers. 
+Frontier models may output language plans, waypoints, object constraints, value maps, latent actions, or robot code. 
+Robots, however, execute joint targets, end effector poses, gripper commands, torques, or controller references. 
+A useful interface should be expressive enough for diverse tasks, but constrained enough for stable execution. 
+This is why many Physical AI systems combine learned perception and reasoning with planning, optimization, motion generation, or feedback control \citep{huang2025rekep,huang2023voxposer,liu2024ok,wu2023tidybot,zhang2024dkprompt}.
+
+\noindent\textbf{Benchmarks and Evaluation.}
+Evaluation remains a central challenge for Physical AI. 
+Static language and vision benchmarks measure recognition, reasoning, or prediction under fixed inputs, but Physical AI requires evaluation under interaction. 
+A benchmark should test whether a system can ground knowledge into perception, planning, execution, and recovery, not only whether it can answer questions or predict actions offline \citep{srivastavabehavior,li2023behavior,liigibson,shen2021igibson,li2024embodied,yang2025embodiedbench}.
+
+Closed loop execution is especially important. 
+Open loop action prediction is useful for model development, but it cannot capture compounding error, contact dynamics, safety failures, or recovery behavior. 
+Benchmarks should therefore report task completion, failure modes, intervention counts, robustness to perturbations, and generalization across objects, scenes, instructions, initial states, and embodiments \citep{liu2023libero,fei2025libero,zhou2025libero,fang2026molmoact2}.
+
+Recent benchmark efforts also move toward larger scale and more systematic evaluation in simulation and realistic household environments. 
+These benchmarks make it possible to study task diversity, environment variation, multi task learning, and robustness under controlled protocols \citep{zhu2020robosuite,nasiriany2024robocasa,nasiriany2026robocasa365,yang2026robolab}. 
+However, real robot evaluation remains necessary because small implementation details can change performance substantially. 
+Overall, progress in Physical AI requires a shift from model centric evaluation to system centric evaluation, where systems are compared by what they can reliably do in the world, not only by what they can predict from static inputs.

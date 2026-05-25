@@ -1,29 +1,177 @@
+% \section{World Models for Physical AI}
+% \label{sec:world-models}
+% While the VLA limited by the language bottleneck and catasphoric forgetting of world knowledge learnt during language backbone pretraining, some recent work find that training a model from scratch might better for action ~\cite{zhang2026vlm4vla, gao2026vla}
+% some recent SOTA VLA like $\pi_{0.7}$~\cite{intelligence2026pi} even start to embed a world model inside VLA architecture. These works in turn proves the road from the parallel prediction from languge-bottleneck into the world models to train a foundation model from scratch to learn physcial AI.
+% However, VLA mosty focus on robotics control and action prediction, which only serve as a small part of physical AI. A vision-only and self-supervised 
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Different from the action-based model extract knowledge inside LLM backbone, the world model aims to predict the future directly based on on the observation to learn the world knowledge containing the physical AI , we based on the state to represent the observation and prediction to divide the world model into a few catgories, in specific the video and latent world model.  
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% World models provide predictive and simulative substrates for Physical AI. 
+% While LLMs encode high-level world knowledge, world models aim to predict how states evolve over time, especially under actions. 
+% They are therefore essential for planning, counterfactual reasoning, simulation, and policy learning.
+
+% \subsection{Video World Models}
+% Video world models generate or predict future visual observations. Relying on the massive progress on video generation and prediction, the video world models predict pixels of future frames by reusing previous efforts on video generation to learn the physical AI inside the physical worlds
+
+% They can support visual imagination, future prediction, synthetic data generation, and interactive simulation. 
+% For Physical AI, video world models are useful because they provide a visual interface for modeling temporal evolution and possible future outcomes. 
+% However, photorealistic generation does not necessarily imply physical correctness. 
+% A useful world model for Physical AI must support temporal consistency, controllability, action conditioning, and physically plausible dynamics.
+
+% \subsection{Latent World Models}
+% Latent world models predict future states in a learned representation space rather than directly generating pixels. 
+% Relying on predicting pixels needs too much time for denoisng steps and model capabilitgy for the fine-grained visual details.
+% This makes them more efficient for planning and control, since they can focus on task-relevant dynamics instead of reconstructing every visual detail. 
+% Latent predictive models are especially promising for embodied agents that require fast simulation, long-horizon planning, and policy optimization.
+
+% \subsection{Interactive and Action-Conditioned World Models}
+% Action-conditioned world models predict how the environment changes in response to possible actions. 
+% This capability is central to Physical AI because agents must evaluate counterfactual futures before acting. 
+% Interactive world models can be used for planning, policy learning, simulation-based training, and safety evaluation.
+
+% \subsection{World Knowledge vs. World Models}
+% LLM-based world knowledge and world models are complementary. 
+% LLMs encode semantic, commonsense, procedural, and causal priors about what usually happens and what actions may be meaningful. 
+% World models estimate what will happen next under physical dynamics. 
+% In short, LLMs provide knowledge about the world, while world models directly provide predictive physical AI mechanisms for the world.
+% Some works start to merge this two, such as ThinkJEPA or CosMos , they embed a llm to provide world knowledge and help world model better help  future world
+% While others like $\pi_{0.7}$~\cite{intelligence2026pi}  try to use world model to provide a goal taht suit  physcial AI to  embed a world model for better learn world knowledge.
+
 \section{World Models for Physical AI}
 \label{sec:world-models}
 
-World models provide predictive and simulative substrates for Physical AI. 
-While LLMs encode high-level world knowledge, world models aim to predict how states evolve over time, especially under actions. 
-They are therefore essential for planning, counterfactual reasoning, simulation, and policy learning.
+The previous sections describe how LLMs provide high-level world knowledge, how VLMs ground this knowledge into perception, and how VLAs connect perception and language to executable actions. 
+However, VLA models alone are not sufficient for general Physical AI. 
+Even when they align language, observations, and actions, they often lack an internal predictive model of how the physical world evolves under actions. 
+This motivates a transition from using LLMs as semantic priors toward learning \emph{world models} that directly acquire predictive and simulative knowledge from videos, trajectories, and embodied interactions.
 
-\subsection{Video World Models}
-Video world models generate or predict future visual observations. 
-They can support visual imagination, future prediction, synthetic data generation, and interactive simulation. 
-For Physical AI, video world models are useful because they provide a visual interface for modeling temporal evolution and possible future outcomes. 
-However, photorealistic generation does not necessarily imply physical correctness. 
-A useful world model for Physical AI must support temporal consistency, controllability, action conditioning, and physically plausible dynamics.
+We use \emph{world model} to refer to a model that predicts or simulates future observations, latent states, rewards, values, or action consequences from current states and possible actions. 
+This definition distinguishes world models from LLM-based world knowledge. 
+LLMs encode semantic, commonsense, procedural, and causal priors about what usually happens and what actions may be meaningful; world models estimate what will happen next under physical dynamics. 
+In short, LLMs provide knowledge about the world, while world models provide predictive mechanisms for acting in the world. 
+This idea has a long history in model-based learning and control: early neural world models learned compressed spatial-temporal representations for agents~\citep{ha2018world}, latent dynamics models such as PlaNet and Dreamer learned to plan and act through latent imagination~\citep{hafner2019planet,hafner2020dreamer,hafner2023dreamerv3}, and MuZero showed that decision-centric models can support planning by predicting value, reward, and policy-relevant quantities without explicitly reconstructing observations~\citep{schrittwieser2020mastering}.
+For Physical AI, recent world models can be organized by their prediction target and interaction interface. 
 
-\subsection{Latent World Models}
-Latent world models predict future states in a learned representation space rather than directly generating pixels. 
-This makes them more efficient for planning and control, since they can focus on task-relevant dynamics instead of reconstructing every visual detail. 
-Latent predictive models are especially promising for embodied agents that require fast simulation, long-horizon planning, and policy optimization.
+\noindent\textbf{Video-space world models} generate or predict future visual observations, providing an intuitive interface for visual imagination, synthetic data generation, and future scene simulation. 
+Examples include generative driving and real-world simulators such as GAIA-1 and UniSim, as well as interactive environment models such as Genie~\citep{hu2023gaia,yang2023unisim,bruce2024genie}. 
+Cosmos further frames world foundation models as general-purpose world models that can be adapted for Physical AI applications such as robotics, autonomous driving, and synthetic data generation~\citep{agarwal2025cosmos}. 
+However, photorealistic video generation is not sufficient for Physical AI: a useful video world model must support temporal consistency, controllability, action conditioning, and physically plausible dynamics.
 
-\subsection{Interactive and Action-Conditioned World Models}
-Action-conditioned world models predict how the environment changes in response to possible actions. 
-This capability is central to Physical AI because agents must evaluate counterfactual futures before acting. 
-Interactive world models can be used for planning, policy learning, simulation-based training, and safety evaluation.
+\noindent\textbf{Latent world models} predict future states in representation space rather than reconstructing pixels. 
+This is important because dense video generation can be computationally expensive and may waste capacity on details irrelevant to control. 
+Latent models instead focus on task-relevant dynamics for efficient planning, policy learning, and long-horizon imagination. 
+Beyond latent dynamics in model-based reinforcement learning, JEPA-style predictive architectures argue for learning world models in representation space~\citep{lecun2022path,assran2023ijepa,bardes2024vjepa}. 
+Recent V-JEPA 2 further connects self-supervised video representation learning with robot planning by post-training an action-conditioned latent world model from robot trajectories~\citep{assran2025vjepa2}. 
 
-\subsection{World Knowledge vs. World Models}
-LLM-based world knowledge and world models are complementary. 
-LLMs encode semantic, commonsense, procedural, and causal priors about what usually happens and what actions may be meaningful. 
-World models estimate what will happen next under physical dynamics. 
-In short, LLMs provide knowledge about the world, while world models provide predictive mechanisms for the world.
+\noindent\textbf{Interactive and action-conditioned world models} are the most directly relevant to Physical AI because embodied agents must evaluate counterfactual futures before acting. 
+Instead of passively predicting what may happen next, these models ask what would happen if a particular action were taken. 
+This capability supports planning, policy learning, simulation-based training, safety evaluation, and recovery. 
+It also clarifies why world models are complementary to VLAs: VLAs provide an action-facing interface, while world models provide the predictive substrate needed to evaluate actions before execution. 
+The long-term challenge is therefore to connect LLM-derived world knowledge, multimodal grounding, VLA-style action interfaces, and world-model-based prediction into embodied agents that can act reliably in real or interactive environments.
+
+
+% \section{World Models for Physical AI}
+% \label{sec:world-models}
+
+% The previous sections show that LLMs, VLMs, and VLAs provide increasingly grounded interfaces for Physical AI: LLMs encode high-level world knowledge, VLMs ground such knowledge into perception, and VLAs connect perception and language to executable actions. 
+% However, action prediction alone is not sufficient for general Physical AI. 
+% Even when VLA models align language, visual observations, and robot actions, they often lack an internal predictive model of how the physical world evolves under actions. 
+% This limitation motivates the transition from using LLMs as semantic priors to learning \emph{world models} that directly acquire predictive and simulative knowledge from observations, videos, trajectories, and embodied interactions.
+
+% In this survey, we use \emph{world model} to refer to a predictive or simulative model that estimates future states, observations, rewards, values, or action consequences from current observations and possible actions. 
+% Unlike LLM-based world knowledge, which captures what is semantically, procedurally, or causally plausible, world models estimate what is likely to happen next under physical dynamics. 
+% Formally, a world model may learn future observations $p(o_{t+1:t+H}\mid o_{\leq t}, a_{t:t+H})$, future latent states $p(z_{t+1:t+H}\mid z_{\leq t}, a_{t:t+H})$, or decision-relevant quantities such as reward, value, or policy predictions. 
+% This distinction is central to our roadmap: LLMs provide knowledge about the world, while world models provide predictive mechanisms for acting in the world.
+
+% World modeling has a long history in model-based reinforcement learning and planning. 
+% Early frameworks such as Dyna integrated learning, planning, and acting through learned transition models~\citep{sutton1991dyna}. 
+% Neural world models later learned compressed spatial and temporal representations of environments for control~\citep{ha2018world}. 
+% PlaNet learned latent dynamics for planning from image observations~\citep{hafner2019planet}, while Dreamer and its successors improved policies through latent imagination across increasingly diverse domains~\citep{hafner2020dreamer,hafner2021dreamerv2,hafner2023dreamerv3}. 
+% MuZero showed that decision-centric models can support planning by predicting value, reward, and policy-relevant quantities without reconstructing full observations or knowing the environment dynamics~\citep{schrittwieser2020mastering}. 
+% For Physical AI, these works establish the core principle that agents should not only react to observations, but also imagine, evaluate, and plan over possible futures.
+
+% \subsection{Video-Space World Models}
+% \label{sec:video-world-models}
+
+% Video-space world models generate or predict future visual observations. 
+% They provide an intuitive interface for Physical AI because videos expose temporal evolution, object motion, scene changes, and possible future outcomes. 
+% Earlier action-conditioned video prediction models studied how future frames can be predicted from visual observations and actions~\citep{oh2015action}. 
+% More scalable video generation approaches, such as VideoGPT and SimVP, further show how spatiotemporal patterns can be modeled through discrete video tokens, convolutional predictors, or transformer-style sequence models~\citep{yan2021videogpt,gao2022simvp}. 
+
+% Recent generative world models extend video prediction toward controllable and interactive simulation. 
+% GAIA-1 models autonomous-driving scenarios from video, text, and action inputs, allowing controllable generation of future driving scenes~\citep{hu2023gaia}. 
+% UniSim learns an interactive real-world simulator from heterogeneous datasets, simulating visual outcomes of high-level instructions and low-level controls, and using the learned simulator to train policies~\citep{yang2023unisim}. 
+% Genie learns generative interactive environments from unlabelled Internet videos and induces a latent action space that enables frame-by-frame interaction~\citep{bruce2024genie}. 
+% Cosmos further positions world foundation models as general-purpose models that can be adapted into customized world models for Physical AI, with applications in robotics, autonomous driving, and synthetic data generation~\citep{agarwal2025cosmos}. 
+
+% For Physical AI, video-space world models are useful because they support visual imagination, future prediction, synthetic data generation, and interactive simulation. 
+% However, photorealistic generation does not by itself imply physical correctness. 
+% A video model becomes useful as a physical world model only when it supports temporal consistency, controllability, action conditioning, object permanence, causal interaction, and physically plausible dynamics. 
+% Thus, video-space models should be evaluated not only by visual realism, but also by whether their generated futures are useful for planning, policy learning, and closed-loop decision making.
+
+% \subsection{Latent and Representation-Space World Models}
+% \label{sec:latent-world-models}
+
+% Latent world models predict future states in a learned representation space rather than directly reconstructing pixels. 
+% This design is especially important for Physical AI because pixel-level generation can be computationally expensive and may waste capacity on visual details that are irrelevant to control. 
+% Latent dynamics models, such as PlaNet and Dreamer, compress observations into latent states and perform prediction, planning, or policy improvement in this compact space~\citep{hafner2019planet,hafner2020dreamer,hafner2023dreamerv3}. 
+% Such models can support long-horizon imagination and efficient control because they focus on task-relevant dynamics rather than full image reconstruction.
+
+% A related line of work learns predictive representations without generating pixels. 
+% LeCun's JEPA proposal argues for predictive architectures that model the world in representation space rather than through purely generative reconstruction~\citep{lecun2022path}. 
+% I-JEPA predicts representations of masked image regions from context blocks~\citep{assran2023ijepa}, and V-JEPA extends this principle to video by predicting masked spatiotemporal regions in latent space~\citep{bardes2024vjepa}. 
+% V-JEPA 2 further connects self-supervised video learning with planning and robot control by pretraining from large-scale video and post-training an action-conditioned latent world model with robot trajectories~\citep{assran2025vjepa2}. 
+% These models are especially aligned with Physical AI because they learn from observation at scale while avoiding the need to reconstruct every visual detail.
+
+% Latent world models therefore occupy a middle ground between semantic world knowledge and low-level control. 
+% Compared with LLMs, they are more grounded in temporal and visual dynamics. 
+% Compared with pixel-level video models, they are more efficient for planning and policy learning. 
+% Their main limitations are interpretability, grounding to executable actions, and the difficulty of verifying whether latent predictions are physically correct rather than merely useful for downstream tasks.
+
+% \subsection{Action-Conditioned and Interactive World Models}
+% \label{sec:interactive-world-models}
+
+% Physical AI requires more than predicting what happens next under passive observation. 
+% An embodied agent must ask counterfactual questions: what would happen if I push, grasp, move, turn, stop, or replan? 
+% Action-conditioned world models address this requirement by predicting future observations, latent states, or decision-relevant quantities conditioned on candidate actions. 
+% This capability makes world models useful for planning, policy learning, simulation-based training, safety evaluation, and failure recovery.
+
+% The model-based reinforcement learning tradition already uses learned dynamics for action selection and policy improvement~\citep{sutton1991dyna,janner2019trust,hafner2020dreamer}. 
+% MuZero provides a decision-centric example: instead of reconstructing observations, it learns a model that supports planning through predicted rewards, values, and policies~\citep{schrittwieser2020mastering}. 
+% In more visually grounded settings, GAIA-1, UniSim, Genie, V-JEPA 2-AC, and Cosmos-style world foundation models extend action conditioning and controllability toward realistic video or latent simulations~\citep{hu2023gaia,yang2023unisim,bruce2024genie,assran2025vjepa2,agarwal2025cosmos}. 
+% These models are particularly relevant to Physical AI because they can generate possible futures before an agent commits to real-world actions.
+
+% Interactive world models also expose a key difference between world models and ordinary video generation. 
+% A passive video generator may produce plausible future frames, but an interactive world model must respond coherently to actions and preserve causal structure across rollouts. 
+% For robotics, this means modeling contacts, object state changes, recovery behavior, and embodiment constraints. 
+% For autonomous driving, it means generating controllable futures under ego-vehicle actions and dynamic agents. 
+% For general embodied agents, it means enabling closed-loop reasoning over multiple possible futures.
+
+% \subsection{Hybrid Language-Guided World Models}
+% \label{sec:hybrid-world-models}
+
+% Although world models mark a transition beyond purely LLM-centric backbones, they do not make language-based world knowledge irrelevant. 
+% LLMs and VLMs can provide semantic guidance, task context, causal priors, and long-horizon intent, while latent or video world models provide dense predictive dynamics. 
+% This motivates hybrid architectures that combine high-level language or vision-language reasoning with low-level predictive modeling.
+
+% Recent work begins to explore this direction. 
+% For example, ThinkJEPA studies how a large vision-language reasoning model can guide a JEPA-style latent world model, combining dense-frame dynamics modeling with long-horizon semantic guidance~\citep{zhang2026thinkjepa}. 
+% This kind of architecture matches the central thesis of our survey: LLMs and VLMs are strong sources of world knowledge, but dense physical prediction requires world models that learn directly from videos, trajectories, and interactions. 
+% Rather than replacing one with the other, Physical AI may require a division of labor: language models provide semantic and causal priors, while world models provide predictive and simulative mechanisms.
+
+% \subsection{World Knowledge vs. World Models}
+% \label{sec:knowledge-vs-models}
+
+% The distinction between world knowledge and world models clarifies the role of this section in our roadmap. 
+% LLM-based world knowledge is broad, semantic, and often language-mediated: it captures what objects are, what actions are meaningful, what procedures are likely, and what causal outcomes are plausible. 
+% World models are predictive, temporal, and interaction-centered: they estimate how states evolve, how actions change the environment, and what future outcomes may occur. 
+% In short, LLMs help an agent reason about what should be done, while world models help the agent predict what will happen if it acts.
+
+% This complementarity also explains why VLA models alone are not enough. 
+% VLA models provide an action-facing interface, but they often learn policies without explicitly modeling counterfactual futures. 
+% World models provide the missing predictive substrate for planning, simulation, recovery, and safety. 
+% For Physical AI, the long-term challenge is therefore to connect LLM-derived world knowledge, multimodal grounding, VLA-style action interfaces, and world-model-based prediction into embodied agents that can act reliably in real or interactive environments.

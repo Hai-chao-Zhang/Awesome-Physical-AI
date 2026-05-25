@@ -1,0 +1,336 @@
+\section{Supplementary Material}
+\label{app:supplementary}
+
+This appendix expands the roadmap and taxonomy used in the main paper. 
+The main paper focuses on the conceptual transition from LLM-based world knowledge to Physical AI under the page limit. 
+Here we provide additional scope boundaries, comparisons with existing surveys, extended taxonomy tables, benchmark organization, frontier-system examples, and failure modes.
+
+\section{Scope and Boundary of the Survey}
+\label{app:scope}
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{p{0.18\linewidth}p{0.34\linewidth}p{0.36\linewidth}}
+\toprule
+Roadmap Component & Included in This Survey & Not Exhaustively Covered \\
+\midrule
+LLM-based world knowledge 
+& Semantic, commonsense, procedural, causal, spatial, and affordance priors encoded in LLMs~\citep{petroni2019language,roberts2020knowledge,kandpal2023longtail,chang2024factualpretraining}
+& General factual recall or knowledge editing unrelated to physical reasoning \\
+\midrule
+Multimodal grounding 
+& VLMs/MLLMs that ground language-derived knowledge into images, videos, regions, objects, spatial relations, and affordances~\citep{alayrac2022flamingo,li2023blip,liu2023llava,team2023gemini}
+& Generic image captioning, VQA, or multimodal dialogue not related to physical grounding \\
+\midrule
+Action grounding 
+& VLA models, action representations, policy learning, and language-conditioned embodied control~\citep{driess2023palm,zitkovich2023rt,kim2024openvla,black2024pi0}
+& Classical robot control, motion planning, or manipulation algorithms without foundation-model grounding \\
+\midrule
+World models 
+& Video, latent, interactive, and action-conditioned models that support prediction, simulation, planning, or policy learning~\citep{ha2018world,hafner2019planet,hafner2020dreamer,schrittwieser2020mastering,agarwal2025cosmos}
+& All video generation, all simulators, or all model-based RL methods outside the Physical AI roadmap \\
+\midrule
+Embodied systems 
+& Systems that close the loop between perception, planning, execution, recovery, and evaluation~\citep{team2025gemini1,team2025gemini15,bjorck2025gr00tn1,intelligence2026pi}
+& Hardware-specific robot engineering and domain-specific control stacks \\
+\bottomrule
+\end{tabular}
+\caption{Scope boundary of this survey. We organize Physical AI as a roadmap from LLM-based world knowledge to grounded perception, action, world modeling, and embodied deployment, rather than as an exhaustive survey of all robotics or physical intelligence.}
+\label{tab:scope-boundary}
+\end{table*}
+
+\section{Comparison with Existing Surveys}
+\label{app:survey-comparison}
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{p{0.20\linewidth}p{0.20\linewidth}p{0.13\linewidth}p{0.13\linewidth}p{0.13\linewidth}p{0.13\linewidth}}
+\toprule
+Survey Type & Main Focus & LLM World Knowledge & VLA / Action Grounding & World Models & Deployment / Closed Systems \\
+\midrule
+Broad Physical AI / PAI surveys~\citep{li2023physicalai,dewi2025systematicphysicalai}
+& Concepts, applications, industrial systems, and cyber-physical perspectives
+& Limited
+& Partial
+& Limited
+& Partial \\
+\midrule
+Vision-centric Generative Physical AI~\citep{liu2025generative}
+& Physics-aware generation, visual simulation, and physically grounded computer vision
+& Limited
+& Limited
+& Partial
+& Partial \\
+\midrule
+VLA and robot foundation model surveys
+& Robot policies, action representations, and embodied control
+& Partial
+& Strong
+& Limited
+& Partial \\
+\midrule
+World model surveys
+& Prediction, latent dynamics, model-based RL, simulation, and planning
+& Limited
+& Partial
+& Strong
+& Partial \\
+\midrule
+Ours
+& Roadmap from LLM-based world knowledge to Physical AI
+& Strong
+& Strong
+& Strong
+& Strong \\
+\bottomrule
+\end{tabular}
+\caption{Comparison with existing survey perspectives. Our survey differs by using LLM-based world knowledge as the organizing lens and connecting it to multimodal grounding, VLA-style action interfaces, world models, and deployable Physical AI systems.}
+\label{tab:survey-comparison}
+\end{table*}
+
+\section{Extended Roadmap Taxonomy}
+\label{app:roadmap-taxonomy}
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{p{0.15\linewidth}p{0.22\linewidth}p{0.30\linewidth}p{0.23\linewidth}}
+\toprule
+Stage & Main Representation & Role in Physical AI & Representative Works \\
+\midrule
+LLM-based world knowledge 
+& Textual and parametric knowledge
+& Semantic, commonsense, procedural, causal, spatial, and affordance priors
+& LAMA, closed-book QA, factual recall, procedural knowledge~\citep{petroni2019language,roberts2020knowledge,kandpal2023longtail,ruis2025procedural} \\
+\midrule
+Multimodal grounding 
+& Image/video-language representations
+& Ground world knowledge into objects, scenes, spatial relations, temporal events, and affordances
+& CLIP, Flamingo, BLIP-2, LLaVA, Gemini~\citep{radford2021learning,alayrac2022flamingo,li2023blip,liu2023llava,team2023gemini} \\
+\midrule
+Action grounding 
+& Action tokens, trajectories, chunks, skills, or continuous controls
+& Map perception and language instructions to executable actions
+& PaLM-E, RT-2, OpenVLA, $\pi_0$, $\pi_{0.5}$~\citep{driess2023palm,zitkovich2023rt,kim2024openvla,black2024pi0,physicalintelligence2025pi05} \\
+\midrule
+World modeling 
+& Future pixels, latent states, rewards, values, or action-conditioned transitions
+& Predict and simulate possible futures for planning, policy learning, and counterfactual reasoning
+& World Models, Dreamer, MuZero, Genie, Cosmos, V-JEPA~\citep{ha2018world,hafner2020dreamer,schrittwieser2020mastering,bruce2024genie,agarwal2025cosmos,bardes2024vjepa} \\
+\midrule
+Policy learning 
+& Learned policies, action experts, diffusion/flow policies, or controllers
+& Convert perception, reasoning, and prediction into behavior
+& ACT, diffusion/flow-based VLAs, FAST, GR00T N1~\citep{act,pertsch2025fast,bjorck2025gr00tn1,rdt1b2025} \\
+\midrule
+Embodied deployment 
+& Closed-loop systems with sensing, planning, execution, verification, and recovery
+& Evaluate whether models can reliably act in real or interactive environments
+& Gemini Robotics, RoboCasa, LIBERO, EmbodiedBench~\citep{team2025gemini1,team2025gemini15,nasiriany2024robocasa,liu2023libero,yang2025embodiedbench} \\
+\bottomrule
+\end{tabular}
+\caption{Extended taxonomy of the roadmap from LLM-based world knowledge to Physical AI. Each stage corresponds to a different representational interface and a different role in grounding knowledge into physical action.}
+\label{tab:roadmap-taxonomy}
+\end{table*}
+
+\section{Extended Taxonomy of World Models}
+\label{app:world-models}
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{p{0.17\linewidth}p{0.24\linewidth}p{0.30\linewidth}p{0.19\linewidth}}
+\toprule
+Category & Prediction Target & Role in Physical AI & Representative Works \\
+\midrule
+Classical / model-based RL world models 
+& Future states, rewards, values, or policy-relevant quantities
+& Planning, latent imagination, decision making, and policy improvement
+& World Models, PlaNet, Dreamer, DreamerV3, MuZero~\citep{ha2018world,hafner2019planet,hafner2020dreamer,hafner2023dreamerv3,schrittwieser2020mastering} \\
+\midrule
+Video-space world models 
+& Future pixels, frames, or video tokens
+& Visual imagination, future scene prediction, synthetic data, and simulated experience
+& GAIA-1, UniSim, Genie, Cosmos~\citep{hu2023gaia,yang2023unisim,bruce2024genie,agarwal2025cosmos} \\
+\midrule
+Latent / representation-space world models
+& Future latent states, embeddings, or masked spatiotemporal representations
+& Efficient long-horizon prediction, compact planning, and control-relevant representation learning
+& PlaNet, Dreamer, I-JEPA, V-JEPA, V-JEPA 2~\citep{hafner2019planet,hafner2020dreamer,assran2023ijepa,bardes2024vjepa,assran2025vjepa2} \\
+\midrule
+Interactive / action-conditioned world models
+& Future observations or latent states conditioned on candidate actions
+& Counterfactual reasoning, simulation-based policy learning, safety evaluation, and recovery
+& MuZero, UniSim, Genie, GAIA-1, V-JEPA 2, Cosmos~\citep{schrittwieser2020mastering,yang2023unisim,bruce2024genie,hu2023gaia,assran2025vjepa2,agarwal2025cosmos} \\
+\midrule
+World foundation models for Physical AI
+& General-purpose predictive or generative world representations
+& Adaptable substrate for robotics, autonomous driving, embodied agents, and synthetic data
+& Cosmos, Genie-style models, V-JEPA-style models~\citep{agarwal2025cosmos,bruce2024genie,bardes2024vjepa,assran2025vjepa2} \\
+\bottomrule
+\end{tabular}
+\caption{Extended taxonomy of world models for Physical AI. The categories are organized by prediction target and their function in the roadmap from LLM-based world knowledge to embodied action.}
+\label{tab:world-model-taxonomy}
+\end{table*}
+
+\section{Benchmarks and Evaluation Protocols}
+\label{app:evaluation}
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{p{0.15\linewidth}p{0.23\linewidth}p{0.30\linewidth}p{0.22\linewidth}}
+\toprule
+Roadmap Stage & Benchmark / Evaluation Type & What to Evaluate & Representative Works \\
+\midrule
+LLM world knowledge
+& Physical commonsense, tool understanding, factual/procedural knowledge
+& Whether LLMs encode usable semantic, commonsense, procedural, and causal priors
+& PHYBench, PhySense, PhysToolBench~\citep{qiu2025phybench,xu2025physense,zhang2025phystoolbench} \\
+\midrule
+VLM/MLLM grounding
+& Spatial, temporal, affordance, and physical reasoning benchmarks
+& Whether language-derived knowledge is grounded into perception, spatial relations, and physical states
+& BLINK, Video-MME, PhysBench, QuantiPhy, MASS-Bench~\citep{fu2024blink,fu2025video,chow2025physbench,puyin2025quantiphy,wu2025mass} \\
+\midrule
+VLA / action grounding
+& Robot manipulation, navigation, and action-prediction benchmarks
+& Whether models can map instructions and observations to executable actions
+& RT-2, OpenVLA, LIBERO, LIBERO-Pro~\citep{zitkovich2023rt,kim2024openvla,liu2023libero,zhou2025libero} \\
+\midrule
+World models
+& Video prediction, latent prediction, action-conditioned simulation, planning evaluation
+& Whether models predict physically plausible, controllable, temporally consistent futures
+& World Models, Dreamer, Genie, Cosmos, V-JEPA 2~\citep{ha2018world,hafner2020dreamer,bruce2024genie,agarwal2025cosmos,assran2025vjepa2} \\
+\midrule
+Embodied agents
+& Closed-loop simulated or real-world tasks
+& Whether systems complete tasks, recover from errors, and generalize across environments and embodiments
+& BEHAVIOR, EAI, EmbodiedBench, RoboSuite, RoboCasa~\citep{srivastavabehavior,li2024embodied,yang2025embodiedbench,zhu2020robosuite,nasiriany2024robocasa} \\
+\midrule
+Closed frontier systems
+& Black-box or product-level evaluation
+& Capability, reliability, reproducibility, safety, and transparency under limited disclosure
+& Gemini Robotics, Gemini Robotics 1.5, GR00T N1, $\pi$-series systems~\citep{team2025gemini1,team2025gemini15,bjorck2025gr00tn1,black2024pi0,physicalintelligence2025pi05,intelligence2026pi} \\
+\bottomrule
+\end{tabular}
+\caption{Evaluation protocols along the roadmap. Physical AI evaluation should shift from static recognition or offline prediction to closed-loop task completion, robustness, safety, recovery, and cross-embodiment generalization.}
+\label{tab:evaluation-protocols}
+\end{table*}
+
+\section{Extended Taxonomy of World Models for Physical AI}
+\label{app:world-models}
+
+World models are used differently across reinforcement learning, video generation, robotics, autonomous driving, and Physical AI. 
+To avoid treating all generative video models or all model-based policies as the same type of world model, we organize them by prediction target, interaction interface, and role in the Physical AI roadmap.
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{p{0.16\linewidth}p{0.22\linewidth}p{0.30\linewidth}p{0.22\linewidth}}
+\toprule
+Category & Prediction Target & Role in Physical AI & Representative Works \\
+\midrule
+Classical / model-based RL world models 
+& Future states, rewards, values, or policy-relevant quantities 
+& Planning, latent imagination, decision making, policy improvement 
+& World Models, PlaNet, Dreamer, DreamerV3, MuZero \\
+\midrule
+Video-space world models 
+& Future pixels, frames, or video tokens 
+& Visual imagination, future scene prediction, synthetic data, simulated experience 
+& GAIA-1, UniSim, Genie, Cosmos \\
+\midrule
+Latent world models 
+& Future latent states or embeddings 
+& Efficient long-horizon prediction, compact planning, control-relevant representation learning 
+& PlaNet, Dreamer, I-JEPA, V-JEPA, V-JEPA 2 \\
+\midrule
+Interactive / action-conditioned world models 
+& Future states or observations conditioned on candidate actions 
+& Counterfactual reasoning, simulation-based policy learning, safety evaluation, recovery 
+& MuZero, UniSim, Genie, GAIA-1, V-JEPA 2-AC, Cosmos \\
+\midrule
+World foundation models for Physical AI 
+& General-purpose predictive or generative world representations 
+& Adaptable substrates for robotics, autonomous driving, embodied agents, and synthetic data 
+& Cosmos, Genie-style models, V-JEPA-style models \\
+\bottomrule
+\end{tabular}
+\caption{Extended taxonomy of world models for Physical AI. The categories are organized by prediction target and their function in the roadmap from LLM-based world knowledge to embodied action.}
+\label{tab:world-model-taxonomy}
+\end{table*}
+
+\section{Failure Modes Along the Roadmap}
+\label{app:failure-modes}
+
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{p{0.17\linewidth}p{0.32\linewidth}p{0.35\linewidth}}
+\toprule
+Component & Typical Failure Mode & Why It Matters for Physical AI \\
+\midrule
+LLMs
+& Hallucinated or ungrounded physical knowledge; overconfident plans; missing metric state
+& The model may propose plausible language plans that violate geometry, contact, force, or object-state constraints \\
+\midrule
+VLMs / MLLMs
+& Correct semantic description but weak dense grounding
+& The model may identify objects but fail to estimate pose, depth, uncertainty, reachability, or action-conditioned dynamics \\
+\midrule
+VLAs
+& Poor cross-embodiment generalization; data-dependent policies; brittle recovery
+& The same instruction may require different grasps, trajectories, or control strategies across robots and environments \\
+\midrule
+World models
+& Visually plausible but physically inconsistent futures
+& Photorealistic generation may still violate object permanence, contact, gravity, controllability, or causal dynamics \\
+\midrule
+Policy learning
+& Offline success but closed-loop failure
+& A model may predict correct actions under dataset states but fail under compounding errors or real-time perturbations \\
+\midrule
+Embodied systems
+& Sensor, calibration, latency, controller, or hardware failures
+& Physical performance depends on the full system stack, not only model accuracy \\
+\midrule
+Closed frontier systems
+& Limited reproducibility and incomplete disclosure
+& Strong product-level systems can shape the field while being difficult to benchmark, ablate, or compare fairly \\
+\bottomrule
+\end{tabular}
+\caption{Representative failure modes along the roadmap from LLM-based world knowledge to Physical AI.}
+\label{tab:failure-modes}
+\end{table*}
+
+\paragraph{Classical and decision-centric world models.}
+Classical world models are rooted in model-based reinforcement learning and planning. 
+They learn transition, reward, value, or policy-relevant predictions that allow agents to plan before acting. 
+World Models, PlaNet, Dreamer, DreamerV3, and MuZero establish this foundation by showing that agents can learn compact internal models and use them for imagination, planning, and policy improvement~\citep{ha2018world,hafner2019planet,hafner2020dreamer,hafner2023dreamerv3,schrittwieser2020mastering}. 
+For Physical AI, this line provides the decision-making substrate: agents should not only react to observations, but also evaluate possible futures.
+
+\paragraph{Video-space world models.}
+Video-space world models predict future visual observations. 
+They are attractive for Physical AI because videos expose motion, temporal evolution, scene changes, and possible future outcomes. 
+GAIA-1 models autonomous-driving futures from video, text, and action inputs~\citep{hu2023gaia}; UniSim learns an interactive real-world simulator from heterogeneous data and uses it for policy training~\citep{yang2023unisim}; Genie learns generative interactive environments from unlabelled videos~\citep{bruce2024genie}; and Cosmos positions world foundation models as adaptable world models for Physical AI~\citep{agarwal2025cosmos}. 
+The main limitation is that visual realism does not guarantee physical correctness.
+
+\paragraph{Latent and representation-space world models.}
+Latent world models predict in compact representation spaces rather than pixel space. 
+This makes them more efficient for planning and control because they can focus on task-relevant dynamics instead of reconstructing every visual detail. 
+JEPA-style models further argue that predictive modeling should happen in representation space rather than through full generative reconstruction~\citep{lecun2022path,assran2023ijepa,bardes2024vjepa}. 
+V-JEPA 2 extends this idea to video-scale learning and post-trains an action-conditioned latent world model for robot planning~\citep{assran2025vjepa2}.
+
+\paragraph{Interactive and action-conditioned world models.}
+Physical AI requires models that respond to actions, not only models that passively predict future frames. 
+Interactive and action-conditioned world models estimate counterfactual futures under candidate actions, enabling planning, safety checking, policy learning, and recovery. 
+This requirement separates physical world models from generic video generators: a Physical AI world model should be controllable, temporally consistent, action-conditioned, and useful for closed-loop decision making.
+
+\paragraph{Relation to LLM-based world knowledge.}
+LLM-based world knowledge and world models are complementary. 
+LLMs provide semantic, commonsense, procedural, and causal priors; world models provide predictive and simulative mechanisms for physical dynamics. 
+The former tells an agent what actions may be meaningful; the latter estimates what is likely to happen if the agent acts. 
+This complementarity is the reason world models occupy a central position in our roadmap from LLM-based world knowledge to deployable Physical AI.

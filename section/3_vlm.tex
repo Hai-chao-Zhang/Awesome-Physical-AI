@@ -1,20 +1,18 @@
 \section{Grounding World Knowledge into Perception}
 \label{sec:vlm-grounding}
 
-To act in the physical world, an AI system must connect language-based world knowledge to perceptual observations. 
-Vision-language models and multimodal large language models provide a first step toward such grounding by aligning language with images, videos, and visual scenes.
+To act in the physical world, an AI system must connect language-based world knowledge to perceptual observations. VLMs and MLLMs are the first major bridge in this transition: they align language with images, videos, regions, objects, and scenes~\citep{radford2021learning,jia2021align,alayrac2022flamingo,liu2023llava}. Language-only knowledge is underspecified with respect to the current world state: an LLM may know that glass is fragile or that a handle affords pulling, but an embodied system must determine whether the relevant object is present, where it is, and whether the current configuration makes that prior actionable. Perception is therefore the mechanism by which world knowledge becomes situated and task-relevant.
 
-\subsection{Vision-Language and Multimodal Models}
-VLMs and MLLMs extend LLMs with visual inputs, allowing them to perform visual question answering, image and video understanding, spatial reasoning, object localization, and instruction grounding. 
-For Physical AI, these capabilities are important because agents must recognize objects, infer scene layouts, understand human instructions, and reason about affordances.
+\noindent\textbf{Vision-Language and Multimodal Models.}
+The development of VLMs can be viewed as a progression from image-text representation alignment to multimodal instruction following. Contrastive and cross-modal pretraining made language an open-vocabulary interface for visual concepts, allowing models to retrieve, classify, and reason over images beyond fixed label spaces~\citep{radford2021learning,lu2019vilbert,tan2019lxmert}. More recent MLLMs connect visual encoders to large language backbones through cross-attention, query transformers, projection layers, or instruction tuning, enabling few-shot visual reasoning, visual dialogue, and open-ended image understanding~\citep{team2026qwen3,li2023blip,shen2026fine}. For Physical AI, their importance is that instructions, observations, and task context can be interpreted through a shared language interface. A VLM can identify task-relevant objects and connect them to commonsense priors, making it useful as a high-level perceptual reasoner in open-world environments. Yet this grounding remains mostly semantic rather than physical: VLMs do not automatically recover metric state, physical parameters, or control-relevant uncertainty~\citep{agarwal2025cosmos,liu2025generative,shridhar2022cliport,bear2021physion}.
 
-\subsection{Spatial, Temporal, and Affordance Grounding}
-Physical AI requires more than object recognition. 
-It requires understanding where objects are, how they relate spatially, what actions they afford, and how they may change over time. 
-Multimodal grounding enables models to connect language concepts such as ``grasp,'' ``push,'' ``open,'' or ``avoid'' to visual evidence in the environment.
+\noindent\textbf{Spatial, Temporal, and Affordance Grounding.}
+Physical AI requires grounding beyond object categories: agents must localize objects, resolve spatial relations, and infer action affordances. Recent MLLMs provide stronger grounded outputs through region, mask, and point supervision~\citep{rasheed2024glammpixelgroundinglarge,lai2024lisa}, unified detection-grounding-segmentation~\citep{xiao2024florence}, and explicit pointing supervision~\citep{deitke2025molmo}. For robotics, recent work extends grounding toward robotics-relevant spatial reasoning and language-conditioned affordance prediction~\citep{chen2024spatialvlm,song2025robospatial,pothiraj2025capture}. These works improve perceptual grounding, but Physical AI still requires metric state, reachability, uncertainty, and embodiment-specific constraints.
 
-\subsection{The Language Bottleneck for Dense Physical States}
-A major limitation of VLMs is that their outputs are often expressed in language. 
-While language is effective for abstraction and communication, it is a lossy interface for dense physical states. 
-Physical interaction requires representing trajectories, velocities, contact dynamics, occlusion, deformation, uncertainty, and long-horizon temporal evolution. 
-This language bottleneck motivates models that can move beyond description toward action and prediction.
+Temporal grounding moves perception from static recognition to event localization and state change. Recent video MLLMs explicitly model timestamps and grounded moments, including TimeChat, VTG-LLM, Grounded-VideoLLM, and TimeSuite~\citep{ren2024timechat,guo2025vtg,wang2024grounded,zeng2025timesuite}; VideoGLaMM further extends grounding to pixel-level video regions~\citep{munasinghe2025videoglamm}. However, temporal grounding is still not physical dynamics: Video-MME and PhysBench show that long-video understanding and physical-world reasoning remain difficult for current MLLMs~\citep{fu2026video,chow2025physbench}.
+
+Affordance grounding connects perception to possible actions. Recent work uses VLM/LLM priors to predict interaction regions, 3D affordances, or language-conditioned affordance points, as in AffordanceLLM, PAVLM, Palm, and RoboPoint~\citep{qian2024affordancellm,liu2025pavlm,liu2026palm,yuan2024robopoint}. These models make perception more action-relevant, but feasibility still depends on embodiment, geometry, reachability, and low-level control.
+
+
+\noindent\textbf{The Language Bottleneck for Dense Physical States.}
+A major limitation of VLMs is that physical understanding is often mediated through language rather than dense state estimation. Text can describe a scene, but it does not encode pose, depth, motion, contact, uncertainty, or action-conditioned dynamics. Recent evaluations show this gap: BLINK probes low-level visual perception~\citep{fu2024blink}, Video-MME tests long-horizon temporal understanding~\citep{fu2025video}, and PhysBench, QuantiPhy, and MASS-Bench evaluate physical reasoning, quantitative physics, and motion-aware spatiotemporal grounding~\citep{chow2025physbench,puyin2025quantiphy,wu2025mass}. Thus, VLMs are better treated as perceptual grounding layers, not complete physical world models.
