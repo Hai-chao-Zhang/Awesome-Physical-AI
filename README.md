@@ -1,53 +1,64 @@
-# *ACL Paper Styles
+# Physical AI Survey
 
-This directory contains the latest LaTeX and Word templates for *ACL
-conferences.
+This repository contains the LaTeX source for a survey paper on Physical AI, with an emphasis on how LLMs, VLMs, action models, and world models contribute complementary forms of world knowledge, grounding, and prediction.
 
-## Instructions for authors
+## Build
 
-Paper submissions to *ACL conferences must use the official ACL style
-templates.
+Compile the paper with:
 
-The LaTeX style files are available
+```bash
+latexmk -pdf -interaction=nonstopmode latex/acl_latex.tex
+```
 
-- as an [Overleaf template](https://www.overleaf.com/latex/templates/association-for-computational-linguistics-acl-conference/jvxskxpnznfj)
-- in this repository, in the [`latex`](https://github.com/acl-org/acl-style-files/blob/master/latex) subdirectory
-- as a [.zip file](https://github.com/acl-org/acl-style-files/archive/refs/heads/master.zip)
+The main paper source is [`latex/acl_latex.tex`](latex/acl_latex.tex), with section files under [`section/`](section/).
 
-Please see [`latex/acl_latex.tex`](https://github.com/acl-org/acl-style-files/blob/master/latex/acl_latex.tex) for an example.
+## LLM Section References
 
-The Microsoft Word template is available in this repository at [`word/acl.docx`](https://github.com/acl-org/acl-style-files/blob/master/word/acl.docx).
+The following papers are currently cited in `section/2_llm.tex`.
 
-Please follow the paper formatting guidelines general to *ACL
-conferences:
+### World Knowledge and Parametric Knowledge
 
-- [Paper formatting guidelines](https://acl-org.github.io/ACLPUB/formatting.html)
+- Arkin, 1990. *Integrating Behavioral, Perceptual, and World Knowledge in Reactive Navigation.*
+- Hagoort et al., 2004. *Integration of Word Meaning and World Knowledge in Language Comprehension.*
+- Petroni et al., 2019. *Language Models as Knowledge Bases?*
+- Roberts et al., 2020. *How Much Knowledge Can You Pack Into the Parameters of a Language Model?*
+- Brown et al., 2020. *Language Models are Few-Shot Learners.*
+- Bommasani et al., 2021. *On the Opportunities and Risks of Foundation Models.*
+- Wei et al., 2022. *Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.*
+- Schwenk et al., 2022. *A-OKVQA: A Benchmark for Visual Question Answering Using World Knowledge.*
+- Kandpal et al., 2023. *Large Language Models Struggle to Learn Long-Tail Knowledge.*
+- Chang et al., 2024. *How Do Large Language Models Acquire Factual Knowledge During Pretraining?*
+- Yuan et al., 2024. *Towards a Holistic Evaluation of LLMs on Factual Knowledge Recall.*
+- Hu et al., 2024. *Enabling LLM Knowledge Analysis via Extensive Materialization.*
 
-Authors may not modify these style files or use templates designed for
-other conferences.
+### Spatial and Affordance Grounding
 
-## Instructions for publications chairs
+- Chen et al., 2024. *SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities.*
+- Qian et al., 2024. *AffordanceLLM: Grounding Affordance from Vision Language Models.*
+- Huang et al., 2024. *ManipVQA: Injecting Robotic Affordance and Physically Grounded Information into Multi-Modal Large Language Models.*
+- Yuan et al., 2024. *RoboPoint: A Vision-Language Model for Spatial Affordance Prediction for Robotics.*
+- Chu et al., 2025. *3D-AffordanceLLM: Harnessing Large Language Models for Open-Vocabulary Affordance Detection in 3D Worlds.*
+- Song et al., 2025. *RoboSpatial: Teaching Spatial Understanding to 2D and 3D Vision-Language Models for Robotics.*
 
-To adapt the style files for your conference, please fork this repository and
-make necessary changes. Minimally, you'll need to update the name of
-the conference and rename the files.
+### LLMs for Embodied Planning and Control
 
-If you make improvements to the templates that should be propagated to
-future conferences, please submit a pull request. Thank you in
-advance!
+- Ahn et al., 2022. *Do As I Can, Not As I Say: Grounding Language in Robotic Affordances.*
+- Huang et al., 2022. *Inner Monologue: Embodied Reasoning through Planning with Language Models.*
+- Huang et al., 2022. *Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents.*
+- Song et al., 2023. *LLM-Planner: Few-Shot Grounded Planning for Embodied Agents with Large Language Models.*
+- Liang et al., 2023. *Code as Policies: Language Model Programs for Embodied Control.*
+- Singh et al., 2023. *ProgPrompt: Generating Situated Robot Task Plans Using Large Language Models.*
+- Wang et al., 2023. *Voyager: An Open-Ended Embodied Agent with Large Language Models.*
+- Huang et al., 2023. *VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models.*
+- Rana et al., 2023. *SayPlan: Grounding Large Language Models Using 3D Scene Graphs for Scalable Robot Task Planning.*
+- Hua et al., 2024. *GenSim2: Scaling Robot Data Generation with Multi-modal and Reasoning LLMs.*
 
-In older versions of the templates, authors were asked to fill in the
-START submission ID so that it would be stamped at the top of each
-page of the anonymized version. This is no longer needed, because it
-is now possible to do this stamping automatically within
-START. Currently, the way to do this is for the program chair to email
-support@softconf.com and request it.
+### Limits of Language-Only Physical Reasoning
 
-## Instructions for making changes to style files
+- Kambhampati et al., 2024. *LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks.*
+- Valmeekam et al., 2024. *LLMs Still Can't Plan; Can LRMs? A Preliminary Evaluation of OpenAI's o1 on PlanBench.*
+- Qiu et al., 2025. *PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models.*
+- Xu et al., 2025. *PhySense: Principle-Based Physics Reasoning Benchmarking for Large Language Models.*
+- Xiang et al., 2025. *SeePhys: Does Seeing Help Thinking? Benchmarking Vision-Based Physics Reasoning.*
+- Zhang et al., 2025. *PhysToolBench: Benchmarking Physical Tool Understanding for MLLMs.*
 
-- merge pull request in github, or push to github
-- git pull from github to a local repository
-- then, git push from your local repository to overleaf project 
-    - Overleaf project is https://www.overleaf.com/project/5f64f1fb97c4c50001b60549
-    - Overleaf git url is https://git.overleaf.com/5f64f1fb97c4c50001b60549
-- then, click "Submit" and then "Sumbit as Template" in overleaf in order to ask overleaf to update the overleaf template from the overleaf project 
