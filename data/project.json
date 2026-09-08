@@ -1,0 +1,94 @@
+{
+  "checkedOn": "2026-09-08",
+  "manuscriptTitle": "From Language Priors towards Physical AGI",
+  "website": "https://physical-agi.bloomy-aphid-2494.chatgpt.site",
+  "repo": "https://github.com/Hai-chao-Zhang/Awesome-Physical-AI",
+  "groups": [
+    {
+      "id": "priors",
+      "title": "Language priors",
+      "question": "What knowledge does the agent bring?",
+      "description": "Semantic and procedural structure before physical interaction."
+    },
+    {
+      "id": "grounding",
+      "title": "Grounded state",
+      "question": "What is happening here, now?",
+      "description": "Objects, geometry, affordances, and changes that matter for action."
+    },
+    {
+      "id": "action",
+      "title": "Action & skills",
+      "question": "What can the agent actually do?",
+      "description": "Interfaces that turn intentions into executable behavior."
+    },
+    {
+      "id": "world-models",
+      "title": "Predictive world models",
+      "question": "What happens if the agent acts?",
+      "description": "Consequences, uncertainty, and predictions useful for decisions."
+    },
+    {
+      "id": "agency",
+      "title": "Integrated agency",
+      "question": "How does the loop stay grounded?",
+      "description": "Planning, execution, feedback, and recovery within one system."
+    },
+    {
+      "id": "generality",
+      "title": "Generality & evaluation",
+      "question": "What transfers beyond training?",
+      "description": "Novelty, bounded adaptation, retention, and embodiment transfer."
+    }
+  ],
+  "benchmarks": [
+    {
+      "key": "liu2023libero",
+      "name": "LIBERO",
+      "version": "2023 · original release",
+      "quantity": "130",
+      "unit": "task definitions",
+      "coverage": "4 suites",
+      "detail": "10 spatial + 10 object + 10 goal + 100 combined-transfer tasks.",
+      "caveat": "Original four-suite accounting; later subset conventions differ.",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/8c3c666820ea055a77726d66fc7d447f-Paper-Datasets_and_Benchmarks.pdf",
+      "location": "PDF pp. 1–2; §4.2, p. 5"
+    },
+    {
+      "key": "li2023behavior",
+      "name": "BEHAVIOR-1K",
+      "version": "2023 proceedings · CoRL 2022",
+      "quantity": "1,000",
+      "unit": "activity definitions",
+      "coverage": "50 scenes",
+      "detail": "Logical everyday-activity definitions grounded in realistic simulation.",
+      "caveat": "Definitions are not sampled episodes or experimentally solved activities.",
+      "url": "https://proceedings.mlr.press/v205/li23a/li23a.pdf",
+      "location": "PDF p. 1; Table 1, p. 3; §4, p. 4"
+    },
+    {
+      "key": "nasiriany2024robocasa",
+      "name": "RoboCasa",
+      "version": "2024 · not RoboCasa365",
+      "quantity": "100",
+      "unit": "designed tasks",
+      "coverage": "120 kitchen scenes",
+      "detail": "25 atomic + 75 composite tasks; scenes combine floor plans and styles.",
+      "caveat": "Original 2024 release, not the later RoboCasa365 leaderboard.",
+      "url": "https://robocasa.ai/assets/robocasa_rss24.pdf",
+      "location": "Fig. 1, p. 1; §III-B, p. 4; §IV-C, p. 5"
+    },
+    {
+      "key": "yang2025embodiedbench",
+      "name": "EmbodiedBench",
+      "version": "2025 · arXiv v3 / ICML",
+      "quantity": "1,128",
+      "unit": "testing instances",
+      "coverage": "4 environments",
+      "detail": "6 capability subsets across EB-ALFRED, EB-Habitat, EB-Navigation, and EB-Manipulation.",
+      "caveat": "Six refers to capability subsets, not environments; instances are not task families.",
+      "url": "https://arxiv.org/html/2502.09560v3",
+      "location": "Abstract; Table 1; §4"
+    }
+  ]
+}

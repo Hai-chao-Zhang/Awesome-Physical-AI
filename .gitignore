@@ -18,3 +18,14 @@ latex/acl_latex.pdf
 # OS/editor metadata
 .DS_Store
 .vscode/
+
+# Website and local tooling
+node_modules/
+dist/
+.wrangler/
+.next/
+.vinext/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
