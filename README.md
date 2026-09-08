@@ -4,7 +4,7 @@
 
 A paper-linked research collection on grounded physical competence, learning, and generalization.
 
-[**Academic website**](https://physical-agi.bloomy-aphid-2494.chatgpt.site) · [**Working manuscript PDF**](website/public/paper/physical-agi.pdf) · [**Complete citation index**](docs/CATALOG.md) · [**Contribute**](CONTRIBUTING.md)
+[**Academic website**](https://physical-agi.haichaozhang.chatgpt.site) · [**Working manuscript PDF**](website/public/paper/physical-agi.pdf) · [**Complete citation index**](docs/CATALOG.md) · [**Contribute**](CONTRIBUTING.md)
 
 **Haichao Zhang · Mingfei Chen · Shwai He · Zhengtong Xu · Yifan Shen · Yiyang Huang · Jianglin Lu · Yijiang Li · Yuhai Wang · Ang Li · Yu She · Yun Fu**
 
