@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160mm" height="189mm" viewBox="0 0 1600 1890" font-family="Arial, sans-serif">
+<title>A Functional Roadmap</title><desc>Shared language and vision priors, learned action policies, VLM-guided world modeling including ThinkJEPA, and frozen frontier VLM robot-use agents.</desc>
+<rect width="1600" height="1890" fill="white"/>
+<text x="28" y="53.239999999999995" font-size="46" font-weight="700" text-anchor="start" fill="#19324B">A Functional Roadmap</text>
+<text x="28" y="98.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">Language and vision priors support complementary routes to Physical AI</text>
+<rect x="28" y="122" width="754" height="314" rx="12" fill="#EEF4E7" stroke="none" stroke-width="2.2"/>
+<rect x="802" y="122" width="770" height="314" rx="12" fill="#E8F3F8" stroke="none" stroke-width="2.2"/>
+<text x="48" y="173.84" font-size="36" font-weight="700" text-anchor="start" fill="#19324B">Language-based world knowledge</text>
+<text x="48" y="223.07999999999998" font-size="32" font-weight="400" text-anchor="start" fill="#19324B">Semantic and commonsense knowledge</text>
+<text x="48" y="264.08" font-size="32" font-weight="400" text-anchor="start" fill="#19324B">Procedural and causal priors</text>
+<text x="48" y="321.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">LAMA, closed-book QA, GPT-4 / Gemini,</text>
+<text x="48" y="362.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">SayCan, Code as Policies, VoxPoser</text>
+<text x="822" y="173.84" font-size="36" font-weight="700" text-anchor="start" fill="#19324B">Multimodal grounding</text>
+<text x="822" y="223.07999999999998" font-size="32" font-weight="400" text-anchor="start" fill="#19324B">Images + language: VLMs / MLLMs</text>
+<text x="822" y="264.08" font-size="32" font-weight="400" text-anchor="start" fill="#19324B">Regions, scenes, relations and attributes</text>
+<text x="822" y="321.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">CLIP, Flamingo, BLIP-2, LLaVA,</text>
+<text x="822" y="362.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">SpatialVLM, AffordanceLLM, RoboPoint</text>
+<rect x="28" y="462" width="1544" height="308" rx="12" fill="#F5F0FA" stroke="none" stroke-width="2.2"/>
+<text x="48" y="515.72" font-size="38" font-weight="700" text-anchor="start" fill="#7656A4">A   Action grounding and learned policies</text>
+<rect x="38" y="540" width="460" height="112" rx="10" fill="#FFFFFF" stroke="#7656A4" stroke-width="2.2"/>
+<text x="268" y="585.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Images + instruction</text>
+<text x="268" y="627.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Robot demonstrations</text>
+<rect x="570" y="540" width="460" height="112" rx="10" fill="#FFFFFF" stroke="#7656A4" stroke-width="2.2"/>
+<text x="800" y="585.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Learned action policy</text>
+<text x="800" y="627.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">VLA / imitation / RL</text>
+<rect x="1102" y="540" width="460" height="112" rx="10" fill="#FFFFFF" stroke="#7656A4" stroke-width="2.2"/>
+<text x="1332" y="585.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Actions / trajectories</text>
+<text x="1332" y="627.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Robot control</text>
+<path d="M506 596H549" fill="none" stroke="#7656A4" stroke-width="4"/><path d="M545 587L560 596L545 605" fill="none" stroke="#7656A4" stroke-width="4"/>
+<path d="M1038 596H1081" fill="none" stroke="#7656A4" stroke-width="4"/><path d="M1077 587L1092 596L1077 605" fill="none" stroke="#7656A4" stroke-width="4"/>
+<text x="48" y="698.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">PaLM-E, RT-2, OpenVLA, FAST, π0, π0.5, SpatialVLA</text>
+<text x="48" y="740.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">ACT, RDT-1B, GR00T N1, π0.6, MEM; imitation / reward objectives update policy weights</text>
+<rect x="28" y="795" width="1544" height="390" rx="12" fill="#FCF3E9" stroke="none" stroke-width="2.2"/>
+<text x="48" y="848.72" font-size="38" font-weight="700" text-anchor="start" fill="#A66927">B   World modeling: learned prediction with reusable priors</text>
+<text x="48" y="900.08" font-size="32" font-weight="400" text-anchor="start" fill="#19324B">Predict latent states or video; action-conditioned models can compare possible futures.</text>
+<rect x="38" y="928" width="460" height="112" rx="10" fill="#FFFFFF" stroke="#A66927" stroke-width="2.2"/>
+<text x="268" y="973.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Frozen compact VLM</text>
+<text x="268" y="1015.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Qwen3-VL-2B-Thinking</text>
+<rect x="570" y="928" width="460" height="112" rx="10" fill="#FFFFFF" stroke="#A66927" stroke-width="2.2"/>
+<text x="800" y="973.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">ThinkJEPA</text>
+<text x="800" y="1015.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Learned latent predictor</text>
+<rect x="1102" y="928" width="460" height="112" rx="10" fill="#FFFFFF" stroke="#A66927" stroke-width="2.2"/>
+<text x="1332" y="973.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Predictive representations</text>
+<text x="1332" y="1015.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Trajectory forecasting</text>
+<path d="M506 984H549" fill="none" stroke="#A66927" stroke-width="4"/><path d="M545 975L560 984L545 993" fill="none" stroke="#A66927" stroke-width="4"/>
+<path d="M1038 984H1081" fill="none" stroke="#A66927" stroke-width="4"/><path d="M1077 975L1092 984L1077 993" fill="none" stroke="#A66927" stroke-width="4"/>
+<text x="48" y="1084.08" font-size="32" font-weight="400" text-anchor="start" fill="#A66927">ThinkJEPA also uses frozen V-JEPA features; its predictor and trajectory head are trained.</text>
+<text x="48" y="1130.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">Other world-model anchors: World Models, Dreamer, MuZero, Genie, Cosmos,</text>
+<text x="48" y="1171.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">V-JEPA, DINO-WM, π0.7</text>
+<rect x="28" y="1210" width="1544" height="348" rx="12" fill="#EAF5F8" stroke="none" stroke-width="2.2"/>
+<text x="48" y="1263.72" font-size="38" font-weight="700" text-anchor="start" fill="#287D94">C   Frozen VLM agents: robot use at inference time</text>
+<rect x="38" y="1290" width="460" height="112" rx="10" fill="#FFFFFF" stroke="#287D94" stroke-width="2.2"/>
+<text x="268" y="1335.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Frozen frontier VLM</text>
+<text x="268" y="1377.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">GPT-6 Astra / Fable</text>
+<rect x="570" y="1290" width="460" height="112" rx="10" fill="#FFFFFF" stroke="#287D94" stroke-width="2.2"/>
+<text x="800" y="1335.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Observe, reason, call tools</text>
+<text x="800" y="1377.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Robot interface / controller</text>
+<rect x="1102" y="1290" width="460" height="112" rx="10" fill="#FFFFFF" stroke="#287D94" stroke-width="2.2"/>
+<text x="1332" y="1335.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">Zero-shot robot use</text>
+<text x="1332" y="1377.08" font-size="32" font-weight="400" text-anchor="middle" fill="#19324B">or demo-conditioned use</text>
+<path d="M506 1346H549" fill="none" stroke="#287D94" stroke-width="4"/><path d="M545 1337L560 1346L545 1355" fill="none" stroke="#287D94" stroke-width="4"/>
+<path d="M1038 1346H1081" fill="none" stroke="#287D94" stroke-width="4"/><path d="M1077 1337L1092 1346L1077 1355" fill="none" stroke="#287D94" stroke-width="4"/>
+<text x="48" y="1448.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">VIA, Robocurve, Moving Atoms; GPT-Policy also studies demonstrations and history.</text>
+<text x="48" y="1492.08" font-size="32" font-weight="400" text-anchor="start" fill="#19324B">No robot-specific weight updates; interfaces, controllers and context still contribute.</text>
+<text x="48" y="1536.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">Zero-shot can use within-episode feedback; task demonstrations are a separate setting.</text>
+<rect x="28" y="1584" width="1544" height="236" rx="12" fill="#F0F3F6" stroke="none" stroke-width="2.2"/>
+<text x="48" y="1637.72" font-size="38" font-weight="700" text-anchor="start" fill="#19324B">Embodied deployment and feedback</text>
+<text x="48" y="1690.08" font-size="32" font-weight="400" text-anchor="start" fill="#19324B">Observe → choose / execute → verify → replan; memory and safety constrain the loop.</text>
+<text x="48" y="1741.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">OK-Robot, ReKep, Gemini Robotics; RoboCasa and EmbodiedBench for evaluation</text>
+<text x="48" y="1782.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">World-model routes support this loop only when coupled to a planner or policy.</text>
+<text x="28" y="1871.08" font-size="32" font-weight="400" text-anchor="start" fill="#42576A">Functional routes, not mandatory stages; an integrated system may combine them.</text>
+</svg>

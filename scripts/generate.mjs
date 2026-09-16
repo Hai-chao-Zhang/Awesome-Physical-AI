@@ -1,118 +1,95 @@
-import { readFileSync, writeFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { resolve } from 'node:path';
+import {readFileSync, writeFileSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import {resolve} from 'node:path';
 const root = fileURLToPath(new URL('../', import.meta.url));
-const read = p => JSON.parse(readFileSync(resolve(root,p),'utf8'));
-const papers = read('data/papers.json');
-const project = read('data/project.json');
-const escape = s => String(s).replaceAll('|','&#124;').replaceAll('[','\\[').replaceAll(']','\\]');
-const link = p => p.url ? '['+escape(p.title)+']('+p.url+')' : escape(p.title)+' · [discovery query]('+p.discoveryUrl+')';
-const labels = {
-  matched:'Scholar visible metadata matched',
-  matched_metadata_review:'Scholar title matched; version/metadata note',
-  citation_only:'Scholar citation-only result',
-  no_exact_result:'No exact matching Scholar source found',
-  blocked_attempted:'Scholar check blocked',
-  unsearched:'Scholar check pending',
-};
-const featured = project.groups.map(g => '### '+g.title+'\n\n'+g.description+'\n\n'+papers.filter(p=>p.featured&&p.group===g.id).map(p=>'- '+link(p)+' — '+p.version+'. '+p.summary).join('\n')).join('\n\n');
+const read = p => JSON.parse(readFileSync(resolve(root, p), 'utf8'));
+const papers = read('data/papers.json'), project = read('data/project.json');
+const manifest = read('data/catalog-manifest.json');
+const esc = s => String(s).replaceAll('|', '&#124;').replaceAll('[', '\\[').replaceAll(']', '\\]');
+const labels = {matched:'Scholar metadata matched', matched_metadata_review:'Scholar match with version/metadata note', citation_only:'Scholar citation-only result', no_exact_result:'No exact Scholar source found', blocked_attempted:'Scholar check blocked', unsearched:'Scholar check pending'};
+const cats = project.catalogCategories;
+const categoryPapers = id => papers.filter(p => p.category === id).sort((a,b) => (Number.parseInt(b.bibYear) || 0) - (Number.parseInt(a.bibYear) || 0) || a.title.localeCompare(b.title));
+const paperLink = p => p.url ? `[${esc(p.title)}](${p.url})` : `${esc(p.title)} · [find source](${p.discoveryUrl})`;
+const links = (urls, label) => urls?.length ? urls.map((url,i) => `[${label}${urls.length > 1 ? ' ' + (i+1) : ''}](${url})`).join(' · ') : '—';
+const rows = id => categoryPapers(id).map(p => `| <a id="paper-${p.key}"></a>${paperLink(p)}<br/>${esc(p.version)}${p.kind !== 'Paper' ? ' · **'+p.kind+'**' : ''} | ${links(p.resources?.github, 'Repo')} | ${links(p.resources?.huggingface, 'HF')} | ${links(p.resources?.homepage, 'Project')} | [BibTeX](${p.citationFile}) · [Scholar](${p.discoveryUrl}) |`).join('\n');
+const sourceStats = Object.fromEntries(['github','huggingface','homepage'].map(type => [type, papers.filter(p=>p.resources?.[type]?.length).length]));
 const readme = `# Awesome Physical AI
 
-### From Language Priors towards Physical AGI
+## ${project.manuscriptTitle}
 
-A paper-linked research collection on grounded physical competence, learning, and generalization.
+A survey companion on language priors, physical grounding, world models and embodied agents, with Physical AGI treated as a research objective rather than an established capability.
 
-[**Academic website**](${project.website}) · [**Working manuscript PDF**](website/public/paper/physical-agi.pdf) · [**Complete citation index**](docs/CATALOG.md) · [**Contribute**](CONTRIBUTING.md)
+[**Manuscript PDF**](https://github.com/Hai-chao-Zhang/physicalAGI-Review/blob/main/output/pdf/paper.pdf) · [**LaTeX / arXiv-format source**](https://github.com/Hai-chao-Zhang/physicalAGI-Review) · [**Springer-format source**](https://github.com/Hai-chao-Zhang/AI-Review-Physical-AI-Survey) · [**Companion website**](${project.website}) · [**All BibTeX**](bibliography/cited.bib)
 
-**Haichao Zhang · Mingfei Chen · Shwai He · Zhengtong Xu · Yifan Shen · Yiyang Huang · Jianglin Lu · Yijiang Li · Yuhai Wang · Ang Li · Yu She · Yun Fu**
+**${project.authors.join(' · ')}**
 
 Northeastern University · University of Washington · University of Maryland, College Park · Purdue University · University of Illinois Urbana-Champaign · University of California, San Diego
 
-> A model may explain how to open a drawer yet fail when its handle, friction, or contents change. The transition towards Physical AGI asks what an agent can learn and reliably accomplish beyond its training conditions.
+**${papers.length} cited records · ${cats.length} categories · ${sourceStats.github} with GitHub resources · ${sourceStats.huggingface} with Hugging Face resources · ${sourceStats.homepage} with project pages**
 
-This companion collection follows the working manuscript **From Language Priors towards Physical AGI**. Physical AGI is an aspirational research objective—not a capability established by assembling components or obtaining a high benchmark score. The page does not imply publication, acceptance, or an arXiv submission.
+This README lists every distinct reference used in the current manuscript, including clearly labeled reports and product documentation. The repository and linked manuscripts are working research materials; no arXiv identifier, acceptance or peer-review status is implied. The companion website is an earlier presentation snapshot; the manuscript links and catalog here are current.
 
-The repository remains private, and the website is initially owner-only. A public release is a separate decision.
+## Updates
+
+- **${project.checkedOn}** — Complete categorized catalog, per-paper BibTeX, and primary-source resource links; added the Astra/Fable and GPT-Policy references from Section 8.
+- **${project.checkedOn}** — Figure 1 and the text distinguish frozen compact-VLM-guided world modeling (ThinkJEPA) from frozen frontier-VLM robot-use agents.
 
 ## Contents
 
-- [Framework](#framework)
-- [Selected reading](#selected-reading)
+- [Research framework](#research-framework)
+${cats.map((c,i) => `- [${i+1}. ${c.title}](#${c.id}) (${categoryPapers(c.id).length})`).join('\n')}
 - [Benchmark coverage](#benchmark-coverage)
-- [Open questions](#open-questions)
-- [Citation and contribution](#citation-and-contribution)
-- [Sources, versions, and maintenance](#sources-versions-and-maintenance)
+- [Citation](#citation)
+- [Contributing and verification](#contributing-and-verification)
 
-## Framework
+## Research framework
 
-| Functional interface | Central question |
-|---|---|
-${project.groups.slice(0,5).map(g=>'| '+g.title+' | '+g.question+' |').join('\n')}
+![Figure 1: Shared language and vision priors support learned action policies, predictive world models, and frozen VLM robot-use agents.](docs/assets/framework.svg)
 
-These interfaces may be shared, recurrent, or parallel. **Generality is an evidence axis**, assessed through unfamiliar tasks and environments, bounded adaptation, retention, and transfer across dynamics and bodies. Autonomy and safety are reported separately.
+[Vector figure PDF](https://github.com/Hai-chao-Zhang/AI-Review-Physical-AI-Survey/blob/main/roadmap-vector.pdf) · [Editable PowerPoint](https://github.com/Hai-chao-Zhang/AI-Review-Physical-AI-Survey/blob/main/output/pptx/figure1-editable-v3.pptx)
 
-## Selected reading
+These routes share language/vision priors and may be combined. ThinkJEPA uses a frozen compact VLM to guide a learned latent predictor; this does not make it a zero-shot robot controller. Zero-shot agents can use within-episode feedback, while supplied demonstrations and cross-episode adaptation require separate reporting.
 
-${papers.filter(p=>p.featured).length} selected starting points, grouped by their role in the framework. Primary identities and linked versions were inspected; recorded Scholar title/visible-metadata matches are not full-author-list or claim verification. The [complete index](docs/CATALOG.md) contains ${papers.length} distinct cited entries with pending checks preserved.
+## Complete paper and resource list
 
-${featured}
+Each entry has a category and exact manuscript BibTeX, plus a paper/source link or an explicitly labeled discovery query. **—** means that no primary-source-confirmed link was located in this snapshot, not that a resource does not exist. GitHub links may provide implementations, evaluation scripts, prompts or resource collections; they do not necessarily release model weights. HF links identify official or author-linked models, datasets or collections, not generic paper-index pages. Scholar links are search aids, not citation counts or verification claims. Resource types and version cautions are recorded in the [link evidence](docs/RESOURCE-LINKS.md); inherited metadata and unresolved citation checks remain visible in the [audit catalog](docs/CATALOG.md).
+
+${cats.map((c,i) => `<a id="${c.id}"></a>\n\n### ${i+1}. ${c.title}\n\n${c.description}\n\n| Paper / source and version | GitHub | Hugging Face | Homepage | Citation |\n|---|---|---|---|---|\n${rows(c.id)}`).join('\n\n')}
 
 ## Benchmark coverage
 
-Resource counts from original papers—not model scores or a cross-benchmark leaderboard.
+Resource statistics from the cited original releases, audited on ${project.benchmarkCheckedOn}; these are not newly run experiments or a cross-benchmark model leaderboard.
 
 | Benchmark | Release | Count and unit | Coverage |
 |---|---|---|---|
-${project.benchmarks.map(b=>'| ['+b.name+']('+b.url+') | '+b.version+' | **'+b.quantity+'** '+b.unit+' | '+b.coverage+' |').join('\n')}
+${project.benchmarks.map(b=>`| [${b.name}](${b.url}) | ${b.version} | **${b.quantity}** ${b.unit} | ${b.coverage} |`).join('\n')}
 
-See [numerical source locations and caveats](docs/BENCHMARKS.md). Different units are not interchangeable: activity definitions, task definitions, and testing instances measure different things.
+See [source locations and counting caveats](docs/BENCHMARKS.md). Generality requires testing unfamiliar tasks and dynamics under declared adaptation budgets, not comparing incompatible task counts.
 
-## Open questions
+## Citation
 
-- Learn genuinely new tasks under explicit experience and compute budgets.
-- Use active sensing to reduce action-relevant uncertainty.
-- Transfer skills across bodies, dynamics, and control interfaces.
-- Retain acquired competence while learning from new experience.
-- Evaluate whether predictions improve decisions and recovery.
-- Measure reliable autonomy with failure, intervention, and safety reporting.
+If this collection helps your research, cite the working manuscript. Please also cite the original works whose methods, data or results you use. Every catalog row links to its preserved BibTeX entry; [download all ${papers.length} cited entries](bibliography/cited.bib).
 
-## Citation and contribution
+\`\`\`bibtex
+${readFileSync(resolve(root,'bibliography/manuscript.bib'),'utf8').trim()}
+\`\`\`
 
-Use [the manuscript BibTeX](bibliography/manuscript.bib) as a working-manuscript citation. Cite each original paper when using its methods, data, or results.
+## Contributing and verification
 
-Resource suggestions and corrections are welcome via issues and pull requests; follow [CONTRIBUTING.md](CONTRIBUTING.md). Include a primary link, the exact version, and what you actually checked.
+Suggestions and corrections are welcome through issues and pull requests. Include the paper identity, appropriate category, and a primary source confirming each code/model/data/project link; follow [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Sources, versions, and maintenance
+- [Machine-readable catalog](data/papers.json) and [source manifest](data/catalog-manifest.json)
+- [Per-entry verification notes](docs/CATALOG.md), [resource-link evidence](docs/RESOURCE-LINKS.md), [HTTP availability snapshot](data/resource-health.json), and [provenance](docs/PROVENANCE.md)
+- [Preserved bibliography](bibliography/custom.bib), [additions](bibliography/additions.bib), and [frontier sources](bibliography/frontier-agents.bib)
+- [Historical ACL draft](archive/acl-draft/README.md) and [website development](website/README.md)
 
-- [Provenance and verification boundaries](docs/PROVENANCE.md)
-- [Machine-readable records](data/papers.json) and [benchmark/project data](data/project.json)
-- [Preserved manuscript bibliography](bibliography/custom.bib)
-- [Website development](website/README.md)
-- [Historical ACL draft and original 125-key index](archive/acl-draft/README.md)
-
-The old ACL material is archived, not the active website or current manuscript. Its original bibliography and third-party license notices are retained. The original bibliography is not silently rewritten when display metadata is normalized.
-
-Organization references: [LLMSurvey](https://github.com/RUCAIBox/LLMSurvey), [Awesome-LLM-Robotics](https://github.com/GT-RIPL/Awesome-LLM-Robotics), and [General-Purpose Robots](https://robotics-fm-survey.github.io/). Website implementation and framework diagram are original; no graphics or template code from these projects are copied.
-
-Snapshot: **${project.checkedOn}**. This is a manuscript-derived collection, not a claim of exhaustive coverage. Third-party works remain subject to their own licenses.
+Organization follows the paper-linked taxonomy and resource-list conventions of [LLMSurvey](https://github.com/RUCAIBox/LLMSurvey) and [Awesome-LLM-Robotics](https://github.com/GT-RIPL/Awesome-LLM-Robotics). This is a manuscript-derived collection, not an exhaustive inventory of the field. Original bibliographies and third-party copyright/license notices are preserved; resource links do not imply endorsement.
 `;
-writeFileSync(resolve(root,'README.md'), readme);
-const catalogue = `# Complete manuscript citation index
-
-Snapshot: ${project.checkedOn}. **${papers.length} distinct cited entries**, derived from the revised manuscript, not an exhaustive field inventory. Group assignment is an editorial reading aid; records may have additional themes in [the data](../data/papers.json).
-
-The original bibliography is preserved separately. Display versions for selected items follow the linked primary records; other entries retain their inherited bibliography year. A source link or Scholar discovery query is not verification. No model or product entry is an assertion of achieved Physical AGI. See [provenance and pending-check details](PROVENANCE.md).
-
-${project.groups.map(g=>'## '+g.title+'\n\n| Key | Source | Version | Recorded checks |\n|---|---|---|---|\n'+papers.filter(p=>p.group===g.id).map(p=>'| `'+p.key+'` | '+link(p)+' | '+escape(p.version)+' | '+labels[p.scholarStatus]+(p.sourceChecked?'; primary identity checked':'')+(p.metadataNote?'; '+escape(p.metadataNote):'')+' |').join('\n')).join('\n\n')}
-`;
-writeFileSync(resolve(root,'docs/CATALOG.md'), catalogue);
-const benchmarks = `# Benchmark coverage: source evidence
-
-Checked on ${project.checkedOn}. All four references exist in the preserved manuscript bibliography. Primary numerical evidence and recorded Scholar visible-metadata matches were checked separately. These are published resource statistics, not newly executed experiments.
-
-${project.benchmarks.map(b=>'## '+b.name+'\n\n- Release: '+b.version+'.\n- Count: **'+b.quantity+' '+b.unit+'**; **'+b.coverage+'**.\n- Definition: '+b.detail+'\n- Primary source: [original paper]('+b.url+').\n- Location: '+b.location+'.\n- Caveat: '+b.caveat+'\n- Existing citation key: `'+b.key+'`.').join('\n\n')}
-
-Do not mix later releases or challenge subsets with these counts. Cross-model comparisons additionally require a shared split, observation/action interface, training exposure, adaptation budget, and evaluation protocol. More tasks alone do not establish generality.
-`;
-writeFileSync(resolve(root,'docs/BENCHMARKS.md'), benchmarks);
-console.log('Generated README, catalogue ('+papers.length+' entries), and benchmark evidence.');
+writeFileSync(resolve(root,'README.md'),readme);
+const catalogue = `# Complete manuscript citation audit\n\nSnapshot: ${project.checkedOn}. ${papers.length} distinct cited records. Source: ${manifest.sourceRepository} at \`${manifest.sourceCommit}\`. Categories are editorial reading aids, not claims about benchmark comparability. Original title/year and Scholar records are preserved independently of resource-link checks.\n\n${cats.map(c=>`## ${c.title}\n\n| Key | Source | Version | Recorded checks |\n|---|---|---|---|\n${categoryPapers(c.id).map(p=>`| \`${p.key}\` | ${paperLink(p)} | ${esc(p.version)} | ${labels[p.scholarStatus]}${p.sourceChecked?'; primary identity checked':''}${p.metadataNote?'; '+esc(p.metadataNote):''} |`).join('\n')}`).join('\n\n')}\n`;
+writeFileSync(resolve(root,'docs/CATALOG.md'),catalogue);
+const benchmarks = `# Benchmark coverage: source evidence\n\nChecked on ${project.benchmarkCheckedOn}. All four references exist in the preserved manuscript bibliography. Primary numerical evidence and recorded Scholar visible-metadata matches were checked separately. These are published resource statistics, not newly executed experiments.\n\n${project.benchmarks.map(b=>'## '+b.name+'\n\n- Release: '+b.version+'.\n- Count: **'+b.quantity+' '+b.unit+'**; **'+b.coverage+'**.\n- Definition: '+b.detail+'\n- Primary source: [original paper]('+b.url+').\n- Location: '+b.location+'.\n- Caveat: '+b.caveat+'\n- Existing citation key: \`'+b.key+'\`.').join('\n\n')}\n\nDo not mix later releases or challenge subsets with these counts. Cross-model comparisons additionally require a shared split, observation/action interface, training exposure, adaptation budget, and evaluation protocol. More tasks alone do not establish generality.\n`;
+writeFileSync(resolve(root,'docs/BENCHMARKS.md'),benchmarks);
+const evidence = papers.filter(p=>p.resourceAudit);
+writeFileSync(resolve(root,'docs/RESOURCE-LINKS.md'),`# Resource-link evidence\n\nSnapshot: ${project.checkedOn}. Resource identity checks are separate from inherited citation metadata and scientific-claim verification. A dash in README means not located/confirmed in this snapshot, not proof of absence. Third-party reimplementations, unrelated dependencies and generic Hugging Face paper pages are not silently labeled official resources.\n\n${evidence.map(p=>`## ${p.key}\n\n- Checked: ${p.resourceAudit.checkedOn}.\n- Evidence: ${p.resourceAudit.evidence.map((u,i)=>`[source ${i+1}](${u})`).join(', ')}.\n- Notes: ${p.resourceAudit.notes || 'Resources linked by the paper, authors, or project repository.'}\n`).join('\n')}`);
+console.log(`Generated complete README and audits: ${papers.length} entries; ${cats.length} categories; resources ${JSON.stringify(sourceStats)}.`);

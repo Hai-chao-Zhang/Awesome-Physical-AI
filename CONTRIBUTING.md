@@ -5,9 +5,10 @@ Contributions should help readers understand the path from language priors to gr
 ## Propose a resource
 
 Open an issue or pull request with:
+
 1. Exact title, authors, year, and the specific preprint or publication version.
 2. A primary paper or official documentation URL; optionally an official code, dataset, or project link.
-3. One or more relevant themes: language priors, grounding, action, world models, agency, or generality/evaluation.
+3. A relevant README category: priors, grounding, action, world models, agency, frontier agents, evaluation, or perspectives.
 4. A short factual explanation of relevance. Distinguish physical experiments, simulation, static evaluation, conceptual work, and product documentation.
 5. What you actually checked. A generated Scholar query or an HTTP-success response is not metadata or claim verification.
 
@@ -21,4 +22,8 @@ Give the release, counting unit, original source, and page/table/section. Model 
 
 The shared source is `data/papers.json` and `data/project.json`. The main README and complete catalogue are generated from those records with `node scripts/generate.mjs`. Run `node scripts/check.mjs` and build the website before proposing a change. See [website/README.md](website/README.md).
 
-The initial 157-entry snapshot is manuscript-derived. Broader community additions should be explicitly marked as collection additions rather than silently described as manuscript citations. Retain source and verification notes. Respect third-party licenses; submit original summaries rather than copied abstracts or figures.
+The current 165-record catalog is manuscript-derived; the original 157-record snapshot and its verification outcomes remain traceable. To synchronize a new manuscript revision, use `node scripts/sync_catalog.mjs /path/to/manuscript-checkout`, review the taxonomy, and update the validation counts and provenance explicitly. This importer refuses to overwrite a differing preserved bibliography.
+
+Put official code, Hugging Face model/dataset/collection, and project URLs in the three `resources` arrays, with the primary evidence URL and date in `resourceAudit`. Use empty arrays when unconfirmed. Do not substitute an unrelated same-name repository, a framework dependency, or a generic HF paper page. Resource identity checks do not replace citation or scientific-claim verification. The website's existing six-group reading guide and the README's eight-category catalog are distinct editorial views.
+
+Broader community additions should be explicitly marked as collection additions rather than silently described as manuscript citations. Retain source and verification notes. Respect third-party licenses; submit original summaries rather than copied abstracts or figures.

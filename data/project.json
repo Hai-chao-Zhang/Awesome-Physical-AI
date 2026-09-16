@@ -1,8 +1,20 @@
 {
-  "checkedOn": "2026-09-08",
-  "manuscriptTitle": "From Language Priors towards Physical AGI",
+  "checkedOn": "2026-09-16",
+  "benchmarkCheckedOn": "2026-09-08",
+  "manuscriptTitle": "From Language Priors towards Physical AI",
   "website": "https://physical-agi.haichaozhang.chatgpt.site",
   "repo": "https://github.com/Hai-chao-Zhang/Awesome-Physical-AI",
+  "authors": ["Haichao Zhang", "Mingfei Chen", "Shwai He", "Zhengtong Xu", "Yifan Shen", "Yiyang Huang", "Jianglin Lu", "Yijiang Li", "Yuhai Wang", "Qihua Dong", "Ang Li", "Yu She", "Yun Fu"],
+  "catalogCategories": [
+    {"id": "priors", "title": "Language priors and knowledge", "description": "Parametric knowledge, reasoning and the language foundations of physical decision making."},
+    {"id": "grounding", "title": "Vision-language grounding and physical perception", "description": "Spatial, temporal and affordance representations that connect language to observations."},
+    {"id": "action", "title": "Vision-language-action models and policy learning", "description": "Action representations, robot learning, demonstrations and generalist policies."},
+    {"id": "world-models", "title": "World models and predictive representations", "description": "Latent, video and action-conditioned prediction. ThinkJEPA belongs to frozen-VLM-guided learned world modeling."},
+    {"id": "agency", "title": "Embodied agents and system integration", "description": "Planning, tool use, execution interfaces, memory and feedback."},
+    {"id": "frontier-agents", "title": "Frozen VLM agents: Astra, Fable and GPT-Policy", "description": "Inference-time robot use without robot-specific weight updates. Zero-shot use is distinguished from demonstration-conditioned or cross-episode adaptation."},
+    {"id": "evaluation", "title": "Benchmarks, simulation and generalization", "description": "Perception, physical reasoning, interaction, robustness and transferable competence."},
+    {"id": "perspectives", "title": "Surveys, perspectives and definitions", "description": "Broader research syntheses and conceptual boundaries for Physical AI and Physical AGI."}
+  ],
   "groups": [
     {
       "id": "priors",

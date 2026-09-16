@@ -17,7 +17,30 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2304.13705",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/act.bib",
+    "resources": {
+      "github": [
+        "https://github.com/tonyzhaozh/act",
+        "https://github.com/tonyzhaozh/aloha"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://tonyzhaozh.github.io/aloha/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2304.13705",
+        "https://tonyzhaozh.github.io/aloha/",
+        "https://github.com/tonyzhaozh/act",
+        "https://github.com/tonyzhaozh/aloha"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "agarwal2025cosmos",
@@ -38,7 +61,30 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2501.03575",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/agarwal2025cosmos.bib",
+    "resources": {
+      "github": [
+        "https://github.com/nvidia-cosmos/cosmos-predict1"
+      ],
+      "huggingface": [
+        "https://huggingface.co/collections/nvidia/cosmos-predict1-67c9d1b97678dbf7669c89a7"
+      ],
+      "homepage": [
+        "https://research.nvidia.com/labs/dir/cosmos-predict1"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2501.03575",
+        "https://research.nvidia.com/labs/dir/cosmos-predict1",
+        "https://github.com/nvidia-cosmos/cosmos-predict1"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "ahn2022saycan",
@@ -59,7 +105,28 @@
     "scholarStatus": "matched_metadata_review",
     "metadataNote": "Visible second result has the same title, A Brohan, Y Chebotar, C Finn ...; proceedings year 2023; https://proceedings.mlr.press/v205/ichter23a. Existing bibliography retained; version/author ordering needs primary-record comparison.",
     "scholarEvidenceUrl": "https://arxiv.org/abs/2204.01691",
-    "scholarNote": "Visible second result has the same title, A Brohan, Y Chebotar, C Finn ...; proceedings year 2023; https://proceedings.mlr.press/v205/ichter23a. Existing bibliography retained; version/author ordering needs primary-record comparison."
+    "scholarNote": "Visible second result has the same title, A Brohan, Y Chebotar, C Finn ...; proceedings year 2023; https://proceedings.mlr.press/v205/ichter23a. Existing bibliography retained; version/author ordering needs primary-record comparison.",
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/ahn2022saycan.bib",
+    "resources": {
+      "github": [
+        "https://github.com/google-research/google-research/tree/master/saycan"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://say-can.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2204.01691",
+        "https://say-can.github.io/",
+        "https://github.com/google-research/google-research/tree/master/saycan"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "alayrac2022flamingo",
@@ -79,7 +146,24 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/960a172bc7fbf0177ccccbb411a7d800-Abstract-Conference.html",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/alayrac2022flamingo.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://deepmind.google/blog/tackling-multiple-tasks-with-a-single-visual-language-model/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://deepmind.google/blog/tackling-multiple-tasks-with-a-single-visual-language-model/"
+      ],
+      "notes": "Original DeepMind project announcement. OpenFlamingo and third-party PyTorch reimplementations are not original-model releases."
+    }
   },
   {
     "key": "anthropic2024claude35sonnettool",
@@ -97,7 +181,61 @@
     "scholarStatus": "no_exact_result",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": "The exact-title search returned papers discussing the card, not a matching card entry. First visible result: Evaluating language models as synthetic data generators; S Kim, J Suk, X Yue, V Viswanathan ...; 2025; https://aclanthology.org/2025.acl-long.320/. This does not prove that the official card is nonexistent."
+    "scholarNote": "The exact-title search returned papers discussing the card, not a matching card entry. First visible result: Evaluating language models as synthetic data generators; S Kim, J Suk, X Yue, V Viswanathan ...; 2025; https://aclanthology.org/2025.acl-long.320/. This does not prove that the official card is nonexistent.",
+    "category": "priors",
+    "kind": "Documentation / report",
+    "citationFile": "bibliography/entries/anthropic2024claude35sonnettool.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://www.anthropic.com/news/claude-3-5-sonnet"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://www.anthropic.com/news/claude-3-5-sonnet"
+      ],
+      "notes": "Official announcement links this exact model-card addendum. No original model weights/code resource verified; general product SDKs are not substituted."
+    }
+  },
+  {
+    "key": "anthropic2026fable51",
+    "title": "Claude Fable 5.1",
+    "bibTitle": "Claude Fable 5.1",
+    "bibYear": "n.d.",
+    "version": "n.d.",
+    "group": "agency",
+    "groups": [
+      "agency"
+    ],
+    "url": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
+    "discoveryUrl": "https://scholar.google.com/scholar?q=%22Claude%20Fable%205.1%22",
+    "featured": false,
+    "summary": null,
+    "sourceChecked": true,
+    "scholarStatus": "no_exact_result",
+    "metadataNote": "Added from the manuscript frontier-agent source audit; see provenance.",
+    "scholarEvidenceUrl": null,
+    "scholarNote": "See the preserved frontier-agent citation audit; primary source and Scholar indexing are separate.",
+    "category": "frontier-agents",
+    "kind": "Documentation / report",
+    "citationFile": "bibliography/entries/anthropic2026fable51.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://platform.claude.com/docs/en/models/fable-5-1/overview"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://platform.claude.com/docs/en/models/fable-5-1/overview"
+      ],
+      "notes": "Official model documentation, not a research paper; no official GitHub implementation or HF weights verified."
+    }
   },
   {
     "key": "arkin1990integrating",
@@ -117,7 +255,23 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://sciencedirect.com/science/article/pii/S0921889005800314",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/arkin1990integrating.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://www.sciencedirect.com/science/article/pii/S0921889005800314",
+        "https://sites.cc.gatech.edu/ai/robot-lab/online-publications/ieee/integratin90.pdf"
+      ],
+      "notes": "Publisher identity and an author-lab-hosted 18-page PDF were located. No paper-specific GitHub, Hugging Face release, or separate project homepage was verified. The author-hosted paper PDF is recorded as evidence, not mislabeled as a code/data homepage. The ScienceDirect search result was readable, but opening its page through the web tool returned an internal error."
+    }
   },
   {
     "key": "assran2023ijepa",
@@ -137,7 +291,28 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/10205476/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/assran2023ijepa.bib",
+    "resources": {
+      "github": [
+        "https://github.com/facebookresearch/ijepa"
+      ],
+      "huggingface": [
+        "https://huggingface.co/facebook/ijepa_vith14_1k"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2301.08243",
+        "https://github.com/facebookresearch/ijepa",
+        "https://huggingface.co/docs/transformers/model_doc/ijepa"
+      ],
+      "notes": "HF checkpoint under the official Facebook organization; listed by Hugging Face Transformers I-JEPA documentation."
+    }
   },
   {
     "key": "assran2025vjepa2",
@@ -157,7 +332,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2506.09985",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/assran2025vjepa2.bib",
+    "resources": {
+      "github": [
+        "https://github.com/facebookresearch/vjepa2"
+      ],
+      "huggingface": [
+        "https://huggingface.co/collections/facebook/v-jepa-2-6841bad8413014e185b497a6"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2506.09985",
+        "https://github.com/facebookresearch/vjepa2"
+      ],
+      "notes": "Repository now also includes V-JEPA 2.1; HF collection here is specifically V-JEPA 2."
+    }
   },
   {
     "key": "athalye2026pixelspredicateslearningsymbolic",
@@ -177,7 +372,65 @@
     "scholarStatus": "matched_metadata_review",
     "metadataNote": "Scholar shows 2024, while existing bibliography uses 2026. Primary arXiv record confirms first submission 2024-12-31, latest revision 2026-03-09 and notes RA-L Vol.11 Issue4. Version/year should be specified consistently; this is not an absent or fabricated paper. Existing entry retained.",
     "scholarEvidenceUrl": "https://arxiv.org/abs/2501.00296",
-    "scholarNote": "Scholar shows 2024, while existing bibliography uses 2026. Primary arXiv record confirms first submission 2024-12-31, latest revision 2026-03-09 and notes RA-L Vol.11 Issue4. Version/year should be specified consistently; this is not an absent or fabricated paper. Existing entry retained."
+    "scholarNote": "Scholar shows 2024, while existing bibliography uses 2026. Primary arXiv record confirms first submission 2024-12-31, latest revision 2026-03-09 and notes RA-L Vol.11 Issue4. Version/year should be specified consistently; this is not an absent or fabricated paper. Existing entry retained.",
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/athalye2026pixelspredicateslearningsymbolic.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Learning-and-Intelligent-Systems/predicators/releases/tag/pix2pred-april2025"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://pix2pred.csail.mit.edu/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2501.00296",
+        "https://pix2pred.csail.mit.edu/",
+        "https://github.com/Learning-and-Intelligent-Systems/predicators/releases/tag/pix2pred-april2025"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
+  },
+  {
+    "key": "awesome2026astra",
+    "title": "Awesome-Astra-Embodied-AI",
+    "bibTitle": "Awesome-Astra-Embodied-AI",
+    "bibYear": "n.d.",
+    "version": "n.d.",
+    "group": "agency",
+    "groups": [
+      "agency"
+    ],
+    "url": "https://github.com/zjwzcx/Awesome-Astra-Embodied-AI/tree/61baafd5fc94ae2db32da8da57704310033a6210",
+    "discoveryUrl": "https://scholar.google.com/scholar?q=%22Awesome-Astra-Embodied-AI%22",
+    "featured": false,
+    "summary": null,
+    "sourceChecked": true,
+    "scholarStatus": "no_exact_result",
+    "metadataNote": "Added from the manuscript frontier-agent source audit; see provenance.",
+    "scholarEvidenceUrl": null,
+    "scholarNote": "See the preserved frontier-agent citation audit; primary source and Scholar indexing are separate.",
+    "category": "frontier-agents",
+    "kind": "Documentation / report",
+    "citationFile": "bibliography/entries/awesome2026astra.bib",
+    "resources": {
+      "github": [
+        "https://github.com/zjwzcx/Awesome-Astra-Embodied-AI"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/zjwzcx/Awesome-Astra-Embodied-AI"
+      ],
+      "notes": "Community resource index, not an empirical paper. Original bibliography pins commit 61baafd5fc94ae2db32da8da57704310033a6210; this resource URL is the current repository."
+    }
   },
   {
     "key": "bardes2024vjepa",
@@ -197,7 +450,25 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2404.08471",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/bardes2024vjepa.bib",
+    "resources": {
+      "github": [
+        "https://github.com/facebookresearch/jepa"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2404.08471",
+        "https://github.com/facebookresearch/jepa"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "bear2021physion",
@@ -217,7 +488,26 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2106.08261",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/bear2021physion.bib",
+    "resources": {
+      "github": [
+        "https://github.com/cogtoolslab/physics-benchmarking-neurips2021"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://physion-benchmark.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://physion-benchmark.github.io/"
+      ],
+      "notes": "Original 2021 code linked by project page; later Physion v1.5 repository not substituted."
+    }
   },
   {
     "key": "bjorck2025gr00tn1",
@@ -237,7 +527,30 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2503.14734",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/bjorck2025gr00tn1.bib",
+    "resources": {
+      "github": [
+        "https://github.com/NVIDIA/Isaac-GR00T"
+      ],
+      "huggingface": [
+        "https://huggingface.co/nvidia/GR00T-N1-2B"
+      ],
+      "homepage": [
+        "https://research.nvidia.com/labs/lpr/publication/gr00tn1_2025/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2503.14734",
+        "https://research.nvidia.com/labs/lpr/publication/gr00tn1_2025/",
+        "https://github.com/NVIDIA/Isaac-GR00T"
+      ],
+      "notes": "Repository main branch now promotes N1.7; selected HF weights are the paper-specific N1-2B checkpoint, not N1.7."
+    }
   },
   {
     "key": "black2024pi0",
@@ -257,7 +570,28 @@
     "scholarStatus": "matched_metadata_review",
     "metadataNote": "LaTeX title markup normalized to readable pi0 for the exact-title search. Scholar displays the 2024 arXiv version; existing bibliography year2025 retained for version review.",
     "scholarEvidenceUrl": "https://arxiv.org/abs/2410.24164",
-    "scholarNote": "LaTeX title markup normalized to readable pi0 for the exact-title search. Scholar displays the 2024 arXiv version; existing bibliography year2025 retained for version review."
+    "scholarNote": "LaTeX title markup normalized to readable pi0 for the exact-title search. Scholar displays the 2024 arXiv version; existing bibliography year2025 retained for version review.",
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/black2024pi0.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Physical-Intelligence/openpi"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://www.pi.website/blog/pi0"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2410.24164",
+        "https://www.pi.website/blog/pi0",
+        "https://github.com/Physical-Intelligence/openpi"
+      ],
+      "notes": "Official OpenPI code and checkpoint instructions. HF LeRobot conversions were not labeled author-official weights in this audit."
+    }
   },
   {
     "key": "bommasani2021foundation",
@@ -277,7 +611,24 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2108.07258",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/bommasani2021foundation.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://crfm.stanford.edu/report"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://crfm.stanford.edu/report"
+      ],
+      "notes": "Institutional report page, not a model release."
+    }
   },
   {
     "key": "brown2020language",
@@ -297,7 +648,24 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.neurips.cc/paper_files/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/brown2020language.bib",
+    "resources": {
+      "github": [
+        "https://github.com/openai/gpt-3"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/openai/gpt-3"
+      ],
+      "notes": "Official paper repository with data and examples, not GPT-3 model weights."
+    }
   },
   {
     "key": "bruce2024genie",
@@ -317,7 +685,25 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://openreview.net/forum?id=bJbSbJskOS",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/bruce2024genie.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://deepmind.google/research/publications/60474/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://proceedings.mlr.press/v235/bruce24a.html",
+        "https://deepmind.google/research/publications/60474/"
+      ],
+      "notes": "No author-official GitHub implementation or HF weights verified; search results include third-party reproductions, excluded."
+    }
   },
   {
     "key": "cai2026xiaomi",
@@ -337,7 +723,30 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2602.12684",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/cai2026xiaomi.bib",
+    "resources": {
+      "github": [
+        "https://github.com/XiaomiRobotics/Xiaomi-Robotics-0"
+      ],
+      "huggingface": [
+        "https://huggingface.co/collections/XiaomiRobotics/xiaomi-robotics-0"
+      ],
+      "homepage": [
+        "https://xiaomi-robotics-0.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2602.12684",
+        "https://xiaomi-robotics-0.github.io/",
+        "https://github.com/XiaomiRobotics/Xiaomi-Robotics-0"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "chang2024factualpretraining",
@@ -357,7 +766,26 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/6fdf57c71bc1f1ee29014b8dc52e723f-Abstract-Conference.html",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/chang2024factualpretraining.bib",
+    "resources": {
+      "github": [
+        "https://github.com/kaistAI/factual-knowledge-acquisition"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/kaist-ai/fictional-knowledge"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/kaistAI/factual-knowledge-acquisition"
+      ],
+      "notes": "Official repository links the fictional-knowledge dataset."
+    }
   },
   {
     "key": "chen2024spatialvlm",
@@ -378,7 +806,66 @@
     "scholarStatus": "matched",
     "metadataNote": "Inspected arXiv author list includes Danny Driess and Pete Florence, absent from the inherited bibliography/previous visible CVPR list. Display follows the linked arXiv title and year; full author identity is version-specific.",
     "scholarEvidenceUrl": "https://openaccess.thecvf.com/content/CVPR2024/html/Chen_SpatialVLM_Endowing_Vision-Language_Models_with_Spatial_Reasoning_Capabilities_CVPR_2024_paper.html",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/chen2024spatialvlm.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://spatial-vlm.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2401.12168",
+        "https://spatial-vlm.github.io/"
+      ],
+      "notes": "Project page links remyxai/VQASynth but this is not taken as an original Google model release."
+    }
+  },
+  {
+    "key": "cheng2026gptpolicy",
+    "title": "In-Context Robot Learning with VLM Agents",
+    "bibTitle": "In-Context Robot Learning with VLM Agents",
+    "bibYear": "2026",
+    "version": "2026",
+    "group": "agency",
+    "groups": [
+      "agency"
+    ],
+    "url": "https://cheng-haha.github.io/GPT-Policy/",
+    "discoveryUrl": "https://scholar.google.com/scholar?q=%22In-Context%20Robot%20Learning%20with%20VLM%20Agents%22",
+    "featured": false,
+    "summary": null,
+    "sourceChecked": true,
+    "scholarStatus": "no_exact_result",
+    "metadataNote": "Added from the manuscript frontier-agent source audit; see provenance.",
+    "scholarEvidenceUrl": null,
+    "scholarNote": "See the preserved frontier-agent citation audit; primary source and Scholar indexing are separate.",
+    "category": "frontier-agents",
+    "kind": "Research manuscript",
+    "citationFile": "bibliography/entries/cheng2026gptpolicy.bib",
+    "resources": {
+      "github": [
+        "https://github.com/cheng-haha/GPT-Policy"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://cheng-haha.github.io/GPT-Policy/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://cheng-haha.github.io/GPT-Policy/paper.pdf?v=20260915-repository-rename",
+        "https://cheng-haha.github.io/GPT-Policy/",
+        "https://github.com/cheng-haha/GPT-Policy"
+      ],
+      "notes": "Public code and named-author project checked September 16; old GPT-Policy-Eval URL redirects to GPT-Policy."
+    }
   },
   {
     "key": "chollet2019measure",
@@ -398,7 +885,25 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/1911.01547",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "perspectives",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/chollet2019measure.bib",
+    "resources": {
+      "github": [
+        "https://github.com/fchollet/ARC-AGI"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/1911.01547",
+        "https://github.com/fchollet/ARC-AGI"
+      ],
+      "notes": "Author repository identifies the paper and original ARC-AGI-1 task data. Do not substitute ARC-AGI-2 or ARC-AGI-3 for the original benchmark."
+    }
   },
   {
     "key": "chow2025physbench",
@@ -418,7 +923,28 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/f38cb4cf9a5eaa92b3cfa481832719c6-Abstract-Conference.html",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/chow2025physbench.bib",
+    "resources": {
+      "github": [
+        "https://github.com/USC-GVL/PhysBench"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/USC-GVL/PhysBench"
+      ],
+      "homepage": [
+        "https://physbench.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/USC-GVL/PhysBench"
+      ],
+      "notes": "Author repository identifies paper and links dataset/homepage; GitHub currently redirects to physical-superintelligence-lab/PhysBench."
+    }
   },
   {
     "key": "chu2025threedaffordancellm",
@@ -438,7 +964,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/b364c8cbb3f229f40d5873e877391bd2-Abstract-Conference.html",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/chu2025threedaffordancellm.bib",
+    "resources": {
+      "github": [
+        "https://github.com/iLearn-Lab/ICLR25-3D_ADLLM"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2502.20041",
+        "https://arxiv.org/html/2502.20041v3",
+        "https://github.com/iLearn-Lab/ICLR25-3D_ADLLM",
+        "https://github.com/iLearn-Lab/ICLR25-3D_ADLLM/blob/main/README.md"
+      ],
+      "notes": "The author-lab repository explicitly identifies itself as the official implementation, with the exact paper title, matching authors/affiliations, and training/evaluation instructions. The repository is a primary author implementation, although no outgoing repository link was found in the inspected arXiv v3 text. Its Hugging Face link is generic Accelerate documentation, not a model/dataset release, so it is excluded. No separate project homepage or official HF artifact was verified."
+    }
   },
   {
     "key": "deitke2025molmo",
@@ -458,7 +1004,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/11092508/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/deitke2025molmo.bib",
+    "resources": {
+      "github": [
+        "https://github.com/allenai/molmo"
+      ],
+      "huggingface": [
+        "https://huggingface.co/collections/allenai/molmo-66f379e6fe3b8ef090a8ca19",
+        "https://huggingface.co/collections/allenai/pixmo-674746ea613028006285687b"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/allenai/molmo"
+      ],
+      "notes": "Official README links original Molmo model and PixMo dataset collections; not Molmo2."
+    }
   },
   {
     "key": "dewi2025systematicphysicalai",
@@ -468,7 +1034,7 @@
     "version": "2025",
     "group": "generality",
     "groups": [],
-    "url": null,
+    "url": "https://ioinformatic.org/index.php/JAIEA/article/view/1101",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22A+systematic+review+of+physical+artificial+intelligence+%28Physical+AI%29%3A+concepts%2C+applications%2C+challenges%2C+and+future+directions%22",
     "featured": false,
     "summary": null,
@@ -476,7 +1042,22 @@
     "scholarStatus": "citation_only",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": "Scholar displays [CITATION], not a linked publisher record. Journal text is truncated as Journal of Artificial ...; no independent primary-document verification is implied."
+    "scholarNote": "Scholar displays [CITATION], not a linked publisher record. Journal text is truncated as Journal of Artificial ...; no independent primary-document verification is implied.",
+    "category": "perspectives",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/dewi2025systematicphysicalai.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://ioinformatic.org/index.php/JAIEA/article/view/1101"
+      ],
+      "notes": "Publisher page matches the exact title and authors and DOI 10.59934/jaiea.v4i3.1101. No accompanying code/model resource located in this pass."
+    }
   },
   {
     "key": "driess2023palm",
@@ -497,7 +1078,24 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2303.03378",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/driess2023palm.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://palm-e.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://palm-e.github.io/"
+      ],
+      "notes": "Author project page matches PaLM-E. No original code/model release located in this pass; unrelated implementations excluded."
+    }
   },
   {
     "key": "fang2026molmoact2",
@@ -518,7 +1116,30 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2605.02881",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/fang2026molmoact2.bib",
+    "resources": {
+      "github": [
+        "https://github.com/allenai/molmoact2"
+      ],
+      "huggingface": [
+        "https://huggingface.co/collections/allenai/molmoact2-models-69f81e05242e2499606b1be6",
+        "https://huggingface.co/collections/allenai/molmoact2-datasets-69f81e316ec3daafe3f9555c"
+      ],
+      "homepage": [
+        "https://allenai.org/blog/molmoact2"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/allenai/molmoact2",
+        "https://arxiv.org/abs/2605.02881"
+      ],
+      "notes": "Official README links base models, fine-tuned models and training data; selected core collections."
+    }
   },
   {
     "key": "fei2025libero",
@@ -538,7 +1159,29 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2510.13626",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/fei2025libero.bib",
+    "resources": {
+      "github": [
+        "https://github.com/sylvestf/LIBERO-plus"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/Sylvest/LIBERO-plus",
+        "https://huggingface.co/datasets/Sylvest/libero_plus_rlds"
+      ],
+      "homepage": [
+        "https://sylvestf.github.io/LIBERO-plus"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/sylvestf/LIBERO-plus"
+      ],
+      "notes": "Official README identifies exact paper, benchmark assets and training data."
+    }
   },
   {
     "key": "fu2024blink",
@@ -558,7 +1201,28 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://link.springer.com/chapter/10.1007/978-3-031-73337-6_9",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/fu2024blink.bib",
+    "resources": {
+      "github": [
+        "https://github.com/zeyofu/BLINK_Benchmark"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/BLINK-Benchmark/BLINK"
+      ],
+      "homepage": [
+        "https://zeyofu.github.io/blink/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://huggingface.co/datasets/BLINK-Benchmark/BLINK/blob/main/README.md?code=true"
+      ],
+      "notes": "Official dataset card directly cross-links exact paper, code and project page."
+    }
   },
   {
     "key": "fu2025video",
@@ -578,7 +1242,28 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/11093290/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/fu2025video.bib",
+    "resources": {
+      "github": [
+        "https://github.com/MME-Benchmarks/Video-MME"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/lmms-lab/Video-MME"
+      ],
+      "homepage": [
+        "https://video-mme.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/MME-Benchmarks/Video-MME"
+      ],
+      "notes": "Official README identifies Video-MME and links the author-linked dataset; this is original Video-MME, not Video-MME-v2."
+    }
   },
   {
     "key": "fu2026capx",
@@ -598,7 +1283,28 @@
     "scholarStatus": "matched_metadata_review",
     "metadataNote": "Main Scholar record displays L Fu; citation-only record displays M Fu. Existing bibliography lists Max Fu and omits Dantong Niu. Independently read current arXiv v2: leading author Letian Fu, and Dantong Niu appears in the author list. This is a metadata/version discrepancy; the real paper's title and identifier match. Existing bibliography retained.",
     "scholarEvidenceUrl": "https://arxiv.org/abs/2603.22435",
-    "scholarNote": "Main Scholar record displays L Fu; citation-only record displays M Fu. Existing bibliography lists Max Fu and omits Dantong Niu. Independently read current arXiv v2: leading author Letian Fu, and Dantong Niu appears in the author list. This is a metadata/version discrepancy; the real paper's title and identifier match. Existing bibliography retained."
+    "scholarNote": "Main Scholar record displays L Fu; citation-only record displays M Fu. Existing bibliography lists Max Fu and omits Dantong Niu. Independently read current arXiv v2: leading author Letian Fu, and Dantong Niu appears in the author list. This is a metadata/version discrepancy; the real paper's title and identifier match. Existing bibliography retained.",
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/fu2026capx.bib",
+    "resources": {
+      "github": [
+        "https://github.com/capgym/cap-x"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://capgym.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2603.22435",
+        "https://capgym.github.io/",
+        "https://github.com/capgym/cap-x"
+      ],
+      "notes": "Official repository matches title, authors and arXiv ID; its README BibTeX currently says year 2025 despite arXiv 2603.22435. Existing bibliography untouched."
+    }
   },
   {
     "key": "fu2026video",
@@ -618,7 +1324,28 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2604.05015",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/fu2026video.bib",
+    "resources": {
+      "github": [
+        "https://github.com/MME-Benchmarks/Video-MME-v2"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/MME-Benchmarks/Video-MME-v2"
+      ],
+      "homepage": [
+        "https://video-mme.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/MME-Benchmarks/Video-MME-v2"
+      ],
+      "notes": "Official README identifies paper and dataset."
+    }
   },
   {
     "key": "gao2026vla",
@@ -636,7 +1363,29 @@
     "scholarStatus": "matched",
     "metadataNote": "Scholar displays 2026, matching the bibliography, while its NeurIPS URL contains 2025; retained for version/year review.",
     "scholarEvidenceUrl": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/c7af751b5e0a407c62ac023e3cb381f9-Abstract-Conference.html",
-    "scholarNote": "Scholar displays 2026, matching the bibliography, while its NeurIPS URL contains 2025; retained for version/year review."
+    "scholarNote": "Scholar displays 2026, matching the bibliography, while its NeurIPS URL contains 2025; retained for version/year review.",
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/gao2026vla.bib",
+    "resources": {
+      "github": [
+        "https://github.com/HeegerGao/VLA-OS"
+      ],
+      "huggingface": [
+        "https://huggingface.co/Linslab/VLA-OS",
+        "https://huggingface.co/datasets/Linslab/VLA-OS-Dataset"
+      ],
+      "homepage": [
+        "https://nus-lins-lab.github.io/vlaos/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/HeegerGao/VLA-OS"
+      ],
+      "notes": "Official README identifies exact title/arXiv:2506.17561 and links models/data."
+    }
   },
   {
     "key": "geva2023dissecting",
@@ -646,7 +1395,7 @@
     "version": "2023",
     "group": "generality",
     "groups": [],
-    "url": null,
+    "url": "https://aclanthology.org/2023.emnlp-main.751/",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Dissecting+Recall+of+Factual+Associations+in+Auto-Regressive+Language+Models%22",
     "featured": false,
     "summary": null,
@@ -654,7 +1403,25 @@
     "scholarStatus": "blocked_attempted",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": "Visible page shows Please show you're not a robot and reCAPTCHA I'm not a robot checkbox. Stopped immediately; no challenge interaction."
+    "scholarNote": "Visible page shows Please show you're not a robot and reCAPTCHA I'm not a robot checkbox. Stopped immediately; no challenge interaction.",
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/geva2023dissecting.bib",
+    "resources": {
+      "github": [
+        "https://github.com/google-research/google-research/tree/master/dissecting_factual_predictions"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://aclanthology.org/2023.emnlp-main.751.pdf",
+        "https://github.com/google-research/google-research/tree/master/dissecting_factual_predictions"
+      ],
+      "notes": "Primary paper links the code subdirectory. That subdirectory README identifies the exact title and authors; do not replace with only the large repository root."
+    }
   },
   {
     "key": "gong2025anytask",
@@ -666,7 +1433,7 @@
     "groups": [
       "generality"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2512.17853",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22AnyTask%3A+an+Automated+Task+and+Data+Generation+Framework+for+Advancing+Sim-to-Real+Policy+Learning%22",
     "featured": false,
     "summary": null,
@@ -674,7 +1441,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/gong2025anytask.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://anytask.rai-inst.com/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2512.17853",
+        "https://anytask.rai-inst.com/"
+      ],
+      "notes": "Primary abstract and project title match. No own GitHub/HF resource located in this pass; related project links are not treated as AnyTask code."
+    }
   },
   {
     "key": "guo2025vtg",
@@ -686,7 +1471,7 @@
     "groups": [
       "grounding"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2405.13382",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Vtg-llm%3A+Integrating+timestamp+knowledge+into+video+llms+for+enhanced+video+temporal+grounding%22",
     "featured": false,
     "summary": null,
@@ -694,7 +1479,27 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/guo2025vtg.bib",
+    "resources": {
+      "github": [
+        "https://github.com/gyxxyg/VTG-LLM"
+      ],
+      "huggingface": [
+        "https://huggingface.co/Yongxin-Guo/VTG-LLM",
+        "https://huggingface.co/datasets/Yongxin-Guo/VTG-IT"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/gyxxyg/VTG-LLM"
+      ],
+      "notes": "Official repository cites exact paper and links checkpoint/data."
+    }
   },
   {
     "key": "guo2026agenticlab",
@@ -714,7 +1519,25 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ui.adsabs.harvard.edu/abs/2026arXiv260201662G/abstract",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/guo2026agenticlab.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://agentic1ab.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://agentic1ab.github.io/static/agenticlab.pdf",
+        "https://agentic1ab.github.io/"
+      ],
+      "notes": "Project retains AgenticLab title and says Code (Coming Soon). Unversioned arXiv 2602.01662 currently serves the renamed PLanAR manuscript; retained original project PDF to avoid silently substituting versions."
+    }
   },
   {
     "key": "ha2018world",
@@ -734,7 +1557,29 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/ha2018world.bib",
+    "resources": {
+      "github": [
+        "https://github.com/hardmaru/WorldModelsExperiments"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://worldmodels.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/1803.10122",
+        "https://worldmodels.github.io/",
+        "https://github.com/hardmaru/WorldModelsExperiments",
+        "https://github.com/worldmodels/worldmodels.github.io"
+      ],
+      "notes": "Implementation explicitly linked by the official interactive-article source repository; article source itself is not mislabeled model code."
+    }
   },
   {
     "key": "hafner2019planet",
@@ -746,7 +1591,7 @@
     "groups": [
       "world-models"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/1811.04551",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Learning+latent+dynamics+for+planning+from+pixels%22",
     "featured": false,
     "summary": null,
@@ -754,7 +1599,28 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/hafner2019planet.bib",
+    "resources": {
+      "github": [
+        "https://github.com/google-research/planet"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://danijar.com/project/planet/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/1811.04551",
+        "https://danijar.com/project/planet/",
+        "https://github.com/google-research/planet"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "hafner2020dreamer",
@@ -766,7 +1632,7 @@
     "groups": [
       "world-models"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/1912.01603",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Dream+to+Control%3A+Learning+Behaviors+by+Latent+Imagination%22",
     "featured": false,
     "summary": null,
@@ -774,7 +1640,30 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/hafner2020dreamer.bib",
+    "resources": {
+      "github": [
+        "https://github.com/google-research/dreamer",
+        "https://github.com/danijar/dreamer"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://danijar.com/project/dreamer/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/1912.01603",
+        "https://danijar.com/project/dreamer/",
+        "https://github.com/google-research/dreamer",
+        "https://github.com/danijar/dreamer"
+      ],
+      "notes": "First GitHub is original TensorFlow 1 implementation; second is author-maintained TensorFlow 2 implementation."
+    }
   },
   {
     "key": "hafner2023dreamerv3",
@@ -794,7 +1683,28 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/hafner2023dreamerv3.bib",
+    "resources": {
+      "github": [
+        "https://github.com/danijar/dreamerv3"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://danijar.com/project/dreamerv3/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2301.04104",
+        "https://danijar.com/project/dreamerv3/",
+        "https://github.com/danijar/dreamerv3"
+      ],
+      "notes": "Project now highlights the 2025 Nature version; existing arXiv source identity retained."
+    }
   },
   {
     "key": "hagoort2004integration",
@@ -814,7 +1724,22 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/hagoort2004integration.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://www.mpi.nl/publications/item60455/integration-word-meaning-and-world-knowledge-language-comprehension"
+      ],
+      "notes": "The authors' Max Planck institutional publication record confirms the paper and links its DOI and public PDF. No paper-specific code/data repository, Hugging Face release, or separate project homepage was verified. The institutional publication record is retained as primary evidence rather than padding the project-homepage field with another paper landing page."
+    }
   },
   {
     "key": "hong2026esibench",
@@ -834,7 +1759,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2605.18746",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/hong2026esibench.bib",
+    "resources": {
+      "github": [
+        "https://github.com/ESI-Bench/ESI-Bench"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://esi-bench.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2605.18746",
+        "https://esi-bench.github.io/"
+      ],
+      "notes": "Paper and project page cross-link exact title/code."
+    }
   },
   {
     "key": "hu2023gaia",
@@ -854,7 +1799,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/hu2023gaia.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://wayve.ai/thinking/introducing-gaia1/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2309.17080",
+        "https://wayve.ai/thinking/introducing-gaia1/"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "hu2024gptkb",
@@ -874,7 +1837,65 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/hu2024gptkb.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Knowledge-aware-AI/GPTKB"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://gptkb.org/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/Knowledge-aware-AI/GPTKB",
+        "https://gptkb.org/"
+      ],
+      "notes": "Living project now presents an expanded release and ACL 2025 title; inherited manuscript citation remains unchanged."
+    }
+  },
+  {
+    "key": "hu2026via",
+    "title": "VIA: Visual Interface Agent for Robot Control",
+    "bibTitle": "VIA: Visual Interface Agent for Robot Control",
+    "bibYear": "2026",
+    "version": "2026",
+    "group": "agency",
+    "groups": [
+      "agency"
+    ],
+    "url": "https://arxiv.org/abs/2607.11119v1",
+    "discoveryUrl": "https://scholar.google.com/scholar?q=%22VIA%3A%20Visual%20Interface%20Agent%20for%20Robot%20Control%22",
+    "featured": false,
+    "summary": null,
+    "sourceChecked": true,
+    "scholarStatus": "matched",
+    "metadataNote": "Added from the manuscript frontier-agent source audit; see provenance.",
+    "scholarEvidenceUrl": "https://arxiv.org/abs/2607.11119v1",
+    "scholarNote": "See the preserved frontier-agent citation audit; primary source and Scholar indexing are separate.",
+    "category": "frontier-agents",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/hu2026via.bib",
+    "resources": {
+      "github": [
+        "https://github.com/hengyuan-hu/via"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2607.11119v1",
+        "https://github.com/hengyuan-hu/via"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "hua2024gensim2",
@@ -894,7 +1915,26 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/hua2024gensim2.bib",
+    "resources": {
+      "github": [
+        "https://github.com/GenSim2/GenSim2"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://gensim2.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/GenSim2/GenSim2"
+      ],
+      "notes": "Official repository links the project page; Google Drive weights are not relabeled as Hugging Face."
+    }
   },
   {
     "key": "huang2022innermonologue",
@@ -914,7 +1954,24 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/huang2022innermonologue.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://innermonologue.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://innermonologue.github.io/"
+      ],
+      "notes": "Author project page. No qualifying official code or HF release confirmed."
+    }
   },
   {
     "key": "huang2022zeroshotplanners",
@@ -934,7 +1991,27 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/huang2022zeroshotplanners.bib",
+    "resources": {
+      "github": [
+        "https://github.com/huangwl18/language-planner"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://huangwl18.github.io/language-planner/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/huangwl18/language-planner",
+        "https://huangwl18.github.io/language-planner/"
+      ],
+      "notes": null
+    }
   },
   {
     "key": "huang2023grounded",
@@ -946,7 +2023,7 @@
     "groups": [
       "agency"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2303.00855",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Grounded+decoding%3A+Guiding+text+generation+with+grounded+models+for+embodied+agents%22",
     "featured": false,
     "summary": null,
@@ -954,7 +2031,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/huang2023grounded.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://grounded-decoding.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2303.00855",
+        "https://grounded-decoding.github.io/"
+      ],
+      "notes": "Project provides paper and video; no official implementation/HF artifact verified."
+    }
   },
   {
     "key": "huang2023voxposer",
@@ -975,7 +2070,28 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/huang2023voxposer.bib",
+    "resources": {
+      "github": [
+        "https://github.com/huangwl18/VoxPoser"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://voxposer.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://proceedings.mlr.press/v229/huang23b.html",
+        "https://voxposer.github.io/",
+        "https://github.com/huangwl18/VoxPoser"
+      ],
+      "notes": "Official demo implementation in RLBench, not the complete real-world perception pipeline."
+    }
   },
   {
     "key": "huang2024manipvqa",
@@ -995,7 +2111,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/10801993/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/huang2024manipvqa.bib",
+    "resources": {
+      "github": [
+        "https://github.com/SiyuanHuang95/ManipVQA"
+      ],
+      "huggingface": [
+        "https://huggingface.co/SiyuanH/ManipVQA/tree/main",
+        "https://huggingface.co/SiyuanH/ManipVQA-7B"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/SiyuanHuang95/ManipVQA"
+      ],
+      "notes": "Author repository links ManipVQA checkpoints; the separate pretrained-backbone dependency is not counted as a ManipVQA release."
+    }
   },
   {
     "key": "huang2025rekep",
@@ -1015,7 +2151,28 @@
     "scholarStatus": "matched_metadata_review",
     "metadataNote": "Scholar shows the 2024 arXiv version. The bibliography cites the 2025 CoRL proceedings; the primary publisher confirms 2025, PMLR 270:4573-4602: https://proceedings.mlr.press/v270/huang25g.html . This version difference is explained, not a demonstrated bibliography error.",
     "scholarEvidenceUrl": "https://arxiv.org/abs/2409.01652",
-    "scholarNote": "Scholar shows the 2024 arXiv version. The bibliography cites the 2025 CoRL proceedings; the primary publisher confirms 2025, PMLR 270:4573-4602: https://proceedings.mlr.press/v270/huang25g.html . This version difference is explained, not a demonstrated bibliography error."
+    "scholarNote": "Scholar shows the 2024 arXiv version. The bibliography cites the 2025 CoRL proceedings; the primary publisher confirms 2025, PMLR 270:4573-4602: https://proceedings.mlr.press/v270/huang25g.html . This version difference is explained, not a demonstrated bibliography error.",
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/huang2025rekep.bib",
+    "resources": {
+      "github": [
+        "https://github.com/huangwl18/ReKep"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://rekep-robot.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://proceedings.mlr.press/v270/huang25g.html",
+        "https://rekep-robot.github.io/",
+        "https://github.com/huangwl18/ReKep"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "huang2026kinderphysicalreasoningbenchmark",
@@ -1035,7 +2192,26 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2604.25788",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/huang2026kinderphysicalreasoningbenchmark.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Princeton-Robot-Planning-and-Learning/kindergarden"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/kinder-bench/kinder-datasets"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/Princeton-Robot-Planning-and-Learning/kindergarden"
+      ],
+      "notes": "README explicitly identifies KinDER and links its dataset. No specific official model checkpoint located in this pass."
+    }
   },
   {
     "key": "intelligence2025pi06vlalearnsexperience",
@@ -1055,7 +2231,25 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2511.14759",
-    "scholarNote": "Initial exact query with readable mathematical prefix 'π*0.6: a VLA That Learns From Experience' showed citing papers but no exact source among the first ten results. Querying the exact textual remainder in the visible Scholar search box matched this arXiv record; mathematical glyphs are absent from the extracted title. Title remainder, visible authors, year and eprint match."
+    "scholarNote": "Initial exact query with readable mathematical prefix 'π*0.6: a VLA That Learns From Experience' showed citing papers but no exact source among the first ten results. Querying the exact textual remainder in the visible Scholar search box matched this arXiv record; mathematical glyphs are absent from the extracted title. Title remainder, visible authors, year and eprint match.",
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/intelligence2025pi06vlalearnsexperience.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://pi.website/blog/pistar06"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2511.14759",
+        "https://pi.website/blog/pistar06"
+      ],
+      "notes": "Do not attach pi0/0.5 OpenPI checkpoints as a pi*0.6 release; exact paper-specific code/weights not verified."
+    }
   },
   {
     "key": "intelligence2026pi",
@@ -1073,7 +2267,62 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2604.15483",
-    "scholarNote": "The exact-title query uses rendered π0.7 rather than TeX markup. The main result's math prefix is absent from extracted visible text; a second citation-only record explicitly displays π0. 7 and the same remaining title."
+    "scholarNote": "The exact-title query uses rendered π0.7 rather than TeX markup. The main result's math prefix is absent from extracted visible text; a second citation-only record explicitly displays π0. 7 and the same remaining title.",
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/intelligence2026pi.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://www.pi.website/blog/pi07"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2604.15483",
+        "https://www.pi.website/blog/pi07"
+      ],
+      "notes": "Official pi0.7 announcement links the technical report. No pi0.7-specific official code/HF release confirmed; OpenPI or other pi versions must not be presented as pi0.7 weights."
+    }
+  },
+  {
+    "key": "isola2026robotuse",
+    "title": "Robot-Use Agents",
+    "bibTitle": "Robot-Use Agents",
+    "bibYear": "2026",
+    "version": "2026",
+    "group": "agency",
+    "groups": [
+      "agency"
+    ],
+    "url": "https://web.mit.edu/phillipi/www/writing/robot-use-agents.html",
+    "discoveryUrl": "https://scholar.google.com/scholar?q=%22Robot-Use%20Agents%22",
+    "featured": false,
+    "summary": null,
+    "sourceChecked": true,
+    "scholarStatus": "no_exact_result",
+    "metadataNote": "Added from the manuscript frontier-agent source audit; see provenance.",
+    "scholarEvidenceUrl": null,
+    "scholarNote": "See the preserved frontier-agent citation audit; primary source and Scholar indexing are separate.",
+    "category": "frontier-agents",
+    "kind": "Documentation / report",
+    "citationFile": "bibliography/entries/isola2026robotuse.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://web.mit.edu/phillipi/www/writing/robot-use-agents.html"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://web.mit.edu/phillipi/www/writing/robot-use-agents.html"
+      ],
+      "notes": "Author perspective essay, not a model or empirical paper; links to other projects are not its own implementation."
+    }
   },
   {
     "key": "jia2021align",
@@ -1093,7 +2342,24 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "http://proceedings.mlr.press/v139/jia21b.html",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/jia2021align.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://research.google/blog/align-scaling-up-visual-and-vision-language-representation-learning-with-noisy-text-supervision/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://research.google/blog/align-scaling-up-visual-and-vision-language-representation-learning-with-noisy-text-supervision/"
+      ],
+      "notes": "Google Research project article matches ALIGN. No original code/HF resource verified; OpenALIGN implementations are not substituted."
+    }
   },
   {
     "key": "jin2024robotgpt",
@@ -1113,7 +2379,22 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/10412086/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/jin2024robotgpt.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2312.01421"
+      ],
+      "notes": "Paper verified; no author-official code, HF artifact or project homepage identified in the checked source."
+    }
   },
   {
     "key": "kambhampati2024llmscantplan",
@@ -1134,7 +2415,22 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2402.01817",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/kambhampati2024llmscantplan.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2402.01817"
+      ],
+      "notes": "Position paper. No paper-specific software/HF artifact/homepage verified; related planning projects not substituted."
+    }
   },
   {
     "key": "kandpal2023longtail",
@@ -1154,7 +2450,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.mlr.press/v202/kandpal23a",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/kandpal2023longtail.bib",
+    "resources": {
+      "github": [
+        "https://github.com/nkandpa2/long_tail_knowledge"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/nkandpa2/pretraining_entities",
+        "https://huggingface.co/datasets/nkandpa2/qa_entities"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/nkandpa2/long_tail_knowledge"
+      ],
+      "notes": "Official repository links entity-count datasets, not trained model checkpoints."
+    }
   },
   {
     "key": "kim2024openvla",
@@ -1174,7 +2490,30 @@
     "scholarStatus": "matched_metadata_review",
     "metadataNote": "Scholar shows the 2024 arXiv version. The bibliography cites the 2025 CoRL proceedings; the primary publisher confirms 2025, PMLR 270:2679-2713: https://proceedings.mlr.press/v270/kim25c.html . This version difference is explained, not a demonstrated bibliography error.",
     "scholarEvidenceUrl": "https://arxiv.org/abs/2406.09246",
-    "scholarNote": "Scholar shows the 2024 arXiv version. The bibliography cites the 2025 CoRL proceedings; the primary publisher confirms 2025, PMLR 270:2679-2713: https://proceedings.mlr.press/v270/kim25c.html . This version difference is explained, not a demonstrated bibliography error."
+    "scholarNote": "Scholar shows the 2024 arXiv version. The bibliography cites the 2025 CoRL proceedings; the primary publisher confirms 2025, PMLR 270:2679-2713: https://proceedings.mlr.press/v270/kim25c.html . This version difference is explained, not a demonstrated bibliography error.",
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/kim2024openvla.bib",
+    "resources": {
+      "github": [
+        "https://github.com/openvla/openvla"
+      ],
+      "huggingface": [
+        "https://huggingface.co/openvla/openvla-7b"
+      ],
+      "homepage": [
+        "https://openvla.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://proceedings.mlr.press/v270/kim25c.html",
+        "https://openvla.github.io/",
+        "https://github.com/openvla/openvla"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "kumar2026openworldtaskmotionplanning",
@@ -1194,7 +2533,25 @@
     "scholarStatus": "matched_metadata_review",
     "metadataNote": "Scholar shows arXiv 2024 and a separate IEEE RA-L 2026 result at https://ieeexplore.ieee.org/abstract/document/11361071/. Existing bibliography combines arXiv identifier with year 2026. Primary arXiv record confirms first submission 2024-11-13, latest revision 2026-03-11 and RA-L Vol.11 Issue3 publication. Preserve entry and choose a consistent version in a later authorized bibliography edit.",
     "scholarEvidenceUrl": "https://arxiv.org/abs/2411.08253",
-    "scholarNote": "Scholar shows arXiv 2024 and a separate IEEE RA-L 2026 result at https://ieeexplore.ieee.org/abstract/document/11361071/. Existing bibliography combines arXiv identifier with year 2026. Primary arXiv record confirms first submission 2024-11-13, latest revision 2026-03-11 and RA-L Vol.11 Issue3 publication. Preserve entry and choose a consistent version in a later authorized bibliography edit."
+    "scholarNote": "Scholar shows arXiv 2024 and a separate IEEE RA-L 2026 result at https://ieeexplore.ieee.org/abstract/document/11361071/. Existing bibliography combines arXiv identifier with year 2026. Primary arXiv record confirms first submission 2024-11-13, latest revision 2026-03-11 and RA-L Vol.11 Issue3 publication. Preserve entry and choose a consistent version in a later authorized bibliography edit.",
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/kumar2026openworldtaskmotionplanning.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://nishanthjkumar.com/owl-tamp/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2411.08253",
+        "https://nishanthjkumar.com/owl-tamp/"
+      ],
+      "notes": "Project title uses Inferred Constraints while its citation uses Generated Constraints; same work/version family. No code release linked by checked project."
+    }
   },
   {
     "key": "lai2024lisa",
@@ -1214,7 +2571,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/10658574/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/lai2024lisa.bib",
+    "resources": {
+      "github": [
+        "https://github.com/JIA-Lab-research/LISA"
+      ],
+      "huggingface": [
+        "https://huggingface.co/xinlai/LISA-7B-v1"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/JIA-Lab-research/LISA",
+        "https://github.com/X-Lai"
+      ],
+      "notes": "Author profile pins current official repository; README links original LISA paper and checkpoints."
+    }
   },
   {
     "key": "lecun2022path",
@@ -1234,7 +2611,22 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://openreview.net/pdf?id=BZ5a1r-kVsf&utm_source=luma",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/lecun2022path.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://openreview.net/pdf?id=BZ5a1r-kVsf"
+      ],
+      "notes": "Position manuscript, not a model release. OpenReview PDF direct HTTP was 403; primary search record matches title."
+    }
   },
   {
     "key": "li2023behavior",
@@ -1254,7 +2646,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.mlr.press/v205/li23a",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/li2023behavior.bib",
+    "resources": {
+      "github": [
+        "https://github.com/StanfordVL/BEHAVIOR-1K"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://behavior.stanford.edu/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/StanfordVL/BEHAVIOR-1K",
+        "https://github.com/StanfordVL/BEHAVIOR-1K/blob/main/OmniGibson/README.md"
+      ],
+      "notes": "Official BEHAVIOR-1K/OmniGibson repository; current releases evolve beyond paper."
+    }
   },
   {
     "key": "li2023blip",
@@ -1274,7 +2686,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.mlr.press/v202/li23q",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/li2023blip.bib",
+    "resources": {
+      "github": [
+        "https://github.com/salesforce/LAVIS/tree/main/projects/blip2"
+      ],
+      "huggingface": [
+        "https://huggingface.co/Salesforce/blip2-opt-2.7b"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://huggingface.co/Salesforce/blip2-opt-2.7b",
+        "https://huggingface.co/spaces/Salesforce/BLIP2/blob/main/app.py"
+      ],
+      "notes": "Salesforce checkpoint card cites exact paper and LAVIS BLIP2 implementation."
+    }
   },
   {
     "key": "li2023physicalai",
@@ -1284,7 +2716,7 @@
     "version": "2023",
     "group": "generality",
     "groups": [],
-    "url": null,
+    "url": "https://doi.org/10.1631/FITEE.2200675",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Physical+artificial+intelligence+%28PAI%29%3A+the+next-generation+artificial+intelligence%22",
     "featured": false,
     "summary": null,
@@ -1292,7 +2724,23 @@
     "scholarStatus": "blocked_attempted",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": "The exact-title navigation displayed 'Please show you are not a robot', reCAPTCHA and an unchecked 'I am not a robot' checkbox. No article result was inspected; no CAPTCHA interaction or bypass. All further Scholar queries stopped."
+    "scholarNote": "The exact-title navigation displayed 'Please show you are not a robot', reCAPTCHA and an unchecked 'I am not a robot' checkbox. No article result was inspected; no CAPTCHA interaction or bypass. All further Scholar queries stopped.",
+    "category": "perspectives",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/li2023physicalai.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://doi.org/10.1631/FITEE.2200675",
+        "https://crossmark.crossref.org/dialog/?doi=10.1631%2FFITEE.2200675"
+      ],
+      "notes": "DOI resolves to the exact Springer journal paper; title and four-author list match. Do not substitute the differently authored arXiv:2105.06564 manuscript. No accompanying resource located."
+    }
   },
   {
     "key": "li2024embodied",
@@ -1304,7 +2752,7 @@
     "groups": [
       "generality"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2410.07166",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Embodied+agent+interface%3A+Benchmarking+llms+for+embodied+decision+making%22",
     "featured": false,
     "summary": null,
@@ -1312,7 +2760,28 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/li2024embodied.bib",
+    "resources": {
+      "github": [
+        "https://github.com/embodied-agent-interface/embodied-agent-interface"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/Inevitablevalor/EmbodiedAgentInterface"
+      ],
+      "homepage": [
+        "https://embodied-agent-interface.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/embodied-agent-interface/embodied-agent-interface"
+      ],
+      "notes": "Official README cross-links paper, dataset and project."
+    }
   },
   {
     "key": "li2026toward",
@@ -1332,7 +2801,31 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2602.01541",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/li2026toward.bib",
+    "resources": {
+      "github": [
+        "https://github.com/PediaMedAI/Cognition-MLLM"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/PediaMedAI/CogSense-Bench",
+        "https://huggingface.co/PediaMedAI/CogSense-8B"
+      ],
+      "homepage": [
+        "https://pediamedai.com/Cognition-MLLM/cogsense/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/html/2602.01541v1",
+        "https://github.com/PediaMedAI/Cognition-MLLM",
+        "https://pediamedai.com/Cognition-MLLM/cogsense/"
+      ],
+      "notes": "Primary paper links the repository/dataset; official multi-project README and exact project page link CogSense-8B. VCog-Bench in the same README belongs to the older different paper and is excluded."
+    }
   },
   {
     "key": "liang2023codeaspolicies",
@@ -1353,7 +2846,28 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/liang2023codeaspolicies.bib",
+    "resources": {
+      "github": [
+        "https://github.com/google-research/google-research/tree/master/code_as_policies"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://code-as-policies.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2209.07753",
+        "https://code-as-policies.github.io/",
+        "https://github.com/google-research/google-research/tree/master/code_as_policies"
+      ],
+      "notes": "Official project also links a Hugging Face Space demo, but no HF model/dataset/collection; demo omitted from requested HF artifact field."
+    }
   },
   {
     "key": "liigibson",
@@ -1373,7 +2887,26 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/liigibson.bib",
+    "resources": {
+      "github": [
+        "https://github.com/StanfordVL/iGibson"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://svl.stanford.edu/igibson/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/StanfordVL/iGibson"
+      ],
+      "notes": "README identifies iGibson 2.0 and its exact arXiv paper; dataset distribution uses project instructions, not a verified HF release."
+    }
   },
   {
     "key": "lin2026phyground",
@@ -1391,7 +2924,30 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2605.10806",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/lin2026phyground.bib",
+    "resources": {
+      "github": [
+        "https://github.com/NU-World-Model-Embodied-AI/PhyGround"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/NU-World-Model-Embodied-AI/phyground",
+        "https://huggingface.co/NU-World-Model-Embodied-AI/phyjudge-9B"
+      ],
+      "homepage": [
+        "https://phyground.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2605.10806",
+        "https://phyground.github.io/"
+      ],
+      "notes": "Project page explicitly links benchmark dataset, PhyJudge checkpoint and code."
+    }
   },
   {
     "key": "liu2023libero",
@@ -1411,7 +2967,28 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/8c3c666820ea055a77726d66fc7d447f-Abstract-Datasets_and_Benchmarks.html",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/liu2023libero.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Lifelong-Robot-Learning/LIBERO"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets"
+      ],
+      "homepage": [
+        "https://libero-project.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/Lifelong-Robot-Learning/LIBERO"
+      ],
+      "notes": "Official original LIBERO repository links author-hosted dataset; third-party LeRobot/RLDS conversions not substituted."
+    }
   },
   {
     "key": "liu2023llava",
@@ -1431,7 +3008,29 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/liu2023llava.bib",
+    "resources": {
+      "github": [
+        "https://github.com/haotian-liu/LLaVA"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/liuhaotian/LLaVA-Pretrain",
+        "https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K"
+      ],
+      "homepage": [
+        "https://llava-vl.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/haotian-liu/LLaVA"
+      ],
+      "notes": "Original-author repository, not forks; datasets linked by README. Repository also documents subsequent LLaVA versions."
+    }
   },
   {
     "key": "liu2023llm",
@@ -1451,7 +3050,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/liu2023llm.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Cranial-XIX/llm-pddl"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2304.11477",
+        "https://github.com/Cranial-XIX/llm-pddl"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "liu2024ok",
@@ -1471,7 +3088,28 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/liu2024ok.bib",
+    "resources": {
+      "github": [
+        "https://github.com/ok-robot/ok-robot"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://ok-robot.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2401.12202",
+        "https://ok-robot.github.io/",
+        "https://github.com/ok-robot/ok-robot"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "liu2025generative",
@@ -1491,7 +3129,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "perspectives",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/liu2025generative.bib",
+    "resources": {
+      "github": [
+        "https://github.com/BestJunYu/Awesome-Physics-aware-Generation"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2501.10928",
+        "https://github.com/BestJunYu/Awesome-Physics-aware-Generation"
+      ],
+      "notes": "Primary abstract explicitly links the author resource repository. It is a curated literature/resource list, not an implementation or new dataset release."
+    }
   },
   {
     "key": "liu2025pavlm",
@@ -1503,7 +3159,7 @@
     "groups": [
       "grounding"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2410.11564",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22PAVLM%3A+Advancing+point+cloud+based+affordance+understanding+via+vision-language+model%22",
     "featured": false,
     "summary": null,
@@ -1511,7 +3167,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/liu2025pavlm.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://pavlm-source.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2410.11564",
+        "https://pavlm-source.github.io/"
+      ],
+      "notes": "Project page GitHub button points only to github.com root, not a released repository; no GitHub resource accepted."
+    }
   },
   {
     "key": "liu2026palm",
@@ -1531,7 +3205,22 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2601.07060",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/liu2026palm.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/html/2601.07060v1"
+      ],
+      "notes": "Primary full-text HTML examined for resource links; no paper-specific official GitHub/HF/project link located in this pass. Null is not evidence of absence. Distinct from Google PaLM-E."
+    }
   },
   {
     "key": "lu2019vilbert",
@@ -1551,7 +3240,24 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.neurips.cc/paper_files/paper/2019/hash/c74d97b01eae257e44aa9d5bade97baf-Abstract.html",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/lu2019vilbert.bib",
+    "resources": {
+      "github": [
+        "https://github.com/jiasenlu/vilbert_beta"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/jiasenlu/vilbert_beta"
+      ],
+      "notes": "Original ViLBERT code and arXiv:1908.02265; later multi-task ViLBERT repository not substituted."
+    }
   },
   {
     "key": "lu2025representation",
@@ -1569,7 +3275,22 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://aclanthology.org/2025.emnlp-main.843/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "perspectives",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/lu2025representation.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://aclanthology.org/2025.emnlp-main.843/"
+      ],
+      "notes": "Publisher title verified. No paper-specific official GitHub/HF/project resource located in this pass; ACL Anthology infrastructure links are not paper code."
+    }
   },
   {
     "key": "morris2023levels",
@@ -1589,7 +3310,59 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2311.02462",
-    "scholarNote": "A separate Position: version is also listed for ICML 2024; the 2023 arXiv entry matches the bibliography."
+    "scholarNote": "A separate Position: version is also listed for ICML 2024; the 2023 arXiv entry matches the bibliography.",
+    "category": "perspectives",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/morris2023levels.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2311.02462"
+      ],
+      "notes": "Primary abstract/title verified; no official code/model/dataset/project resource located in this pass. Null is not evidence of absence."
+    }
+  },
+  {
+    "key": "movingatoms2026evaluation",
+    "title": "Evaluation",
+    "bibTitle": "Evaluation",
+    "bibYear": "n.d.",
+    "version": "n.d.",
+    "group": "agency",
+    "groups": [
+      "agency"
+    ],
+    "url": "https://www.movingatoms.ai/platform/evaluation/",
+    "discoveryUrl": "https://scholar.google.com/scholar?q=%22Evaluation%22",
+    "featured": false,
+    "summary": null,
+    "sourceChecked": true,
+    "scholarStatus": "no_exact_result",
+    "metadataNote": "Added from the manuscript frontier-agent source audit; see provenance.",
+    "scholarEvidenceUrl": null,
+    "scholarNote": "See the preserved frontier-agent citation audit; primary source and Scholar indexing are separate.",
+    "category": "frontier-agents",
+    "kind": "Documentation / report",
+    "citationFile": "bibliography/entries/movingatoms2026evaluation.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://www.movingatoms.ai/platform/evaluation/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://www.movingatoms.ai/platform/evaluation/"
+      ],
+      "notes": "Commercial evaluation-platform page, not an academic paper; RobotGym service linked, no official source-code/HF release verified."
+    }
   },
   {
     "key": "munasinghe2025videoglamm",
@@ -1609,7 +3382,26 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/11093431/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/munasinghe2025videoglamm.bib",
+    "resources": {
+      "github": [
+        "https://github.com/mbzuai-oryx/VideoGLaMM"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://mbzuai-oryx.github.io/VideoGLaMM/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/mbzuai-oryx/VideoGLaMM"
+      ],
+      "notes": "Official repository identifies exact title and arXiv:2411.04923. No HF URL found in inspected README."
+    }
   },
   {
     "key": "nasiriany2024robocasa",
@@ -1629,7 +3421,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2406.02523",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/nasiriany2024robocasa.bib",
+    "resources": {
+      "github": [
+        "https://github.com/robocasa/robocasa"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://robocasa.ai/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/robocasa/robocasa",
+        "https://robocasa.ai/"
+      ],
+      "notes": "Shared repository now defaults to RoboCasa365. Original 2024 paper linked separately; original-release use must pin its version."
+    }
   },
   {
     "key": "nasiriany2026robocasa365",
@@ -1649,7 +3461,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/a05003fdb1e9562ab0c0a9719ea4de10-Abstract-Conference.html",
-    "scholarNote": "Scholar displays the ICLR 2026 published version; a second citation-only record links the baseline arXiv identifier 2603.04356."
+    "scholarNote": "Scholar displays the ICLR 2026 published version; a second citation-only record links the baseline arXiv identifier 2603.04356.",
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/nasiriany2026robocasa365.bib",
+    "resources": {
+      "github": [
+        "https://github.com/robocasa/robocasa"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://robocasa.ai/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/robocasa/robocasa",
+        "https://robocasa.ai/"
+      ],
+      "notes": "Official homepage/repository explicitly identify RoboCasa365 and link its paper."
+    }
   },
   {
     "key": "o2024open",
@@ -1669,7 +3501,28 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/10611477/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/o2024open.bib",
+    "resources": {
+      "github": [
+        "https://github.com/google-deepmind/open_x_embodiment"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://robotics-transformer-x.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://robotics-transformer-x.github.io/paper.pdf",
+        "https://robotics-transformer-x.github.io/",
+        "https://github.com/google-deepmind/open_x_embodiment"
+      ],
+      "notes": "Official dataset repository and paper; third-party HF dataset conversions are not marked author-official."
+    }
   },
   {
     "key": "octo_2023",
@@ -1689,7 +3542,31 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2405.12213",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/octo_2023.bib",
+    "resources": {
+      "github": [
+        "https://github.com/octo-models/octo"
+      ],
+      "huggingface": [
+        "https://huggingface.co/rail-berkeley/octo-base",
+        "https://huggingface.co/rail-berkeley/octo-small"
+      ],
+      "homepage": [
+        "https://octo-models.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2405.12213",
+        "https://octo-models.github.io/",
+        "https://github.com/octo-models/octo"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "openai2023gpt4",
@@ -1707,7 +3584,25 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2303.08774",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/openai2023gpt4.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://openai.com/index/gpt-4-research/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2303.08774",
+        "https://openai.com/index/gpt-4-research/"
+      ],
+      "notes": "Original March 2023 research announcement links the technical report. OpenAI Evals is an evaluation framework, not GPT-4 model code; no model weights resource confirmed. Direct curl access returned HTTP 403 in the final reachability check; primary identity evidence is retained, not represented as unrestricted automated access."
+    }
   },
   {
     "key": "openai2026astra",
@@ -1728,7 +3623,24 @@
     "metadataNote": "Official OpenAI product documentation; no publication date asserted. The recorded exact-title Scholar query found no matching articles. Not a peer-reviewed robotics paper and not evidence of achieved Physical AGI.",
     "scholarEvidenceUrl": null,
     "scholarNote": "The visible page states that the exact-title search did not match any articles. This does not show that the independently checked official documentation is nonexistent.",
-    "sourceType": "official_documentation"
+    "sourceType": "official_documentation",
+    "category": "frontier-agents",
+    "kind": "Documentation / report",
+    "citationFile": "bibliography/entries/openai2026astra.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      ],
+      "notes": "Official API model documentation, not a research paper or open-weight artifact."
+    }
   },
   {
     "key": "pertsch2025fast",
@@ -1748,7 +3660,30 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2501.09747",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/pertsch2025fast.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Physical-Intelligence/openpi"
+      ],
+      "huggingface": [
+        "https://huggingface.co/physical-intelligence/fast"
+      ],
+      "homepage": [
+        "https://www.pi.website/research/fast"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2501.09747",
+        "https://www.pi.website/research/fast",
+        "https://github.com/Physical-Intelligence/openpi"
+      ],
+      "notes": "HF artifact is the FAST action tokenizer; OpenPI includes the pi0-FAST policy integration."
+    }
   },
   {
     "key": "petroni2019language",
@@ -1768,7 +3703,25 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://aclanthology.org/D19-1250/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/petroni2019language.bib",
+    "resources": {
+      "github": [
+        "https://github.com/facebookresearch/LAMA"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/1909.01066",
+        "https://ai.meta.com/research/publications/language-models-as-knowledge-bases/"
+      ],
+      "notes": "Original LAMA evaluation code. This genuine third-party affiliation is not a claim about ownership of the survey."
+    }
   },
   {
     "key": "physicalintelligence2025pi05",
@@ -1788,7 +3741,28 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2504.16054",
-    "scholarNote": "Query uses the readable math title, removing BibTeX presentation commands; Scholar displays TeX notation for pi_0.5."
+    "scholarNote": "Query uses the readable math title, removing BibTeX presentation commands; Scholar displays TeX notation for pi_0.5.",
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/physicalintelligence2025pi05.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Physical-Intelligence/openpi"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://pi.website/blog/pi05"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2504.16054",
+        "https://pi.website/blog/pi05",
+        "https://github.com/Physical-Intelligence/openpi"
+      ],
+      "notes": "Official OpenPI code and checkpoint instructions; HF LeRobot conversions not labeled author-official weights."
+    }
   },
   {
     "key": "pothiraj2025capture",
@@ -1808,7 +3782,26 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/11445505/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/pothiraj2025capture.bib",
+    "resources": {
+      "github": [
+        "https://github.com/atinpothiraj/CAPTURe"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/atinp/CAPTURe"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/atinpothiraj/CAPTURe"
+      ],
+      "notes": "Original-author README directly links paper and dataset."
+    }
   },
   {
     "key": "puyin2025quantiphy",
@@ -1828,7 +3821,29 @@
     "scholarStatus": "matched_metadata_review",
     "metadataNote": "The bibliography cites the 2025 arXiv version (2512.19526); the visible Scholar result links to CVPR 2026. This is a publication-version difference, recorded without changing the bibliography.",
     "scholarEvidenceUrl": "https://openaccess.thecvf.com/content/CVPR2026/html/Puyin_QUANTIPHY_A_Quantitative_Benchmark_Evaluating_Physical_Reasoning_Abilities_of_Vision-Language_CVPR_2026_paper.html",
-    "scholarNote": "The bibliography cites the 2025 arXiv version (2512.19526); the visible Scholar result links to CVPR 2026. This is a publication-version difference, recorded without changing the bibliography."
+    "scholarNote": "The bibliography cites the 2025 arXiv version (2512.19526); the visible Scholar result links to CVPR 2026. This is a publication-version difference, recorded without changing the bibliography.",
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/puyin2025quantiphy.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Paulineli/QuantiPhy"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/PaulineLi/QuantiPhy",
+        "https://huggingface.co/datasets/PaulineLi/QuantiPhy-validation"
+      ],
+      "homepage": [
+        "https://quantiphy.stanford.edu/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/Paulineli/QuantiPhy"
+      ],
+      "notes": "Exact physical-reasoning benchmark; unrelated KenKundert/quantiphy units library excluded."
+    }
   },
   {
     "key": "qian2024affordancellm",
@@ -1849,7 +3864,24 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/10678001/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/qian2024affordancellm.bib",
+    "resources": {
+      "github": [
+        "https://github.com/JasonQSY/AffordanceLLM"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/JasonQSY/AffordanceLLM"
+      ],
+      "notes": "Author repository explicitly describes DATA PROCESSING CODE only. README says the author no longer has access to the Amazon project checkpoints and cannot release the model. Do not advertise this as complete model code or released weights."
+    }
   },
   {
     "key": "qiu2025phybench",
@@ -1869,7 +3901,28 @@
     "scholarStatus": "matched_metadata_review",
     "metadataNote": "Scholar displays 2026 while the bibliography and publisher URL identify NeurIPS 2025. This is a Scholar/publisher year discrepancy, recorded without changing the bibliography.",
     "scholarEvidenceUrl": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/01e793f8cf5689aa0ea46a1b01071bea-Abstract-Datasets_and_Benchmarks_Track.html",
-    "scholarNote": "Scholar displays 2026 while the bibliography and publisher URL identify NeurIPS 2025. This is a Scholar/publisher year discrepancy, recorded without changing the bibliography."
+    "scholarNote": "Scholar displays 2026 while the bibliography and publisher URL identify NeurIPS 2025. This is a Scholar/publisher year discrepancy, recorded without changing the bibliography.",
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/qiu2025phybench.bib",
+    "resources": {
+      "github": [
+        "https://github.com/phybench-official/phybench"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/Eureka-Lab/PHYBench"
+      ],
+      "homepage": [
+        "https://www.phybench.cn/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/phybench-official/phybench"
+      ],
+      "notes": "Official repository links the dataset and current project domain."
+    }
   },
   {
     "key": "qu2025spatialvla",
@@ -1889,7 +3942,30 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2501.15830",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/qu2025spatialvla.bib",
+    "resources": {
+      "github": [
+        "https://github.com/SpatialVLA/SpatialVLA"
+      ],
+      "huggingface": [
+        "https://huggingface.co/collections/IPEC-COMMUNITY/foundation-vision-language-action-model-6795eb96a9c661f90236acbb"
+      ],
+      "homepage": [
+        "https://spatialvla.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2501.15830",
+        "https://spatialvla.github.io/",
+        "https://github.com/SpatialVLA/SpatialVLA"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "radford2021learning",
@@ -1909,7 +3985,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.mlr.press/v139/radford21a",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/radford2021learning.bib",
+    "resources": {
+      "github": [
+        "https://github.com/openai/CLIP"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://openai.com/index/clip/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/openai/CLIP",
+        "https://openai.com/index/clip/"
+      ],
+      "notes": "Official OpenAI code and announcement; HF port not yet separately verified. Direct curl access to the announcement returned HTTP 403 in the final reachability check; the GitHub resource remains accessible."
+    }
   },
   {
     "key": "rana2023sayplan",
@@ -1930,7 +4026,25 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2307.06135",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/rana2023sayplan.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://sayplan.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://proceedings.mlr.press/v229/rana23a.html",
+        "https://sayplan.github.io/"
+      ],
+      "notes": "Author GitHub profiles and site-template repository are not paper implementations; excluded."
+    }
   },
   {
     "key": "rasheed2024glammpixelgroundinglarge",
@@ -1950,7 +4064,26 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/10655326/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/rasheed2024glammpixelgroundinglarge.bib",
+    "resources": {
+      "github": [
+        "https://github.com/mbzuai-oryx/groundingLMM"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://mbzuai-oryx.github.io/groundingLMM"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/mbzuai-oryx/groundingLMM"
+      ],
+      "notes": "Official GLaMM README identifies arXiv:2311.03356 and project."
+    }
   },
   {
     "key": "rdt1b2025",
@@ -1970,7 +4103,31 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/49f80e4d2471ad4f2edf4f5f1ab62339-Abstract-Conference.html",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/rdt1b2025.bib",
+    "resources": {
+      "github": [
+        "https://github.com/thu-ml/RoboticsDiffusionTransformer"
+      ],
+      "huggingface": [
+        "https://huggingface.co/robotics-diffusion-transformer/rdt-1b",
+        "https://huggingface.co/datasets/robotics-diffusion-transformer/rdt-ft-data"
+      ],
+      "homepage": [
+        "https://rdt-robotics.github.io/rdt-robotics/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://proceedings.iclr.cc/paper_files/paper/2025/hash/49f80e4d2471ad4f2edf4f5f1ab62339-Abstract-Conference.html",
+        "https://rdt-robotics.github.io/rdt-robotics/",
+        "https://github.com/thu-ml/RoboticsDiffusionTransformer"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "ren2024timechat",
@@ -1990,7 +4147,27 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/10656135/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/ren2024timechat.bib",
+    "resources": {
+      "github": [
+        "https://github.com/RenShuhuai-Andy/TimeChat"
+      ],
+      "huggingface": [
+        "https://huggingface.co/ShuhuaiRen/TimeChat-7b",
+        "https://huggingface.co/datasets/ShuhuaiRen/TimeIT"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/RenShuhuai-Andy/TimeChat"
+      ],
+      "notes": "Original TimeChat resources; later TimeChat-Online links deliberately not substituted."
+    }
   },
   {
     "key": "roberts2020knowledge",
@@ -2010,7 +4187,67 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://aclanthology.org/2020.emnlp-main.437/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/roberts2020knowledge.bib",
+    "resources": {
+      "github": [
+        "https://github.com/google-research/google-research/tree/master/t5_closed_book_qa"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2002.08910",
+        "https://goo.gle/t5-cbqa",
+        "https://github.com/google-research/google-research/tree/master/t5_closed_book_qa",
+        "https://github.com/google-research/google-research/blob/master/t5_closed_book_qa/README.md"
+      ],
+      "notes": "The arXiv abstract explicitly links the released code/models through goo.gle/t5-cbqa, which resolves to the Google Research subdirectory. Its README identifies this exact paper and describes reproduction code plus released checkpoints on Google Cloud Storage. No project-specific Hugging Face release or separate homepage was verified; generic T5 base-model resources are not substituted."
+    }
+  },
+  {
+    "key": "robocurve2026astra",
+    "title": "GPT-6 Astra on Robotic Manipulation",
+    "bibTitle": "GPT-6 Astra on Robotic Manipulation",
+    "bibYear": "2026",
+    "version": "2026",
+    "group": "agency",
+    "groups": [
+      "agency"
+    ],
+    "url": "https://openai.robocurve.org/gpt-6-astra/",
+    "discoveryUrl": "https://scholar.google.com/scholar?q=%22GPT-6%20Astra%20on%20Robotic%20Manipulation%22",
+    "featured": false,
+    "summary": null,
+    "sourceChecked": true,
+    "scholarStatus": "no_exact_result",
+    "metadataNote": "Added from the manuscript frontier-agent source audit; see provenance.",
+    "scholarEvidenceUrl": null,
+    "scholarNote": "See the preserved frontier-agent citation audit; primary source and Scholar indexing are separate.",
+    "category": "frontier-agents",
+    "kind": "Documentation / report",
+    "citationFile": "bibliography/entries/robocurve2026astra.bib",
+    "resources": {
+      "github": [
+        "https://github.com/robocurve/inspect-robots"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://openai.robocurve.org/gpt-6-astra/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://openai.robocurve.org/gpt-6-astra/",
+        "https://github.com/robocurve/inspect-robots"
+      ],
+      "notes": "Online experimental report, not peer-reviewed paper. GitHub is the linked Inspect Robots evaluation harness, not GPT-6 Astra model source."
+    }
   },
   {
     "key": "ruis2025procedural",
@@ -2020,7 +4257,7 @@
     "version": "2025",
     "group": "generality",
     "groups": [],
-    "url": null,
+    "url": "https://arxiv.org/abs/2411.12580",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Procedural+Knowledge+in+Pretraining+Drives+Reasoning+in+Large+Language+Models%22",
     "featured": false,
     "summary": null,
@@ -2028,7 +4265,23 @@
     "scholarStatus": "blocked_attempted",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": "The exact-title search displayed 'Please show you are not a robot' and reCAPTCHA instead of article results. All further batch-C Scholar queries stopped; no CAPTCHA interaction or bypass."
+    "scholarNote": "The exact-title search displayed 'Please show you are not a robot' and reCAPTCHA instead of article results. All further batch-C Scholar queries stopped; no CAPTCHA interaction or bypass.",
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/ruis2025procedural.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2411.12580",
+        "https://arxiv.org/html/2411.12580v1"
+      ],
+      "notes": "Primary full-text HTML examined. Existing base-model and third-party influence-analysis dependency links are not treated as this paper's own released artifacts. No paper-specific official GitHub/HF/project resource located in this pass."
+    }
   },
   {
     "key": "schrittwieser2020mastering",
@@ -2040,7 +4293,7 @@
     "groups": [
       "world-models"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/1911.08265",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Mastering+atari%2C+go%2C+chess+and+shogi+by+planning+with+a+learned+model%22",
     "featured": false,
     "summary": null,
@@ -2048,7 +4301,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/schrittwieser2020mastering.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://deepmind.google/blog/muzero-mastering-go-chess-shogi-and-atari-without-rules/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/1911.08265",
+        "https://deepmind.google/blog/muzero-mastering-go-chess-shogi-and-atari-without-rules/"
+      ],
+      "notes": "No official full-training GitHub/HF artifact verified; third-party MuZero implementations excluded."
+    }
   },
   {
     "key": "schwenk2022okvqa",
@@ -2068,7 +4339,24 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/schwenk2022okvqa.bib",
+    "resources": {
+      "github": [
+        "https://github.com/allenai/aokvqa"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/allenai/aokvqa"
+      ],
+      "notes": "A-OKVQA official repository. Paper-linked a-okvqa.allenai.org could not be loaded in this check, so the homepage is left unconfirmed."
+    }
   },
   {
     "key": "shen2021igibson",
@@ -2080,7 +4368,7 @@
     "groups": [
       "generality"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2012.02924",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22iGibson+1.0%3A+A+simulation+environment+for+interactive+tasks+in+large+realistic+scenes%22",
     "featured": false,
     "summary": null,
@@ -2088,7 +4376,26 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/shen2021igibson.bib",
+    "resources": {
+      "github": [
+        "https://github.com/StanfordVL/iGibson"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://svl.stanford.edu/igibson/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/StanfordVL/iGibson"
+      ],
+      "notes": "Official repository explicitly identifies the 1.0 paper and instructs users to use the 1.0 branch for that release."
+    }
   },
   {
     "key": "shen2026chronovision",
@@ -2108,7 +4415,28 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2608.05631",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/shen2026chronovision.bib",
+    "resources": {
+      "github": [
+        "https://github.com/PediaMedAI/Cognition-MLLM"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://pediamedai.com/Cognition-MLLM/ChronoVision/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/html/2608.05631v1",
+        "https://github.com/PediaMedAI/Cognition-MLLM",
+        "https://pediamedai.com/Cognition-MLLM/ChronoVision/"
+      ],
+      "notes": "Exact author project page links the shared Cognition-MLLM repository. This is a multi-project repository; no ChronoVision-specific checkpoint or runnable-code completeness claim verified."
+    }
   },
   {
     "key": "shen2026cogniroute",
@@ -2128,7 +4456,22 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2606.20970",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/shen2026cogniroute.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/html/2606.20970v1"
+      ],
+      "notes": "Primary HTML declares https://plan-lab.github.io/cogniroute but direct access returned HTTP 404 on 2026-09-16; not promoted as a working homepage. No official GitHub/HF resource located."
+    }
   },
   {
     "key": "shen2026egoforge",
@@ -2148,7 +4491,24 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2603.20169",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/shen2026egoforge.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2603.20169",
+        "https://arxiv.org/html/2603.20169",
+        "https://plan-lab.github.io/egoforge"
+      ],
+      "notes": "Paper-linked https://plan-lab.github.io/egoforge returned 404 on 2026-09-16. Homepage left null; no verified replacement/code/HF release."
+    }
   },
   {
     "key": "shen2026evaluating",
@@ -2168,7 +4528,25 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2605.17894",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/shen2026evaluating.bib",
+    "resources": {
+      "github": [
+        "https://github.com/PediaMedAI/ChildAgentEval"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/html/2605.17894v1",
+        "https://github.com/PediaMedAI/ChildAgentEval"
+      ],
+      "notes": "Primary paper links the repository; README matches exact title and authors and identifies a model-agnostic interactive evaluation framework, not a static public dataset. Full benchmark release completeness not assessed."
+    }
   },
   {
     "key": "shen2026fine",
@@ -2188,7 +4566,26 @@
     "scholarStatus": "matched",
     "metadataNote": "Scholar displays 2026, matching the bibliography, while its NeurIPS URL contains 2025; retained for version/year review.",
     "scholarEvidenceUrl": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/1a17a06de88cf77f25cda0da91615a54-Abstract-Conference.html",
-    "scholarNote": "Scholar displays 2026, matching the bibliography, while its NeurIPS URL contains 2025; retained for version/year review."
+    "scholarNote": "Scholar displays 2026, matching the bibliography, while its NeurIPS URL contains 2025; retained for version/year review.",
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/shen2026fine.bib",
+    "resources": {
+      "github": [
+        "https://github.com/PLAN-Lab/SpatialReasonerR1"
+      ],
+      "huggingface": [
+        "https://huggingface.co/PLAN-Lab/SpatialReasoner-R1"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/PLAN-Lab/SpatialReasonerR1"
+      ],
+      "notes": "README matches the exact paper title and links the model. Its linked project page https://plan-lab.github.io/spatialreasoner/ returned HTTP 404 in the final live check, so the homepage field is left unconfirmed."
+    }
   },
   {
     "key": "shen2026tiptop",
@@ -2208,7 +4605,28 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2603.09971",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/shen2026tiptop.bib",
+    "resources": {
+      "github": [
+        "https://github.com/tiptop-robot/tiptop"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://tiptop-robot.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2603.09971",
+        "https://tiptop-robot.github.io/",
+        "https://github.com/tiptop-robot/tiptop"
+      ],
+      "notes": "Current arXiv/project title is TiPToP: A Modular Open-Vocabulary Robot Manipulation System That Plans; original bibliography not edited."
+    }
   },
   {
     "key": "shridhar2022cliport",
@@ -2220,7 +4638,7 @@
     "groups": [
       "grounding"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2109.12098",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Cliport%3A+What+and+where+pathways+for+robotic+manipulation%22",
     "featured": false,
     "summary": null,
@@ -2228,7 +4646,26 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/shridhar2022cliport.bib",
+    "resources": {
+      "github": [
+        "https://github.com/cliport/cliport"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://cliport.github.io"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/cliport/cliport"
+      ],
+      "notes": "Original repository links paper and project; datasets/checkpoints use project/GitHub release distribution, not verified HF."
+    }
   },
   {
     "key": "shukor2025smolvla",
@@ -2248,7 +4685,27 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/shukor2025smolvla.bib",
+    "resources": {
+      "github": [
+        "https://github.com/huggingface/lerobot"
+      ],
+      "huggingface": [
+        "https://huggingface.co/lerobot/smolvla_base"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2506.01844",
+        "https://github.com/huggingface/lerobot"
+      ],
+      "notes": "Official LeRobot repository and SmolVLA base model card; not a third-party fine-tune."
+    }
   },
   {
     "key": "singh2023progprompt",
@@ -2268,7 +4725,27 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/singh2023progprompt.bib",
+    "resources": {
+      "github": [
+        "https://github.com/NVlabs/progprompt-vh"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://progprompt.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://progprompt.github.io/",
+        "https://github.com/NVlabs/progprompt-vh"
+      ],
+      "notes": "Project links the VirtualHome implementation; the cited extended Autonomous Robots version is preserved."
+    }
   },
   {
     "key": "song2023llmplanner",
@@ -2288,7 +4765,26 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/song2023llmplanner.bib",
+    "resources": {
+      "github": [
+        "https://github.com/OSU-NLP-Group/LLM-Planner"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://osu-nlp-group.github.io/LLM-Planner/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/OSU-NLP-Group/LLM-Planner"
+      ],
+      "notes": null
+    }
   },
   {
     "key": "song2025robospatial",
@@ -2309,7 +4805,26 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/song2025robospatial.bib",
+    "resources": {
+      "github": [
+        "https://github.com/NVlabs/RoboSpatial"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/chanhee-luke/RoboSpatial-Home"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/NVlabs/RoboSpatial"
+      ],
+      "notes": "Official NVIDIA README links exact paper and Home evaluation dataset; not claiming it is the entire training dataset."
+    }
   },
   {
     "key": "srivastavabehavior",
@@ -2329,7 +4844,30 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/srivastavabehavior.bib",
+    "resources": {
+      "github": [
+        "https://github.com/StanfordVL/BehaviorChallenge2021",
+        "https://github.com/StanfordVL/bddl-100",
+        "https://github.com/StanfordVL/iGibson"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://behavior.stanford.edu/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2108.03332",
+        "https://github.com/StanfordVL/BehaviorChallenge2021",
+        "https://github.com/StanfordVL/bddl-100"
+      ],
+      "notes": "2021 official challenge starter repository and explicitly archived BEHAVIOR-100 BDDL distinguish original benchmark from BEHAVIOR-1K. Shared homepage now emphasizes newer releases; use historical 2021/iGibson versions for reproduction."
+    }
   },
   {
     "key": "tan2019lxmert",
@@ -2341,7 +4879,7 @@
     "groups": [
       "grounding"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/1908.07490",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Lxmert%3A+Learning+cross-modality+encoder+representations+from+transformers%22",
     "featured": false,
     "summary": null,
@@ -2349,7 +4887,24 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/tan2019lxmert.bib",
+    "resources": {
+      "github": [
+        "https://github.com/airsplay/lxmert"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/airsplay/lxmert"
+      ],
+      "notes": "Original implementation links exact paper; weights distributed on UNC server in README."
+    }
   },
   {
     "key": "tao2024context",
@@ -2359,7 +4914,7 @@
     "version": "2024",
     "group": "generality",
     "groups": [],
-    "url": null,
+    "url": "https://aclanthology.org/2024.emnlp-main.234/",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22When+Context+Leads+but+Parametric+Memory+Follows+in+Large+Language+Models%22",
     "featured": false,
     "summary": null,
@@ -2367,7 +4922,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/tao2024context.bib",
+    "resources": {
+      "github": [
+        "https://github.com/PortNLP/WikiAtomic"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://aclanthology.org/2024.emnlp-main.234.pdf",
+        "https://github.com/PortNLP/WikiAtomic"
+      ],
+      "notes": "Publisher paper footnote links WikiAtomic; repository README links the matching paper."
+    }
   },
   {
     "key": "team2023gemini",
@@ -2385,7 +4958,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/team2023gemini.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2312.11805",
+        "https://blog.google/technology/ai/google-gemini-ai/"
+      ],
+      "notes": "Original Google Gemini announcement verified; canonical URL is redirected destination. No model weights/source-code resource verified; general SDKs not substituted."
+    }
   },
   {
     "key": "team2025gemini1",
@@ -2405,7 +4996,28 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/team2025gemini1.bib",
+    "resources": {
+      "github": [
+        "https://github.com/embodiedreasoning/ERQA"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2503.20020",
+        "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/",
+        "https://github.com/embodiedreasoning/ERQA"
+      ],
+      "notes": "GitHub is the official ERQA embodied-reasoning benchmark released with Gemini Robotics, not the model source or weights. No official Gemini Robotics model GitHub/HF weight release verified."
+    }
   },
   {
     "key": "team2025gemini15",
@@ -2425,7 +5037,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/team2025gemini15.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2510.03342",
+        "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/"
+      ],
+      "notes": "Official model announcement; no model-source GitHub or HF weights verified."
+    }
   },
   {
     "key": "team2026qwen3",
@@ -2445,7 +5075,25 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2604.15804",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/team2026qwen3.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://huggingface.co/spaces/Qwen/Qwen3.5-Omni-Online-Demo"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/html/2604.15804v2",
+        "https://huggingface.co/spaces/Qwen/Qwen3.5-Omni-Online-Demo"
+      ],
+      "notes": "Primary paper explicitly links the official HF Space demo. Homepage stores this DEMO, while huggingface remains null because no model/dataset/collection was verified. Qwen3-Omni or ordinary Qwen3.5 weights are not substituted for Qwen3.5-Omni."
+    }
   },
   {
     "key": "torne2026mem",
@@ -2465,7 +5113,25 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2603.03596",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/torne2026mem.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://www.pi.website/research/memory"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2603.03596",
+        "https://www.pi.website/research/memory"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "valmeekam2024planbench",
@@ -2485,7 +5151,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/valmeekam2024planbench.bib",
+    "resources": {
+      "github": [
+        "https://github.com/karthikv792/LLMs-Planning"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/karthikv792/LLMs-Planning",
+        "https://arxiv.org/abs/2409.13373"
+      ],
+      "notes": "Shared author-maintained planning evaluation repository; cited 2024 o1 report is distinct from the original 2023 PlanBench benchmark."
+    }
   },
   {
     "key": "wang2023voyager",
@@ -2505,7 +5189,27 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/wang2023voyager.bib",
+    "resources": {
+      "github": [
+        "https://github.com/MineDojo/Voyager"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://voyager.minedojo.org/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/MineDojo/Voyager",
+        "https://arxiv.org/abs/2305.16291"
+      ],
+      "notes": null
+    }
   },
   {
     "key": "wang2024grounded",
@@ -2525,7 +5229,27 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/wang2024grounded.bib",
+    "resources": {
+      "github": [
+        "https://github.com/WHB139426/Grounded-Video-LLM"
+      ],
+      "huggingface": [
+        "https://huggingface.co/WHB139426/Grounded-Video-LLM",
+        "https://huggingface.co/datasets/WHB139426/Grounded-VideoLLM/blob/main/G-VideoQA-gpt4o-mini-anno.json"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/WHB139426/Grounded-Video-LLM"
+      ],
+      "notes": "Official README links the model and the exact G-VideoQA annotation file; second HF URL is a dataset file, not a separate model."
+    }
   },
   {
     "key": "wang2026finemola",
@@ -2545,7 +5269,25 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://openaccess.thecvf.com/content/CVPR2026W/HuMoGen/html/Wang_FineMoLA_Towards_Fine-Grained_Motion-Language_Alignment_from_Clip-Level_Supervision_CVPRW_2026_paper.html",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/wang2026finemola.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://hellosunnyworld.github.io/finemola/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://openaccess.thecvf.com/content/CVPR2026W/HuMoGen/html/Wang_FineMoLA_Towards_Fine-Grained_Motion-Language_Alignment_from_Clip-Level_Supervision_CVPRW_2026_paper.html",
+        "https://hellosunnyworld.github.io/finemola/"
+      ],
+      "notes": "Project currently links paper only; no implementation/HF artifact verified."
+    }
   },
   {
     "key": "wei2022chain",
@@ -2565,7 +5307,29 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "priors",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/wei2022chain.bib",
+    "resources": {
+      "github": [
+        "https://github.com/jasonwei20/chain-of-thought-prompting"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://research.google/blog/language-models-perform-reasoning-via-chain-of-thought/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2201.11903",
+        "https://arxiv.org/pdf/2201.11903v1",
+        "https://github.com/jasonwei20/chain-of-thought-prompting",
+        "https://research.google/blog/language-models-perform-reasoning-via-chain-of-thought/"
+      ],
+      "notes": "The original arXiv v1 reproducibility statement (PDF page 9) directly links Jason Wei's repository. Its current contents include chain-of-thought-zip.zip and LICENSE_COINFLIP_LAST_LETTER; this is an inputs/targets/predictions supplementary resource, not released PaLM/LaMDA model weights or a complete training runtime. The Google Research article is a first-party explanation by Jason Wei and Denny Zhou. No official paper-specific Hugging Face release was verified."
+    }
   },
   {
     "key": "wen2024tinyvla",
@@ -2577,7 +5341,7 @@
     "groups": [
       "action"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2409.12514",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22TinyVLA%3A+Towards+fast%2C+data-efficient+vision-language-action+models+for+robotic+manipulation%22",
     "featured": false,
     "summary": null,
@@ -2585,7 +5349,28 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/wen2024tinyvla.bib",
+    "resources": {
+      "github": [
+        "https://github.com/liyaxuanliyaxuan/TinyVLA"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://tiny-vla.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2409.12514",
+        "https://tiny-vla.github.io/",
+        "https://github.com/liyaxuanliyaxuan/TinyVLA"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "wen2025dexvla",
@@ -2605,7 +5390,32 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/wen2025dexvla.bib",
+    "resources": {
+      "github": [
+        "https://github.com/midea-ai/DexVLA"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/lesjie/dexvla_example_data",
+        "https://huggingface.co/lesjie/scale_dp_h",
+        "https://huggingface.co/lesjie/scale_dp_l"
+      ],
+      "homepage": [
+        "https://dex-vla.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2502.05855",
+        "https://dex-vla.github.io/",
+        "https://github.com/midea-ai/DexVLA"
+      ],
+      "notes": "Official repository links an example dataset and pretrained ScaleDP components; these are not a complete standalone DexVLA end-to-end checkpoint."
+    }
   },
   {
     "key": "wu2023tidybot",
@@ -2617,7 +5427,7 @@
     "groups": [
       "agency"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2305.05658",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Tidybot%3A+Personalized+robot+assistance+with+large+language+models%22",
     "featured": false,
     "summary": null,
@@ -2625,7 +5435,28 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/wu2023tidybot.bib",
+    "resources": {
+      "github": [
+        "https://github.com/jimmyyhwu/tidybot"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://tidybot.cs.princeton.edu/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2305.05658",
+        "https://tidybot.cs.princeton.edu/",
+        "https://github.com/jimmyyhwu/tidybot"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "wu2025mass",
@@ -2645,7 +5476,22 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/wu2025mass.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/html/2511.18373v1"
+      ],
+      "notes": "Primary full-text HTML title verified and outbound links examined; no paper-specific official GitHub/HF/project resource located in this pass. Null is not evidence of absence."
+    }
   },
   {
     "key": "xiang2025seephys",
@@ -2665,7 +5511,28 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/xiang2025seephys.bib",
+    "resources": {
+      "github": [
+        "https://github.com/AI4Phys/SeePhys"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/SeePhys/SeePhys"
+      ],
+      "homepage": [
+        "https://seephys.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/AI4Phys/SeePhys"
+      ],
+      "notes": "Dataset URL is explicitly linked by the official repository; not inferred from the project name."
+    }
   },
   {
     "key": "xiao2024florence",
@@ -2677,7 +5544,7 @@
     "groups": [
       "grounding"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2311.06242",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Florence-2%3A+Advancing+a+unified+representation+for+a+variety+of+vision+tasks%22",
     "featured": false,
     "summary": null,
@@ -2685,7 +5552,24 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/xiao2024florence.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [
+        "https://huggingface.co/microsoft/Florence-2-base"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://huggingface.co/microsoft/Florence-2-base"
+      ],
+      "notes": "Microsoft model card identifies exact paper and authors. Representative original base model, not community conversion."
+    }
   },
   {
     "key": "xu2025physense",
@@ -2705,7 +5589,24 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/xu2025physense.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2505.24823",
+        "https://arxiv.org/html/2505.24823v1",
+        "https://github.com/thuml/PhySense"
+      ],
+      "notes": "The inspected arXiv v1 paper and exact-title/arXiv searches did not establish a matching author-linked code, dataset, HF artifact, or project homepage. Do not substitute thuml/PhySense: its official README identifies PhySense: Sensor Placement Optimization for Accurate Physics Sensing (arXiv:2505.18190), a different paper. A same-name hcliucs/PhySense repository has no description/README and GitHub size 0; it is not treated as verified evidence for this paper."
+    }
   },
   {
     "key": "yang2023unisim",
@@ -2717,7 +5618,7 @@
     "groups": [
       "world-models"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2310.06114",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Learning+Interactive+Real-World+Simulators%22",
     "featured": false,
     "summary": null,
@@ -2725,7 +5626,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/yang2023unisim.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://universal-simulator.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2310.06114",
+        "https://universal-simulator.github.io/"
+      ],
+      "notes": "Official project contains demonstrations; no original UniSim model/code release verified."
+    }
   },
   {
     "key": "yang2025embodiedbench",
@@ -2745,7 +5664,29 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2502.09560",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/yang2025embodiedbench.bib",
+    "resources": {
+      "github": [
+        "https://github.com/EmbodiedBench/EmbodiedBench"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/EmbodiedBench/EB-ALFRED",
+        "https://huggingface.co/datasets/EmbodiedBench/EB-Manipulation"
+      ],
+      "homepage": [
+        "https://embodiedbench.github.io"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/EmbodiedBench/EmbodiedBench"
+      ],
+      "notes": "Official README links release datasets and reports later data fixes; do not equate latest data with original paper version."
+    }
   },
   {
     "key": "yang2026robolab",
@@ -2765,7 +5706,27 @@
     "scholarStatus": "matched_metadata_review",
     "metadataNote": "Main Scholar record displays JX Yang; a citation-only record displays X Yang. Original bibliography gives Xuning Yang. Independently read current arXiv v4 author list: Jenai Xuning Yang; other visible leading authors agree. Existing bibliography retained.",
     "scholarEvidenceUrl": "https://arxiv.org/abs/2604.09860",
-    "scholarNote": "Main Scholar record displays JX Yang; a citation-only record displays X Yang. Original bibliography gives Xuning Yang. Independently read current arXiv v4 author list: Jenai Xuning Yang; other visible leading authors agree. Existing bibliography retained."
+    "scholarNote": "Main Scholar record displays JX Yang; a citation-only record displays X Yang. Original bibliography gives Xuning Yang. Independently read current arXiv v4 author list: Jenai Xuning Yang; other visible leading authors agree. Existing bibliography retained.",
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/yang2026robolab.bib",
+    "resources": {
+      "github": [
+        "https://github.com/NVlabs/RoboLab"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://research.nvidia.com/labs/srl/projects/robolab/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/NVlabs/RoboLab",
+        "https://arxiv.org/abs/2604.09860"
+      ],
+      "notes": "Repository identity and project link verified. Issue requests for future releases are not evidence that model weights are available."
+    }
   },
   {
     "key": "ye2026starvla",
@@ -2785,7 +5746,32 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2604.11757",
-    "scholarNote": "Rendered α was used for the TeX math title. The math glyph is absent from extracted result text; result title additionally hyphenates Vision-Language-Action. Authors, year and arXiv identifier match."
+    "scholarNote": "Rendered α was used for the TeX math title. The math glyph is absent from extracted result text; result title additionally hyphenates Vision-Language-Action. Authors, year and arXiv identifier match.",
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/ye2026starvla.bib",
+    "resources": {
+      "github": [
+        "https://github.com/starVLA/starVLA"
+      ],
+      "huggingface": [
+        "https://huggingface.co/StarVLA/Qwen2.5-VL-3B-Instruct-Action",
+        "https://huggingface.co/StarVLA/Qwen3-VL-4B-Instruct-Action",
+        "https://huggingface.co/StarVLA/Qwen3VL-GR00T-Bridge-RT-1"
+      ],
+      "homepage": [
+        "https://starvla.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2604.11757",
+        "https://starvla.github.io/",
+        "https://github.com/starVLA/starVLA"
+      ],
+      "notes": "Official current project model resources; repository covers a broader framework and later releases, not a frozen exact paper reproduction."
+    }
   },
   {
     "key": "yuan2024factbench",
@@ -2805,7 +5791,24 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/yuan2024factbench.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2404.16164",
+        "https://arxiv.org/html/2404.16164v1",
+        "https://github.com/launchnlp/FactBench"
+      ],
+      "notes": "The inspected original paper says the benchmark will be made publicly available but provides no verified release link. Exact-title/arXiv searches and GitHub repository discovery did not establish a matching author release. Do not substitute launchnlp/FactBench or launch/FactBench on HF: their primary README identifies a different paper, FactBench: A Dynamic Benchmark for In-the-Wild Language Model Factuality Evaluation (arXiv:2410.22257), by different authors. DeFacto/FactBench is also a different temporal fact-validation benchmark."
+    }
   },
   {
     "key": "yuan2024robopoint",
@@ -2826,7 +5829,30 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/yuan2024robopoint.bib",
+    "resources": {
+      "github": [
+        "https://github.com/wentaoyuan/RoboPoint"
+      ],
+      "huggingface": [
+        "https://huggingface.co/wentao-yuan/robopoint-v1-vicuna-v1.5-13b",
+        "https://huggingface.co/datasets/wentao-yuan/robopoint_data",
+        "https://huggingface.co/datasets/wentao-yuan/where2place"
+      ],
+      "homepage": [
+        "https://robo-point.github.io"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/wentaoyuan/RoboPoint"
+      ],
+      "notes": "Official README links checkpoints, training mix and Where2Place evaluation dataset."
+    }
   },
   {
     "key": "zeng2025timesuite",
@@ -2838,7 +5864,7 @@
     "groups": [
       "grounding"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2410.19702",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Timesuite%3A+Improving+mllms+for+long+video+understanding+via+grounded+tuning%22",
     "featured": false,
     "summary": null,
@@ -2846,7 +5872,26 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zeng2025timesuite.bib",
+    "resources": {
+      "github": [
+        "https://github.com/OpenGVLab/TimeSuite"
+      ],
+      "huggingface": [
+        "https://huggingface.co/Lanxingxuan/TimeSuite"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/OpenGVLab/TimeSuite"
+      ],
+      "notes": "Official README links paper, checkpoint repository and TimePro dataset directory within the same HF resource."
+    }
   },
   {
     "key": "zhang2023layout",
@@ -2858,7 +5903,7 @@
     "groups": [
       "agency"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2310.06138",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Layout+sequence+prediction+from+noisy+mobile+modality%22",
     "featured": false,
     "summary": null,
@@ -2866,7 +5911,28 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhang2023layout.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://www.zhanghaichao.xyz/LTrajDiff/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2310.06138",
+        "https://www.zhanghaichao.xyz/LTrajDiff/",
+        "https://hai-chao-zhang.github.io/LTrajDiff/",
+        "https://www.zhanghaichao.xyz/",
+        "https://github.com/Hai-chao-Zhang/LTrajDiff"
+      ],
+      "notes": "Official project labels LTrajDiff GitHub coming soon; that linked repository returned 404. arXiv source title is confirmed by author page and primary search record, but direct HTTP returned 406 in this audit. Canonical HTTPS project works (old GitHub Pages URL redirects to HTTP)."
+    }
   },
   {
     "key": "zhang2024dkprompt",
@@ -2886,7 +5952,25 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhang2024dkprompt.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://dkprompt.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2406.17659",
+        "https://dkprompt.github.io/"
+      ],
+      "notes": "Project title is Prompting VLMs with and for Classical Planners; official page linked by the paper. Site-template GitHub is not model code."
+    }
   },
   {
     "key": "zhang2024oostraj",
@@ -2898,7 +5982,7 @@
     "groups": [
       "agency"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2404.02227",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Oostraj%3A+Out-of-sight+trajectory+prediction+with+vision-positioning+denoising%22",
     "featured": false,
     "summary": null,
@@ -2906,7 +5990,29 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhang2024oostraj.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Hai-chao-Zhang/OOSTraj"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://www.zhanghaichao.xyz/Out-of-SightTrajPred/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2404.02227",
+        "https://www.zhanghaichao.xyz/Out-of-SightTrajPred/",
+        "https://github.com/Hai-chao-Zhang/OOSTraj",
+        "https://hai-chao-zhang.github.io/Out-of-SightTrajPred/"
+      ],
+      "notes": "Resources traced to the primary paper, official project page or author-maintained repository. Null means no qualifying official resource verified in this audit, not proof of absence."
+    }
   },
   {
     "key": "zhang2025dense",
@@ -2916,7 +6022,7 @@
     "version": "2025",
     "group": "generality",
     "groups": [],
-    "url": null,
+    "url": "https://arxiv.org/abs/2509.14199",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22Dense+video+understanding+with+gated+residual+tokenization%22",
     "featured": false,
     "summary": null,
@@ -2924,7 +6030,28 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhang2025dense.bib",
+    "resources": {
+      "github": [
+        "https://github.com/hai-chao-zhang/DenseVideoUnderstand/"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/haichaozhang/DenseVideoEvaluation"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/html/2509.14199v2",
+        "https://github.com/hai-chao-zhang/DenseVideoUnderstand/",
+        "https://huggingface.co/datasets/haichaozhang/DenseVideoEvaluation"
+      ],
+      "notes": "Primary paper links DenseVideoUnderstand and DenseVideoEvaluation. The author-linked HF destinations https://huggingface.co/datasets/haichaozhang/DIVE-Bench and https://huggingface.co/datasets/haichaozhang/highmotion_densevideounderstand returned HTTP 401 during live checks, so neither is promoted as publicly accessible. The verified DenseVideoEvaluation entry is retained."
+    }
   },
   {
     "key": "zhang2025linkedout",
@@ -2934,7 +6061,7 @@
     "version": "2025",
     "group": "generality",
     "groups": [],
-    "url": null,
+    "url": "https://arxiv.org/abs/2512.16891",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%22LinkedOut%3A+Linking+World+Knowledge+Representation+Out+of+Video+LLM+for+Next-Generation+Video+Recommendation%22",
     "featured": false,
     "summary": null,
@@ -2942,7 +6069,22 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhang2025linkedout.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2512.16891"
+      ],
+      "notes": "Primary abstract/title and authors verified; no official GitHub/HF/project resource located in this pass. Null is not evidence of absence."
+    }
   },
   {
     "key": "zhang2025phystoolbench",
@@ -2962,7 +6104,26 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhang2025phystoolbench.bib",
+    "resources": {
+      "github": [
+        "https://github.com/EnVision-Research/PhysToolBench"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/zhangzixin02/PhysToolBench"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/EnVision-Research/PhysToolBench"
+      ],
+      "notes": "Official repository redirects from the older PhysToolBench/PhysToolBench owner and links the HF dataset."
+    }
   },
   {
     "key": "zhang2026out",
@@ -2982,7 +6143,26 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://ieeexplore.ieee.org/abstract/document/11450494/",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "agency",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhang2026out.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Hai-chao-Zhang/OST"
+      ],
+      "huggingface": [],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://ieeexplore.ieee.org/abstract/document/11450494/",
+        "https://github.com/Hai-chao-Zhang/OST",
+        "https://www.zhanghaichao.xyz/"
+      ],
+      "notes": "Author repository describes the TPAMI extension under earlier Out-of-Sight Trajectory title; author homepage links IEEE document 11450494 under final title. Repository readme is older, not a new citation identity. Direct IEEE HTTP returned 418; source retained from bibliography and author publication record rather than claimed HTTP-access verified."
+    }
   },
   {
     "key": "zhang2026thinkjepa",
@@ -3000,7 +6180,30 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2603.22281",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "world-models",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhang2026thinkjepa.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Hai-chao-Zhang/ThinkJEPA"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/haichaozhang/cache/tree/iso"
+      ],
+      "homepage": [
+        "https://www.zhanghaichao.xyz/ThinkJEPA/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2603.22281",
+        "https://www.zhanghaichao.xyz/ThinkJEPA/",
+        "https://github.com/Hai-chao-Zhang/ThinkJEPA"
+      ],
+      "notes": "Reclassify to world-models. HF artifact is released preprocessed cache (iso branch), not a pretrained model checkpoint."
+    }
   },
   {
     "key": "zhang2026vlm4vla",
@@ -3018,7 +6221,26 @@
     "scholarStatus": "matched",
     "metadataNote": null,
     "scholarEvidenceUrl": "https://arxiv.org/abs/2601.03309",
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhang2026vlm4vla.bib",
+    "resources": {
+      "github": [
+        "https://github.com/CladernyJorn/VLM4VLA"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://cladernyjorn.github.io/VLM4VLA.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/CladernyJorn/VLM4VLA"
+      ],
+      "notes": "Official README links the exact paper arXiv:2601.03309 and project page; no HF resource located in this pass."
+    }
   },
   {
     "key": "zhang2026vqtoken",
@@ -3038,7 +6260,26 @@
     "scholarStatus": "matched",
     "metadataNote": "Scholar displays 2026 while the publisher URL contains 2025. Retain existing bibliography; this is a version/year signal to review, not a silent correction.",
     "scholarEvidenceUrl": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/2f4d6f8e0f4f543db12260696b2a3551-Abstract-Conference.html",
-    "scholarNote": "Scholar displays 2026 while the publisher URL contains 2025. Retain existing bibliography; this is a version/year signal to review, not a silent correction."
+    "scholarNote": "Scholar displays 2026 while the publisher URL contains 2025. Retain existing bibliography; this is a version/year signal to review, not a silent correction.",
+    "category": "grounding",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhang2026vqtoken.bib",
+    "resources": {
+      "github": [
+        "https://github.com/Hai-chao-Zhang/VQToken"
+      ],
+      "huggingface": [
+        "https://huggingface.co/haichaozhang/VQ-Token-llava-ov-0.5b"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/Hai-chao-Zhang/VQToken"
+      ],
+      "notes": "Public repository status checked. README matches the exact paper and links the model. Existing publication metadata unchanged."
+    }
   },
   {
     "key": "zhen2024threedvla",
@@ -3050,7 +6291,7 @@
     "groups": [
       "action"
     ],
-    "url": null,
+    "url": "https://arxiv.org/abs/2403.09631",
     "discoveryUrl": "https://scholar.google.com/scholar?q=%223D-VLA%3A+a+3D+vision-language-action+generative+world+model%22",
     "featured": false,
     "summary": null,
@@ -3058,7 +6299,29 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhen2024threedvla.bib",
+    "resources": {
+      "github": [
+        "https://github.com/UMass-Embodied-AGI/3D-VLA"
+      ],
+      "huggingface": [
+        "https://huggingface.co/anyezhy/3dvla-diffusion",
+        "https://huggingface.co/anyezhy/3dvla-diffusion-depth",
+        "https://huggingface.co/anyezhy/3dvla-diffusion-pointcloud"
+      ],
+      "homepage": []
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2403.09631",
+        "https://github.com/UMass-Embodied-AGI/3D-VLA"
+      ],
+      "notes": "HF resources are released goal-image, goal-depth and goal-point-cloud diffusion models, not necessarily all VLA components. Old project hostname vis-www.cs.umass.edu failed DNS resolution in this environment; homepage left null."
+    }
   },
   {
     "key": "zhou2025libero",
@@ -3078,7 +6341,69 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhou2025libero.bib",
+    "resources": {
+      "github": [
+        "https://github.com/RLinf/LIBERO-PRO"
+      ],
+      "huggingface": [
+        "https://huggingface.co/datasets/zhouxueyang/LIBERO-Pro"
+      ],
+      "homepage": [
+        "https://zxy-mllab.github.io/LIBERO-PRO-Webpage/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/RLinf/LIBERO-PRO"
+      ],
+      "notes": "Official README identifies exact paper and links dataset/project; README retains earlier Zxy-MLlab repository name."
+    }
+  },
+  {
+    "key": "zhou2026embodiedagents",
+    "title": "Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation",
+    "bibTitle": "Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation",
+    "bibYear": "2026",
+    "version": "2026",
+    "group": "agency",
+    "groups": [
+      "agency"
+    ],
+    "url": "https://arxiv.org/abs/2607.26148v2",
+    "discoveryUrl": "https://scholar.google.com/scholar?q=%22Embodied%20Agents%20Take%20Control%3A%20Minimal-Interface%20Zero-Shot%20Agents%20Rival%20Industrial-Scale%20Policies%20in%20Vision-and-Language%20Navigation%22",
+    "featured": false,
+    "summary": null,
+    "sourceChecked": true,
+    "scholarStatus": "matched",
+    "metadataNote": "Added from the manuscript frontier-agent source audit; see provenance.",
+    "scholarEvidenceUrl": "https://arxiv.org/abs/2607.26148v2",
+    "scholarNote": "See the preserved frontier-agent citation audit; primary source and Scholar indexing are separate.",
+    "category": "frontier-agents",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhou2026embodiedagents.bib",
+    "resources": {
+      "github": [
+        "https://github.com/jianzhou0420/AgentCanvas/tree/archive/mip-embodied-agents-take-control"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://jianzhou0420.github.io/mip/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://arxiv.org/abs/2607.26148v2",
+        "https://jianzhou0420.github.io/mip/",
+        "https://github.com/jianzhou0420/AgentCanvas/tree/archive/mip-embodied-agents-take-control"
+      ],
+      "notes": "Project links archived MIP branch explicitly; generic AgentCanvas main is not substituted for the paper release."
+    }
   },
   {
     "key": "zhu2020robosuite",
@@ -3098,7 +6423,26 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "evaluation",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zhu2020robosuite.bib",
+    "resources": {
+      "github": [
+        "https://github.com/ARISE-Initiative/robosuite"
+      ],
+      "huggingface": [],
+      "homepage": [
+        "https://robosuite.ai/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://github.com/ARISE-Initiative/robosuite"
+      ],
+      "notes": "Official repository README links robosuite and its matching arXiv paper; no HF resource located in this pass."
+    }
   },
   {
     "key": "zitkovich2023rt",
@@ -3118,6 +6462,24 @@
     "scholarStatus": "unsearched",
     "metadataNote": null,
     "scholarEvidenceUrl": null,
-    "scholarNote": null
+    "scholarNote": null,
+    "category": "action",
+    "kind": "Paper",
+    "citationFile": "bibliography/entries/zitkovich2023rt.bib",
+    "resources": {
+      "github": [],
+      "huggingface": [],
+      "homepage": [
+        "https://robotics-transformer2.github.io/"
+      ]
+    },
+    "resourceAudit": {
+      "checkedOn": "2026-09-16",
+      "evidence": [
+        "https://robotics-transformer2.github.io/assets/rt2.pdf",
+        "https://robotics-transformer2.github.io/"
+      ],
+      "notes": "Project links language-table benchmark code, not RT-2 model source; excluded from model GitHub field."
+    }
   }
 ]

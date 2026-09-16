@@ -23,7 +23,7 @@ jobs:
       - name: Validate records and preservation
         run: |
           node scripts/generate.mjs
-          git diff --exit-code -- README.md docs/CATALOG.md docs/BENCHMARKS.md
+          git diff --exit-code -- README.md docs/CATALOG.md docs/BENCHMARKS.md docs/RESOURCE-LINKS.md
           node scripts/check.mjs
       - name: Install without dependency lifecycle scripts
         working-directory: website
