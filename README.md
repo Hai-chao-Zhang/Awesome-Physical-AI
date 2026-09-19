@@ -16,6 +16,7 @@ This README lists every distinct reference used in the current manuscript, inclu
 
 ## Updates
 
+- **2026-09-19** — Synced the author-supplied Figure 1 used by both manuscript versions; the original PDF is preserved unchanged, with a high-resolution README preview.
 - **2026-09-16** — Complete categorized catalog, per-paper BibTeX, and primary-source resource links; added the Astra/Fable and GPT-Policy references from Section 8.
 - **2026-09-16** — Figure 1 and the text distinguish frozen compact-VLM-guided world modeling (ThinkJEPA) from frozen frontier-VLM robot-use agents.
 
@@ -36,9 +37,11 @@ This README lists every distinct reference used in the current manuscript, inclu
 
 ## Research framework
 
-![Figure 1: Shared language and vision priors support learned action policies, predictive world models, and frozen VLM robot-use agents.](docs/assets/framework.svg)
+[![Figure 1: Roadmap from language priors towards Physical AI. The current author-supplied figure used in both manuscript versions.](docs/assets/figure1.png)](docs/assets/figure1.pdf)
 
-[Vector figure PDF](https://github.com/Hai-chao-Zhang/AI-Review-Physical-AI-Survey/blob/main/roadmap-vector.pdf) · [Editable PowerPoint](https://github.com/Hai-chao-Zhang/AI-Review-Physical-AI-Survey/blob/main/output/pptx/figure1-editable-v3.pptx)
+[Original Figure 1 PDF](docs/assets/figure1.pdf) · [Full-resolution preview](docs/assets/figure1.png)
+
+The PDF is copied byte-for-byte from the manuscript; the PNG above is a display rendering only. No figure content, fonts, or layout were edited.
 
 These routes share language/vision priors and may be combined. ThinkJEPA uses a frozen compact VLM to guide a learned latent predictor; this does not make it a zero-shot robot controller. Zero-shot agents can use within-episode feedback, while supplied demonstrations and cross-episode adaptation require separate reporting.
 

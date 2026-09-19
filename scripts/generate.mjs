@@ -5,6 +5,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const read = p => JSON.parse(readFileSync(resolve(root, p), 'utf8'));
 const papers = read('data/papers.json'), project = read('data/project.json');
 const manifest = read('data/catalog-manifest.json');
+const figure = read('docs/assets/figure1.json');
 const esc = s => String(s).replaceAll('|', '&#124;').replaceAll('[', '\\[').replaceAll(']', '\\]');
 const labels = {matched:'Scholar metadata matched', matched_metadata_review:'Scholar match with version/metadata note', citation_only:'Scholar citation-only result', no_exact_result:'No exact Scholar source found', blocked_attempted:'Scholar check blocked', unsearched:'Scholar check pending'};
 const cats = project.catalogCategories;
@@ -31,6 +32,7 @@ This README lists every distinct reference used in the current manuscript, inclu
 
 ## Updates
 
+- **${figure.syncedOn}** — Synced the author-supplied Figure 1 used by both manuscript versions; the original PDF is preserved unchanged, with a high-resolution README preview.
 - **${project.checkedOn}** — Complete categorized catalog, per-paper BibTeX, and primary-source resource links; added the Astra/Fable and GPT-Policy references from Section 8.
 - **${project.checkedOn}** — Figure 1 and the text distinguish frozen compact-VLM-guided world modeling (ThinkJEPA) from frozen frontier-VLM robot-use agents.
 
@@ -44,9 +46,11 @@ ${cats.map((c,i) => `- [${i+1}. ${c.title}](#${c.id}) (${categoryPapers(c.id).le
 
 ## Research framework
 
-![Figure 1: Shared language and vision priors support learned action policies, predictive world models, and frozen VLM robot-use agents.](docs/assets/framework.svg)
+[![Figure 1: Roadmap from language priors towards Physical AI. The current author-supplied figure used in both manuscript versions.](${figure.preview})](${figure.pdf})
 
-[Vector figure PDF](https://github.com/Hai-chao-Zhang/AI-Review-Physical-AI-Survey/blob/main/roadmap-vector.pdf) · [Editable PowerPoint](https://github.com/Hai-chao-Zhang/AI-Review-Physical-AI-Survey/blob/main/output/pptx/figure1-editable-v3.pptx)
+[Original Figure 1 PDF](${figure.pdf}) · [Full-resolution preview](${figure.preview})
+
+The PDF is copied byte-for-byte from the manuscript; the PNG above is a display rendering only. No figure content, fonts, or layout were edited.
 
 These routes share language/vision priors and may be combined. ThinkJEPA uses a frozen compact VLM to guide a learned latent predictor; this does not make it a zero-shot robot controller. Zero-shot agents can use within-episode feedback, while supplied demonstrations and cross-episode adaptation require separate reporting.
 

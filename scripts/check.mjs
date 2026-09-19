@@ -61,6 +61,18 @@ const entries = Object.entries(manifest.bibliographyHashes).flatMap(([file,hash]
 assert.equal(entries.length,manifest.bibliographyEntries);
 const byKey = new Map(entries.map(e=>[e.key,e]));
 const readme=read('README.md').toString();
+const figure=JSON.parse(read('docs/assets/figure1.json'));
+assert.equal(figure.preservePdfBytes,true,'Figure 1 must preserve the author-supplied PDF');
+assert.equal(sha(read(figure.pdf)),figure.pdfSha256,'Figure 1 PDF differs from its provenance record');
+assert.equal(read(figure.pdf).subarray(0,5).toString(),'%PDF-','Figure 1 is not a PDF');
+const preview=read(figure.preview);
+assert.equal(sha(preview),figure.previewSha256,'Figure 1 preview differs from its provenance record');
+assert.equal(preview.subarray(0,8).toString('hex'),'89504e470d0a1a0a','Figure 1 preview is not a PNG');
+assert.equal(preview.readUInt32BE(16),figure.previewWidth,'Figure 1 preview width');
+assert.equal(preview.readUInt32BE(20),figure.previewHeight,'Figure 1 preview height');
+assert(readme.includes(']('+figure.preview+')]('+figure.pdf+')'),'README must display and link the current Figure 1');
+assert(!readme.includes('](docs/assets/framework.svg)'),'README uses the historical figure');
+assert(!readme.includes('figure1-editable-v3.pptx'),'README links an obsolete editable figure');
 for (const p of papers) {
   assert(byKey.has(p.key),p.key+' not in preserved bibliography');
   assert.equal(read(p.citationFile).toString(),byKey.get(p.key).raw+'\n',p.key+' BibTeX altered');
@@ -85,3 +97,4 @@ for (const p of ['README.md','docs/CATALOG.md','docs/BENCHMARKS.md','docs/RESOUR
  }
 }
 console.log('PASS: 165 unique citations in 8 categories; exact per-entry BibTeX; inherited Scholar records unchanged; resource evidence; 20 featured sources; 4 benchmark units; 22 archived files; bibliography and website PDF hashes; Markdown links.');
+console.log('PASS: current Figure 1 PDF/PNG hashes, PNG dimensions, and README image/download links; historical SVG preserved.');

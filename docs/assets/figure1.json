@@ -1,0 +1,16 @@
+{
+  "syncedOn": "2026-09-19",
+  "sourceRepository": "Hai-chao-Zhang/AI-Review-Physical-AI-Survey",
+  "sourceCommit": "75bb2a071d500d3f4c3d11ddb0599f177342e827",
+  "sourcePath": "roadmap-vector.pdf",
+  "sourceGitBlob": "be18435dcde8a31e1ce1962714a977d125ac0898",
+  "pdf": "docs/assets/figure1.pdf",
+  "pdfSha256": "58ee412c7017672885d779bfeda828879755febeb6cbff8163b185332fceecd8",
+  "preview": "docs/assets/figure1.png",
+  "previewSha256": "21a65c4096543e24ce4ccc4a146bdac5b6a6f6addfc600a780af2e6f98eb8dd6",
+  "previewWidth": 3200,
+  "previewHeight": 2288,
+  "renderCommand": "pdftoppm -f 1 -singlefile -r 192 -png docs/assets/figure1.pdf docs/assets/figure1",
+  "preservePdfBytes": true,
+  "note": "Author-supplied Figure 1, identical in both manuscript repositories. The PNG is a full-page display rendering, not a redesign. The older framework.svg and editable v3 PowerPoint are historical and do not reproduce this figure."
+}
