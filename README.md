@@ -4,7 +4,7 @@
 
 A survey companion on language priors, physical grounding, world models and embodied agents, with Physical AGI treated as a research objective rather than an established capability.
 
-[**Manuscript PDF**](https://github.com/Hai-chao-Zhang/physicalAGI-Review/blob/main/output/pdf/paper.pdf) · [**LaTeX / arXiv-format source**](https://github.com/Hai-chao-Zhang/physicalAGI-Review) · [**Springer-format source**](https://github.com/Hai-chao-Zhang/AI-Review-Physical-AI-Survey) · [**Companion website**](https://hai-chao-zhang.github.io/Awesome-Physical-AI/) · [**All BibTeX**](bibliography/cited.bib)
+[**Manuscript PDF**](https://github.com/Hai-chao-Zhang/physicalAGI-Review/blob/main/output/pdf/paper.pdf) · [**Companion website**](https://hai-chao-zhang.github.io/Awesome-Physical-AI/) · [**All BibTeX**](bibliography/cited.bib)
 
 **Haichao Zhang · Mingfei Chen · Shwai He · Zhengtong Xu · Yifan Shen · Yiyang Huang · Jianglin Lu · Yijiang Li · Yuhai Wang · Qihua Dong · Ang Li · Yu She · Yun Fu**
 

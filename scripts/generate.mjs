@@ -20,7 +20,7 @@ const readme = `# Awesome Physical AI
 
 A survey companion on language priors, physical grounding, world models and embodied agents, with Physical AGI treated as a research objective rather than an established capability.
 
-[**Manuscript PDF**](https://github.com/Hai-chao-Zhang/physicalAGI-Review/blob/main/output/pdf/paper.pdf) · [**LaTeX / arXiv-format source**](https://github.com/Hai-chao-Zhang/physicalAGI-Review) · [**Springer-format source**](https://github.com/Hai-chao-Zhang/AI-Review-Physical-AI-Survey) · [**Companion website**](${project.website}) · [**All BibTeX**](bibliography/cited.bib)
+[**Manuscript PDF**](https://github.com/Hai-chao-Zhang/physicalAGI-Review/blob/main/output/pdf/paper.pdf) · [**Companion website**](${project.website}) · [**All BibTeX**](bibliography/cited.bib)
 
 **${project.authors.join(' · ')}**
 
