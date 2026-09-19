@@ -1,5 +1,6 @@
 import papers from '../../data/papers.json';
 import project from '../../data/project.json';
+import { basePath } from '@/lib/site';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 const repo = project.repo;
 const stages = [
@@ -47,7 +48,7 @@ export default function Home() {
         <p className="lead">What must change when an agent moves from describing the physical world to learning how to act within it?</p>
         <div className="authors">{authors.map(([name,aff])=><span key={name}>{name}<sup>{aff}</sup></span>)}</div>
         <div className="affiliations">{affiliations.map((name,i)=><span key={name}><sup>{i+1}</sup> {name}</span>)}</div>
-        <div className="actions"><a className="button primary" href="/paper/physical-agi.pdf">Read the manuscript <span aria-hidden="true">↗</span></a><a className="button" href={repo}>GitHub collection <span aria-hidden="true">↗</span></a><a className="button" href="#cite">BibTeX</a></div>
+        <div className="actions"><a className="button primary" href={`${basePath}/paper/physical-agi.pdf`}>Read the manuscript <span aria-hidden="true">↗</span></a><a className="button" href={repo}>GitHub collection <span aria-hidden="true">↗</span></a><a className="button" href="#cite">BibTeX</a></div>
         <p className="hero-note">Working manuscript · Resource snapshot: September 8, 2026</p>
       </section>
       <section className="section" id="overview">
