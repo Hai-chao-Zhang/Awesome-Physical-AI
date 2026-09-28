@@ -304,15 +304,11 @@ See [source locations and counting caveats](docs/BENCHMARKS.md). Generality requ
 If this collection helps your research, cite the working manuscript. Please also cite the original works whose methods, data or results you use. Every catalog row links to its preserved BibTeX entry; [download all 165 cited entries](bibliography/cited.bib).
 
 ```bibtex
-@unpublished{zhang2026physicalagi,
-  title = {From Language Priors towards Physical AI},
-  author = {Zhang, Haichao and Chen, Mingfei and He, Shwai
-    and Xu, Zhengtong and Shen, Yifan and Huang, Yiyang
-    and Lu, Jianglin and Li, Yijiang and Wang, Yuhai
-    and Dong, Qihua and Li, Ang and She, Yu and Fu, Yun},
-  year = {2026},
-  note = {Working manuscript},
-  url = {https://github.com/Hai-chao-Zhang/Awesome-Physical-AI}
+@article{zhang2026survey,
+  title={A Survey of Physical AI: A History from ChatGPT to World Models and Embodied Agents},
+  author={Zhang, Haichao and Chen, Mingfei and He, Shwai and Xu, Zhengtong and Shen, Yifan and Huang, Yiyang and Lu, Jianglin and Li, Yijiang and She, Yu and Fu, Yun},
+  journal={Preprints, June},
+  year={2026}
 }
 ```
 
